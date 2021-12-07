@@ -3,7 +3,5 @@ public class Main {
     //ist eher dann wenn das Game schon steht
     public static void main (String[] args){
         System.out.println("Hello World!");
-        //ich hoffe das funktioniert:))
     }
-
 }
