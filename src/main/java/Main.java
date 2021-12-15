@@ -3,5 +3,6 @@ public class Main {
     //ist eher dann, wenn das Game schon steht
     public static void main (String[] args){
         System.out.println("Hello Wo!");
+        System.out.println("lol");
     }
 }
