@@ -7,9 +7,12 @@ public class Question {
     private String c;
     private String d;
     private char correct;
-    private boolean hide; //unterschieden zwischen gezeigt/unsichtbar (50:50)
+    private boolean hideA;
+    private boolean hideB;
+    private boolean hideC;
+    private boolean hideD;//unterschieden zwischen gezeigt/unsichtbar (50:50)
 
-    public Question(String question, int category, String theme, String a, String b, String c, String d, char  correct, boolean hide){
+    public Question(String question, int category, String theme, String a, String b, String c, String d, char  correct, boolean hideA, boolean hideB, boolean hideC, boolean hideD){
         this.question = question;
         this.category = category;
         this.theme = theme;
@@ -18,7 +21,11 @@ public class Question {
         this.c = c;
         this.d = d;
         this.correct = correct;
-        this.hide = hide;
+
+        this.hideA = hideA;
+        this.hideB = hideB;
+        this.hideC = hideC;
+        this.hideD = hideD;
     }
 
     //Getter
@@ -26,20 +33,63 @@ public class Question {
         return question;
     }
 
-    public void printQuestion(){
-        //Ausgabe der Frage
-        //              Frage
-        // Antwort 1            Antwort 2
-        // Antwort 3            Antwort 4
+    public char getCorrect(){
+        return correct;
+    }
 
-        //Frage :
-        //a:
-        //b:
-        //etc.
+
+    public void changeHide(char answer, Joker fiftyFifty){
+        switch (answer){
+            case 'a':
+                if (!hideA){
+                    hideA = true;
+                } else {
+                    fiftyFifty.changeQuestion(this);
+                }
+                break;
+            case 'b':
+                if (!hideB){
+                    hideB = true;
+                } else {
+                    fiftyFifty.changeQuestion(this);
+                }
+                break;
+            case 'c':
+                if (!hideC){
+                    hideC = true;
+                } else {
+                    fiftyFifty.changeQuestion(this);
+                }
+                break;
+            case 'd':
+                if (!hideD){
+                    hideD = true;
+                } else {
+                    fiftyFifty.changeQuestion(this);
+                }
+                break;
+            default:
+                break;
+        }
+    }
+    public void printQuestion(){
+        System.out.println(question);
+        if (!hideA){
+            System.out.println("a: " + a);
+        }
+        if (!hideB) {
+            System.out.println("b: " + b);
+        }
+        if (!hideC) {
+            System.out.println("c: " + c);
+        }
+        if (!hideD) {
+            System.out.println("d: " + d);
+        }
     }
 
     public void printCorrectAnswer(){
-        //Ausgabe der korrekten Antworten bzw. richtig/falsch
+        System.out.println("Die richtige Antwort war: " + correct);
     }
 
     public boolean checkAnswer(Player p1){

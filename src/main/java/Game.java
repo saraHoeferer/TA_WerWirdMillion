@@ -1,3 +1,4 @@
+import java.util.Random;
 import java.util.Scanner;
 
 public class Game {
@@ -35,24 +36,38 @@ public class Game {
     }
 
     public void playGame(Player p1){
+        int cnt = 0;
         //Initialisieren der Objekte --> main
-        //Question q1 = new Question();
+        Question q1 = new Question("In den Trockengebieten des vorderen Orients und Nordafirkas leben die ...?", 3, "Biologie & Medizin", "Frechenhoppelhasen", "Wildenhüpfhamster", "Keckenhopshunde", "Wüstenspringmäuse", 'd', false, false, false, false);
         Joker fiftyFifty = new Joker(1);
         Joker secondChance =  new Joker(2);
         Joker help = new Joker(3);
 
         //Spielablauf
-        while (playing) {
-            p1.makeGuess(scanIn);
+        do{
+            q1.printQuestion();
+            if (cnt > 0) {
+                if(p1.leave(scanIn)){
+                    p1.printMoney();
+                    break;
+                }
+            }
+
             p1.chooseJoker(scanIn);
-            //checkJoker(p1, fiftyFifty, secondChance, help, q1, scanIn);
-            p1.leave(scanIn);
-            p1.printMoney();
-            playing = false;
-        }
-        //Spielablauf
-        //Frage ausgeben --> leave/Joker?/leave --> Spieler Guess --> richtig/falsch? --> weiter/gewonnen oder verloren
-        //Ausgabe, ob gewonnen oder verloren
+            checkJoker(p1, fiftyFifty, secondChance, help, q1, scanIn);
+            p1.makeGuess(scanIn);
+
+            if (!q1.checkAnswer(p1)){
+                q1.printCorrectAnswer();
+                p1.printMoneyWon();
+                break;
+            } else {
+                p1.raiseMoney();
+                System.out.println("Bravo du hast die Frage richtig beantwortet!");
+                p1.printMoney();
+            }
+            cnt++;
+        } while (playing);
     }
 
     public static void main (String[] args){
