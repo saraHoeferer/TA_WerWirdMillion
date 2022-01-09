@@ -1,0 +1,1499 @@
+[
+    {
+        "question": "Der Briefträger flüchtete vor dem Hund, der ihn ...?",
+        "a": "abwehr",
+        "b": "mittelfeld",
+        "c": "angriff",
+        "d": "reservebank",
+        "correct": "c",
+        "category": "1"
+    },
+    {
+        "question": "Wie man zum Beispiel an Feta und Mozzarella gut erkennen kann, ist bisweilen ...?",
+        "a": "Leichen blass",
+        "b" : "Asch fahl",
+        "c" : "Kreide bleich",
+        "d" : "Käse weiß",
+        "correct": "d",
+        "category": "2"
+    },
+    {
+        "question": "Welches Stichwort macht viele Objekte für Sammler erst richtig interessant?",
+        "a": "einfältig",
+        "b": "limitiert",
+        "c": "doof",
+        "d": "unterbilichtet",
+        "correct": "b",
+        "category": "3"
+    },
+    {
+        "question": "Die Garbo hatte auch einen Vornamen, und zwar ...?",
+        "a": "Groatien",
+        "b": "Grefeld",
+        "c": "Grakau",
+        "d": "Great",
+        "correct": "d",
+        "category": "4"
+    },
+    {
+        "question": "Da es keinen wolligen Pelz trägt, hat es wenig Sinn, wenn ich das ...?",
+        "a": "Hummer zange",
+        "b": "Fischer messer",
+        "c": "Geflügel schere",
+        "d": "Eier löffel",
+        "correct": "c",
+        "category": "5"
+    },
+     {
+       "question": "Kleinen Kindern wird von ihren 'diebischen' Eltern häufig ...?",
+        "a": "der Mund gestohlen",
+        "b": "die Nase geklaut",
+        "c": "das Ohr gemopst",
+        "d": "das Auge stibitzt",
+        "correct": "b",
+        "category": "6"
+    },
+     {
+        "question": "Wie kühlt ein handelsüblicher Kühlschrank im Grundprinzip?",
+        "a": "Wärme wird entzogen",
+        "b": "kalte Luft wird zugeführt",
+        "c": "Innenluft wird ventiliert",
+        "d": "leichter Unterdruck",
+        "correct": "a",
+        "category": "7"
+    },
+     {
+        "question": "Von welchen laut Deutschem Tiefkühlinstitut nur tiefgefroren erhältlichen Produkt isst der Deutsche im Schnitt 24 Stück pro Jahr?",
+        "a": "Fischstäbchen",
+        "b": "Salami-Pizzen",
+        "c": "Pommes frites",
+        "d": "Fertigtorten",
+        "correct": "a",
+        "category": "8"
+    },
+     {
+       "question": "Welcher 'Beruf' ist vor allem in den USA häufig zu finden?",
+        "a": "Televangelist",
+        "b": "Advokatholik",
+        "c": "Döner Kebaptist",
+        "d": "Zeuger Jehovas",
+        "correct": "a",
+        "category": "9"
+    },
+     {
+        "question": "'I tried so hard and got so far, but in the end it doesn't even matter', heißt es in einem bekannten Song welcher Band?",
+        "a": "Nirvana",
+        "b": "Soundgarden",
+        "c": "Linkin Park",
+        "d": "INXS",
+        "correct": "c",
+        "category": "10"
+    },
+     {
+        "question": "Japan, Moskau und Tennessee wurden unlängst Namensgeber für drei erst seit einigen Jahren bekannte ...?",
+        "a": "Gutenberg-Bibeln",
+        "b": "Mars-Monde",
+        "c": "chemische Elemente",
+        "d": "Stradivari-Geigen",
+        "correct": "c",
+        "category": "11"
+    },
+     {
+        "question": "Was gibt's bei gut sortierten Gemüsehändlern?",
+        "a": "Bobbybohnen",
+        "b": "Eddyerbsen",
+        "c": "Tommytomaten",
+        "d": "Larrylinsen",
+        "correct": "a",
+        "category": "12"
+    },
+     {
+        "question": "Atrax robustus zählt zu den weltweit ...?",
+        "a": "größten Fischen",
+        "b": "giftigsten Spinnen",
+        "c": "schnellste Säugetieren",
+        "d": "geschwätzigsten Papageien",
+        "correct": "b",
+        "category": "13"
+    },
+     {
+        "question": "Wovon ist betroffen, wer unter Daltonismus leidet?",
+        "a": "Farbenblindhiet",
+        "b": "Pollenallergie",
+        "c": "Schluckauf",
+        "d": "Migräne",
+        "correct": "a",
+        "category": "14"
+    },
+    {
+        "question": "Welche Tiere tragen den wissenschaftlichen Namen Cetacea?",
+        "a": "Wale",
+        "b": "Wölfe",
+        "c": "Wanzen",
+        "d": "Warane",
+        "correct": "a",
+        "category": "15"
+    },
+    {
+        "question": "Was kommt vor allem bei Kleinkindern zum Einsatz? ",
+        "a": "Blinzelchen",
+        "b": "Beißerchen",
+        "c": "Schnupperchen",
+        "d": "Hörerchen",
+        "correct": "b",
+        "category": "1"
+    },
+    {
+        "question": "Wer nichts von einer strikten Trennung zwischen Zier- und Nutzgarten hält, bei dem wächst womöglich zwischen den ...?",
+        "a": "Kicher Erbsen",
+        "b": "Kopf Salat",
+        "c": "Cocktail tomaten",
+        "d": "Rosen Kohl",
+        "correct": "d",
+        "category": "2"
+    },
+    {
+        "question": "Was der 'Wahnsinn'-Sänger repariert, das macht der ...?",
+        "a": "Halls- und beinbruch",
+        "b": "Glükk Auf",
+        "c": "Guht holz",
+        "d": "Petry heil",
+        "correct": "d",
+        "category": "3"
+    },
+    {
+        "question": "Womit beschäftigen sich BWL-Studenten?",
+        "a": "Geldmonster",
+        "b": "Kapitalkreaturen",
+        "c": "Finanzwesen",
+        "d": "Rechnungsgeschöpfe",
+        "correct": "c",
+        "category": "4"
+
+    },
+    {
+        "question": "Offenbar zählen sowhol der FBI- als auch der Facebook-Chef zur wachsenden Gemeinde der Computer-User, die ihre ...?",
+        "a": "Tastaturen unlesbar mache",
+        "b": "Webcams abkleben",
+        "c": "Mäuse anketten",
+        "d": "Monitore verstecken",
+        "correct": "b",
+        "category": "5"
+    },
+    {
+        "question": "Eine Bückling ist ein heiß geräucherter Hering, der vor dem Verzehr im wahrsten Sinne des Wortes ...?",
+        "a": "auf großem Fuß lebt",
+        "b": "zwei linke Hände hat",
+        "c": "nicht den Kopf verliert",
+        "d": "die Nase voll hat",
+        "correct": "c",
+        "category": "6"
+    },
+    {
+        "question": "Wobei soll man je nach Temperatur die Silberseite nach innen bzw. nach außen drehen?",
+        "a": "Rettungsdecke",
+        "b": "Alufolie",
+        "c": "Daten-CD",
+        "d": "Euromünze",
+        "correct": "a",
+        "category": "7"
+    },
+    {
+        "question": "Zum Angebot eines Supermarktes gehört laut Duden nicht nur die, sondern auch der ...?",
+        "a": "Paprika",
+        "b": "Gurke",
+        "c": "Tomate",
+        "d": "Möhre",
+        "correct": "a",
+        "category": "8"
+    },
+    {
+        "question": "An welchem Gerät findet man häufig einen Objetivrevolver?",
+        "a": "DVD-Player",
+        "b": "Mikroskop",
+        "c": "Wagenheber",
+        "d": "Spülmaschine",
+        "correct": "b",
+        "category": "9"
+    },
+    {
+        "question": "Itz, Wern, Tauber, Mümling, Gersprenz, Kinzig und Nidda sind ...?",
+        "a": "Schillers 'Räuber'",
+        "b": "sächsische Sepzialitäten",
+        "c": "Nebenflüsse des Mains",
+        "d": "die sieben Zwerge",
+        "correct": "c",
+        "category": "10"
+    },
+    {
+        "question": "Welche 1911 von August von Trott zu Solz in Preußen eingeführte Regelung ist auch heute noch weit verbreitet?",
+        "a": "Schaltjahr: 366 Tage",
+        "b": "Arbeitswoche: 35 Stunden",
+        "c": "Schulstunde: 45 Minuten",
+        "d": "Bundesliga: 15:30",
+        "correct": "c",
+        "category": "11"
+    },
+    {
+        "question": "Was dient bei vielen Treppen als tragendes Element?",
+        "a": "Ohren",
+        "b": "Wangen",
+        "c": "Knochen",
+        "d": "Lungen",
+        "correct": "b",
+        "category": "12"
+    },
+    {
+        "question": "Deutsche Großspitze und Deutsche Kleinspitze sind ...?",
+        "a": "Hunde",
+        "b": "Garne",
+        "c": "Weine",
+        "d": "Berge",
+        "correct": "a",
+        "category": "13"
+    },
+    {
+        "question": "Welche biblische Gestalt wurde 950 Jahre alt?",
+        "a": "Moses",
+        "b": "Noah",
+        "c": "Abraham",
+        "d": "Isaak",
+        "correct": "b",
+        "category": "14"
+    },
+    {
+        "question": "Wie heißt der Vater von James Bond?",
+        "a": "Andrew",
+        "b": "Charles",
+        "c": "Harry",
+        "d": "William",
+        "correct": "a",
+        "category": "15"
+    },
+    {
+        "question": "Ziemlich erstaunt war der Seemann, als er in der Ostsee ...?",
+        "a": "Gorba schof",
+        "b": "Hon nekker",
+        "c": "Wale sah",
+        "d": "Gen schär",
+        "correct": "c",
+        "category": "1"
+    },
+    {
+        "question": "Selbst in qualitätsbewussten Metzgereien ist der Speck sehr oft ausdrücklich ...?",
+        "a": "minderwertig",
+        "b": "mittelmäßig",
+        "c": "mangelhaft",
+        "d": "durchwachsen",
+        "correct": "d",
+        "category": "2"
+    },
+    {
+        "question": "Schlechte Laune - oder auch: ...?",
+        "a": "Ekstase im Schlafzimmer",
+        "b": "Party in der Küche",
+        "c": "Saufgelage unterm Dach",
+        "d": "Stimmung im Keller",
+        "correct": "d",
+        "category": "3"
+    },
+    {
+        "question": "Möchten Sie die Tafel abwischen, dann benötigen die ...?",
+        "a": "Priester Mangel",
+        "b": "Lehrer Schwämme",
+        "c": "Ärzte Notstand",
+        "d": "Frauen Quote",
+        "correct": "b",
+        "category": "4"
+    },
+    {
+        "question": "Wer behauptet in einem Nr. 1 Hit: 'meine ligaschlanken Waden san a Wahnsinn für die Madln'?",
+        "a": "Sepp aus Kärnten",
+        "b": "Xaver aus Bayern",
+        "c": "Anton aus Tirol",
+        "d": "Rudolf aus der Steiermark",
+        "correct": "c",
+        "category": "5"
+    },
+    {
+        "question": "Vertrauen kann man nicht ...?",
+        "a": "pachten, aber mieten",
+        "b": "borgen, aber ausleihen",
+        "c": "kaufen, aber erwerben",
+        "d": "anzahlen, aber abstottern",
+        "correct": "c",
+        "category": "6"
+    },
+    {
+        "question": "Vor rund 300 Jahren gründete ...?",
+        "a": "Frank Frankfurt",
+        "b": "Karl Karlsruhe",
+        "c": "Hanno Hannover",
+        "d": "Bo Bochum",
+        "correct": "b",
+        "category": "7"
+    },
+    {
+        "question": "Welches nützliche Utensil gehört oftmals zur Erste-Hilfe-Ausstattung für unterwegs?",
+        "a": "Wespenbrief",
+        "b": "Mückenpäckchen",
+        "c": "Zeckenkarte",
+        "d": "Moskitotelegramm",
+        "correct": "c",
+        "category": "8"
+    },
+    {
+        "question": "Wer dirigierte die Gladbacher Borussia nach verpatztem Saisonstart und Trainer Favres Abgang meisterlich aus der Krise?",
+        "a": "Schubert",
+        "b": "Händel",
+        "c": "Brahms",
+        "d": "Haydn",
+        "correct": "a",
+        "category": "9"
+    },
+    {
+        "question": "Welcher Filmklassiker heißt im Original 'Jaws', also 'Kiefer'?",
+        "a": "Godzilla",
+        "b": "King Kong",
+        "c": "Der weiße Hai",
+        "d": "Die Vögel",
+        "correct": "c",
+        "category": "10"
+    },
+    {
+        "question": "Was wird seit 1969 in sogenannte Perlenflaschen abgefüllt?",
+        "a": "Bier",
+        "b": "Milch",
+        "c": "Sekt",
+        "d": "Mineralwasser",
+        "correct": "d",
+        "category": "11"
+    },
+    {
+        "question": "Was müsste bei dem Hinweis 'Nur für geladene Gäste' der Party wohl fernbleiben?",
+        "a": "Proton",
+        "b": "Elektron",
+        "c": "Kation",
+        "d": "Neutron",
+        "correct": "d",
+        "category": "12"
+    },
+    {
+        "question": "Die Hauptstädte wievieler EU-Staaten befinden sich genau eine Zeitzone weiter westlich als Berlin?",
+        "a": "keine",
+        "b": "eine",
+        "c": "zwei",
+        "d": "drei",
+        "correct": "c",
+        "category": "13"
+    },
+    {
+        "question": "'Joko' Winterscheidt heißt eigentlich Joachim ...? ",
+        "a": "Cornelius",
+        "b": "Konrad",
+        "c": "Cosimo",
+        "d": "Konstantin",
+        "correct": "a",
+        "category": "14"
+    },
+    {
+        "question": "Die beiden Tage, an denen der Bund seine Dienstgebäude regelmäßig halbmast beflaggt, sind der Volkstrauertag und ...?",
+        "a": "der 27. Januar",
+        "b": "der 17. Juni",
+        "c": "der 7. November",
+        "d": "Karfreitag",
+        "correct": "a",
+        "category": "15"
+    },
+    {
+        "question": "Im Idealfall gilt: Auf der Toilette wird man ...?",
+        "a": "zaanarzt",
+        "b": "mätzger",
+        "c": "leerer",
+        "d": "moddel",
+        "correct": "c",
+        "category": "1"
+    },
+    {
+        "question": "Nimmt die Folklegende Dylan den Zug, dann fährt der ...?",
+        "a": "Ski Piste",
+        "b": "Rodel Hang",
+        "c": "Sprung Schanze",
+        "d": "Bob Bahn",
+        "correct": "d",
+        "category": "2"
+    },
+    {
+        "question": "Bei einer kleinen Kartoffel handelt es sich sozusagen um ...?",
+        "a": "einen Bußgeldbescheid",
+        "b": "ein Knöllchen",
+        "c": "einen Strafzettel",
+        "d": "eine Verwarnung",
+        "correct": "b",
+        "category": "3"
+    },
+    {
+        "question": "Fanden alle Aspekte ausführlich Beachtung, dann wurde das Thema ...?",
+        "a": "ermüdend therapiert",
+        "b": "aufreibend verarztet",
+        "c": "erschöpfend behandelt",
+        "d": "schweißtreibend behandelt",
+        "correct": "c",
+        "category": "4"
+    },
+{
+        "question": "Welches idyllische Fleckchen wird durch das Einfügen eines 'b' von einer Naturkatastrophe heimgesucht?",
+        "a": "Waldrand",
+        "b": "Bergkuppe",
+        "c": "Feldweg",
+        "d": "Flussufer",
+        "correct": "a",
+        "category": "5"
+    },
+    {
+        "question": "Wofür wird in der Regel ein Brennwert angegeben?",
+        "a": "Kreditkarten",
+        "b": "Nahrungsmittel",
+        "c": "Kleidungsstücke",
+        "d": "Autoreifen",
+        "correct": "b",
+        "category": "6"
+    },
+    {
+        "question": "Zu den bekanntesten schwedischen Krimiautoren zählen Stieg Larsson, Henning Mankell und Hakan ...? ",
+        "a": "Nesser",
+        "b": "Nabel",
+        "c": "Nöffel",
+        "d": "Nuppenkelle",
+        "correct": "a",
+        "category": "7"
+    },
+    {
+        "question": "Wofür steht das 'I' bei den Gewerkschaften IG Metall, IG BCE und IG Bau?",
+        "a": "Integrativ",
+        "b": "International",
+        "c": "Industrie",
+        "d": "Interessen",
+        "correct": "c",
+        "category": "8"
+    },
+    {
+        "question": "Was kennzeichnete den u.a. auch bei Hollywood-Schauspielern beliebten 'Man Bun' Style?",
+        "a": "Dutt",
+        "b": "Lippenstift",
+        "c": "Minirock",
+        "d": "Babybauch",
+        "correct": "a",
+        "category": "9"
+    },
+    {
+        "question": "In welcher Sportart folgt auf das sogenannte Umsetzen das Ausstoßen?",
+        "a": "Fechten",
+        "b": "Gewichtheben",
+        "c": "Speerwerfen",
+        "d": "Trampolinturnen",
+        "correct": "b",
+        "category": "10"
+    },
+    {
+        "question": "Welches deutsch DJ-Duo landete 2015 mit 'Unter meiner Haut' einen Hit?",
+        "a": "Bekloppt aber BilliG",
+        "b": "Gestört aber GeiL",
+        "c": "Dämlich aber DiskreT",
+        "d": "Wirr aber WilD",
+        "correct": "b",
+        "category": "11"
+    },
+    {
+        "question": "Welche beiden Flüsse findet man im selben Bundesland?",
+        "a": "Saale und Isar",
+        "b": "Oder und Mosel",
+        "c": "Spree und Rhein",
+        "d": "Weser und Saar",
+        "correct": "a",
+        "category": "12"
+    },
+    {
+        "question": "Wen ernannte US-Präsident Obama im Herbst 2015 zum Sonderbeauftragten für die weltweite Anti-IS-Koalition?",
+        "a": "Brett McGurk",
+        "b": "Berto DiTomat",
+        "c": "Bror Kohlrabsson",
+        "d": "Berat Al Karrot",
+        "correct": "a",
+        "category": "13"
+    },
+    {
+        "question": "Zum 'Oxford Dictionaries Word of the Year 2015' gewählt wurde ein Emoji, und zwar ein lachendes Gesicht mit ...?",
+        "a": "rausgestreckter Zunge",
+        "b": "herzförmigen Augen",
+        "c": "Freudentränen",
+        "d": "Hasenzähnen",
+        "correct": "c",
+        "category": "14"
+    },
+    {
+        "question": "Wer spielte im Kinofilm 'A Most Wanted Man' seine letzte Hauptrolle?",
+        "a": "Robin Williams",
+        "b": "Bob Hoskins",
+        "c": "Philip Seymour Hoffman",
+        "d": "James Gandolfini",
+        "correct": "c",
+        "category": "15"
+    },
+      {
+        "question": "Möchte ich der sich entfernenden Kreuzotter noch etwas sagen, so rufe ich ihr hinterher: '...'?",
+        "a": "Super, Markt!",
+        "b": "Einkaufs, Wagen!",
+        "c": "Warte, Schlange!",
+        "d": "Kassen, Bon!",
+        "correct": "c",
+        "category": "1"
+    },
+      {
+        "question": "Wohl kaum jemand ...?",
+        "a": "schwimmt im Schwimmanzug",
+        "b": "badet im Bademantel",
+        "c": "duscht in der Duschkabine",
+        "d": "taucht mit Taucherbrille",
+        "correct": "b",
+        "category": "2"
+    },
+      {
+        "question": "Was kann leider schon mal vorkommen?",
+        "a": "Dürre in der Brieftasche",
+        "b": "Flaute am Schlüsselbund",
+        "c": "Ebbe im Portemonnaie",
+        "d": "Stille in der Geldbörse",
+        "correct": "c",
+        "category": "3"
+    },
+      {
+        "question": "Ereignet sich tatsächlich der 'größte anzunehmende Unfall', dann ist der ...?",
+        "a": "TILL siter",
+        "b": "EH damer",
+        "c": "PEE corino",
+        "d": "GAU da",
+        "correct": "d",
+        "category": "4"
+    },
+      {
+        "question": "Für wen ich Sympathien hege, dem bin ich ...?",
+        "a": "geprüuft",
+        "b": "gemessen",
+        "c": "gezählt",
+        "d": "gezählt",
+        "correct": "d",
+        "category": "5"
+    },
+      {
+        "question": "Sogenannte Kunstfehler werden in der Regel nicht Künstlern angelastet, sondern ...?",
+        "a": "Ärzten",
+        "b": "Übersetzern",
+        "c": "Köchen",
+        "d": "Richtern",
+        "correct": "a",
+        "category": "6"
+    },
+      {
+        "question": "Wie kann man die in den sozialen Medien oft verwendete englische Abkürzung 'wtf' am besten übersetzen?",
+        "a": "Was geht?",
+        "b": "Was machst du hier?",
+        "c": "Was wäre wenn ...?",
+        "d": "Was zum Teufel ...?",
+        "correct": "d",
+        "category": "7"
+    },
+      {
+        "question": "Zwar nicht giftig, aber dennoch wenig appetitlich ist der 'Pilz des Jahres 2020': ...? ",
+        "a": "der Kotling",
+        "b": "die Moderkappe",
+        "c": "die Stinkmorchel",
+        "d": "der Müffeltrüffel",
+        "correct": "c",
+        "category": "8"
+    },
+      {
+        "question": "Welche Schallmauer durchbrach Eliud Kipchoge am 12. Oktober 2019 als erster Mensch?",
+        "a": "100 m unter 8 Sekunden",
+        "b": "Weitsprung über 10 Meter",
+        "c": "Marathon unter 2 Stunden",
+        "d": "Speerwurf über 200 m",
+        "correct": "c",
+        "category": "9"
+    },
+      {
+        "question": "Wen sieht man total blau in der Realverfilmung von Disneys 'Alladin'",
+        "a": "Will Smith",
+        "b": "Robert Downey Jr.",
+        "c": "Bryan Cranston",
+        "d": "Jack Nicholson",
+        "correct": "a",
+        "category": "10"
+    },
+      {
+        "question": "Mit welchem Phänomen haben vor allem Fahrer älterer Autos bei entsprechender Motorisierung zu kämpfen?",
+        "a": "Hybridlücke",
+        "b": "Dieselschlitz",
+        "c": "Turboloch",
+        "d": "Enspritzspalt",
+        "correct": "c",
+        "category": "11"
+    },
+      {
+        "question": "Rostock hat seit 2019 als erste deutsche Großstadt einen Oberbürgermeister, der ...?",
+        "a": "die 90 überschritten hat",
+        "b": "kein Deutscher ist",
+        "c": "einen Mann geheiratet hat",
+        "d": "der Piratenpartei angehört",
+        "correct": "b",
+        "category": "12"
+    },
+      {
+        "question": "Davin Herbrüggen wurde im April 2019 ...?",
+        "a": "Mister Germany",
+        "b": "Sylvie Meis' neuer Lover",
+        "c": "DSDS-Sieger",
+        "d": "Verona Pooths Manager",
+        "correct": "c",
+        "category": "13"
+    },
+      {
+        "question": "Was darf laut Konfitürenverordnung von der deutschen Lebensmittelindustrie nicht zu 'Marmelade' verarbeitet werden?",
+        "a": "Zitronen",
+        "b": "Orangen",
+        "c": "Mandarinen",
+        "d": "Aprikosen",
+        "correct": "d",
+        "category": "14"
+    },
+      {
+        "question": "Wie viele Kilometer ist man dem Ermittelpunkt am Nordpol näher als am Äquator?",
+        "a": "ca. 2 km",
+        "b": "etwas mehr als 20 km",
+        "c": "rund 200 km",
+        "d": "knapp 2.000 km",
+        "correct": "b",
+        "category": "15"
+    },
+      {
+        "question": "Knipst ein Betrunkener im Dunkeln die Taschenlampe an, dann macht er ...?",
+        "a": "martins Horn",
+        "b": "warn Signal",
+        "c": "si Rene",
+        "d": "blau Licht",
+        "correct": "d",
+        "category": "1"
+    },
+      {
+        "question": "Was ergänzt Kinn-, Schub-, Rou-, Remou- und Bal-?",
+        "a": "marzi",
+        "b": "pan",
+        "c": "schoko",
+        "d": "lade",
+        "correct": "d",
+        "category": "2"
+    },
+      {
+        "question": "Steht der 'Ice Age'-Held Manni vor Gericht, kommt es sozusagen zu einem ...?",
+        "a": "Grundsatz-Urteil",
+        "b": "Präsidenz-Fall",
+        "c": "Mammut-Prozess",
+        "d": "Eil-Verfahren",
+        "correct": "c",
+        "category": "3"
+    },
+      {
+        "question": "Was befindet sich üblicherweise in den eigenen vier Wänden?",
+        "a": "Hauspolizeirevier",
+        "b": "Hausapotheke",
+        "c": "Haustankstelle",
+        "d": "Hausbahnhof",
+        "correct": "b",
+        "category": "4"
+    },
+      {
+        "question": "Was ist ein anderes Wort für 'Norm'?",
+        "a": "Halteseil",
+        "b": "Maßband",
+        "c": "Richtschnur",
+        "d": "Fallstrick",
+        "correct": "c",
+        "category": "5"
+    },
+      {
+        "question": "Was steht - wie der Name schon sagt - bei einem heliozentrischen System im Mittelpunkt?",
+        "a": "Atomkern",
+        "b": "Marktplatz",
+        "c": "Sonne",
+        "d": "die eigene Person",
+        "correct": "c",
+        "category": "6"
+    },
+      {
+        "question": "An welcher deutschen Übersetzung des in der Mode beliebten Stoffes 'Canvas' erkennt man eine ursprüngliche Verwendung?",
+        "a": "Papierserviette",
+        "b": "Segeltuch",
+        "c": "Gummiband",
+        "d": "Gipsbinde",
+        "correct": "b",
+        "category": "7"
+    },
+      {
+        "question": "Liest man im Rezept 'Schale kreuzweise einhitzen und dann 20 Minuten in den Ofen', so geht es wohl um die Zubereitung von ...?",
+        "a": "Esskastanien",
+        "b": "Hokkaido-Kürbissen",
+        "c": "Birne Helene",
+        "d": "Backpflaumen",
+        "correct": "a",
+        "category": "8"
+    },
+      {
+        "question": "Wer verkleidete sich zur 'fünften Jahreszeit' schon als Shrek, Gandhi, Gandalf, Punk, Homer Simpson und Marilyn Monroe?",
+        "a": "Christian Lindner",
+        "b": "Jens Spahn",
+        "c": "Markus Söder",
+        "d": "Heiko Maas",
+        "correct": "c",
+        "category": "9"
+    },
+      {
+        "question": "Um unliebsamen Gesetzen zu entgehen, erfreuen sich Länder wie Panama oder Liberia großer Beliebtheit wegen ihrer 'offenen ...'?",
+        "a": "Standesämter",
+        "b": "Börsenplätze",
+        "c": "Universitäten",
+        "d": "Schiffsregister",
+        "correct": "d",
+        "category": "10"
+    },
+      {
+        "question": "Bei welcher dieser Damen ist der Vater ihrer Kinder auf den Tag genau zehn Jahre jünger als sie selbst?",
+        "a": "Shakira",
+        "b": "Thea Gottschalk",
+        "c": "Victoria Beckham",
+        "d": "Maria Furtwängler",
+        "correct": "a",
+        "category": "11"
+    },
+      {
+        "question": "Aufgrund eines 150. Jubiläums erklärten die UN 2019 zum internationalen Jahr ...?",
+        "a": "der Milchstraße",
+        "b": "der Zahl Pi",
+        "c": "des Periodensystems",
+        "d": "des Seewegs nach Indien",
+        "correct": "c",
+        "category": "12"
+    },
+      {
+        "question": "Um sich als Schwiegersohn würdig zu erweisen, verlangt König Saul von David laut Bibel hundert ...?",
+        "a": "Kanaaniter-Skalpe",
+        "b": "Hetiter-Köpfe",
+        "c": "Philister-Vorhäute",
+        "d": "Babylonier-Daumen",
+        "correct": "c",
+        "category": "13"
+    },
+      {
+        "question": "'Keltis' heißt das ...?",
+        "a": "letzte Buch von Günter Grass",
+        "b": "erste kalorienfreie Bier",
+        "c": "aktuelle Madonna-Album",
+        "d": "Spiel des Jahres 2008",
+        "correct": "d",
+        "category": "14"
+    },
+      {
+        "question": "Auch in Deutschland heimisch ist Byturus tomentosus, besser bekannt unter dem Namen ...?",
+        "a": "Himbeerkäfer",
+        "b": "Erdbeerschnecke",
+        "c": "Blaubeerspinne",
+        "d": "Johannisbeerfliege",
+        "correct": "a",
+        "category": "15"
+    },
+     {
+        "question": "Vor welchem 'Sturm' wird im Wetterbericht wohl kaum gewarnt?",
+        "a": "Schneesturm",
+        "b": "Wirbelsturm",
+        "c": "Herbssturm",
+        "d": "Aussichtsturm",
+        "correct": "d",
+        "category": "1"
+    },
+
+     {
+        "question": "Was ist anatomisch betrachtet eigentlich eine Selbstverständlichkeit?",
+        "a": "Hals über Kopf",
+        "b": "Nase vorn",
+        "c": "Herz in der Hose",
+        "d": "zwei linke Hände",
+        "correct": "b",
+        "category": "2"
+    },
+     {
+        "question": "Mein Missfallen am Mainstream bringe ich zum Ausdruck, indem ich mich gegen den ...?",
+        "a": "Stimmungs wechsel",
+        "b": "Kurs korrektur",
+        "c": "Trend wende",
+        "d": "Meinungs umschwung",
+        "correct": "c",
+        "category": "3"
+    },
+     {
+        "question": "Gerade in der Winterzeit ist es für Autofahrer unangenehm, wenn die Sonne ...?",
+        "a": "niederhockt",
+        "b": "tief steht",
+        "c": "flachliegt",
+        "d": "hoch sitzt",
+        "correct": "b",
+        "category": "4"
+    },
+     {
+        "question": "Wem etwas Revolutionäres vorschwebt, der möchte sinnbildlich die Welt ...?",
+        "a": "aus den Netzen fischen",
+        "b": "von den Haken nehmen",
+        "c": "aus den Angeln heben",
+        "d": "durch die Reusen schleusen",
+        "correct": "c",
+        "category": "5"
+    },
+     {
+        "question": "Wofür gibt der Duden die Umschreibung 'sehr gut; wunderbar; großartig' an?",
+        "a": "kaltblütig",
+        "b": "brutal",
+        "c": "grausam",
+        "d": "rabiat",
+        "correct": "b",
+        "category": "6"
+    },
+     {
+        "question": "Welcher fruchtige Likör schmeckt auch unmusikalischen Zeitgenossen?",
+        "a": "Zitronpiano",
+        "b": "Mandarinviola",
+        "c": "Limoncello",
+        "d": "Mangoboe",
+        "correct": "c",
+        "category": "7"
+    },
+     {
+        "question": "Wer bekam Ende September 2019 erstmals in der Fußballbundesliga offiziell eine Gelb-Rote Karte gezeigt?",
+        "a": "Schiedsrichterassistent",
+        "b": "Trainer",
+        "c": "Maskottchen",
+        "d": "Zuschauer",
+        "correct": "b",
+        "category": "8"
+    },
+     {
+        "question": "In welchem Film ist der Bösewicht auf der Suche nach Raumstein, Realitätsstein, Gedankenstein, Zeitstein und Seelenstein?",
+        "a": "Herr der Ringe: Die Gefährten",
+        "b": "James Bond 007: Spectre",
+        "c": "Avengers: Infinity War",
+        "d": "Matrix Reloaded",
+        "correct": "c",
+        "category": "9"
+    },
+     {
+        "question": "Welcher kochende TV-Star wurde im Mai 2019 für die Grünen ins Europaparlament gewählt?",
+        "a": "Horst Lichter",
+        "b": "Nelson Müller",
+        "c": "Sarah Wiener",
+        "d": "Cornelia Poletto",
+        "correct": "c",
+        "category": "10"
+    },
+     {
+        "question": "Welches Land ist sowohl nach der Einwohnerzahl als auch nach der Fläche das drittgrößte der Erde?",
+        "a": "USA",
+        "b": "Indien",
+        "c": "Russland",
+        "d": "China",
+        "correct": "a",
+        "category": "11"
+    },
+     {
+        "question": "Welcher deutsche Schriftsteller arbeitete auch schon als Strafverteidiger?",
+        "a": "Ferdinand von Schirach",
+        "b": "Sebastian Fitzek",
+        "c": "Daniel Kehlmann",
+        "d": "Frank Schätzing",
+        "correct": "a",
+        "category": "12"
+    },
+     {
+        "question": "Wer 'stirbt' schon mal den sogenannten Zwergentod?",
+        "a": "Piloten",
+        "b": "Jogger",
+        "c": "Kletterer",
+        "d": "Reiter",
+        "correct": "c",
+        "category": "13"
+    },
+     {
+        "question": "Wer war 2019 mit dem Rundfunk-Tanzorchester Ehrenfeld auf Deutschlandtour?",
+        "a": "Jan Böhmermann",
+        "b": "Wolfgang Niedecken",
+        "c": "Eckart von Hirschhausen",
+        "d": "Jan Josef Liefers",
+        "correct": "a",
+        "category": "14"
+    },
+     {
+        "question": "Wer Anfang 2020 jeweils gut 1.400 Euro in 'Känguru', 'Buffalo' oder 'Wiener Philharmoniker' investierte, kaufte  namenhafte ...?",
+        "a": "Herrenschuhe",
+        "b": "Rotweine",
+        "c": "Goldmünzen",
+        "d": "Duftwässer",
+        "correct": "c",
+        "category": "15"
+    },
+    {
+        "question": "Welche Hauptstadt liegt an einem mehr als 1.000 km langen Fluss gleichen Namens?",
+        "a": "Ottawa",
+        "b": "Canberra",
+        "c": "Washington",
+        "d": "Dublin",
+        "correct": "a",
+        "category": "7"
+    },
+    {
+        "question": "Wird schon die letzte Strophe gesungen, ist man blad am Ende des ... ?",
+        "a": "Scheffield",
+        "b": "Nottinghämm",
+        "c": "Brisstel",
+        "d": "Lieds",
+        "correct": "d",
+        "category": "2"
+    },
+    {
+        "question": "Wozu kam es 2018 erneut zwischen Union und SPD?",
+        "a": "PeLi-Can",
+        "b": "ELe-Phunt",
+        "c": "PaBa-Guy",
+        "d": "GroKo-Deal",
+        "correct": "d",
+        "category": "3"
+    },
+    {
+        "question": "Wer am ersten Tag der Kalenderwoche die betreffenden Blumen ersteht, der kauft die ... ?",
+        "a": "Pfingst sonntags",
+        "b": "Rosen montags",
+        "c": "Kar freitags",
+        "d": "Ascher mittwochs",
+        "correct": "b",
+        "category": "4"
+    },
+    {
+        "question": "Wer gibt Studien zufolge das bessere Produkt ab?",
+        "a": "glückliche Kühe",
+        "b": "dumme Schafe",
+        "c": "kesse Bienen",
+        "d": "verrückte Hühner",
+        "correct": "a",
+        "category": "5"
+    },
+    {
+        "question": "Was schränkt die Nutzbarkeit von Smartphones ein?",
+        "a": "SHER-Lock",
+        "b": "FANB-Lock",
+        "c": "DREAD-Lock",
+        "d": "SIM-Lock",
+        "correct": "d",
+        "category": "6"
+    },
+    {
+        "question": "Bei Zeitgenossen, die gerade anderweitig abgelenkt sind, lässt sich zumindest redensartlich schon mal feststellen, dass sie nur mit ... ?",
+        "a": "halbem Auge hinschauen",
+        "b": "halbem Ohr zuhören",
+        "c": "halbem Hirn mitdenken",
+        "d": "halbem Hintern dabeisitzen",
+        "correct": "b",
+        "category": "7"
+    },
+    {
+        "question": "Am Beginn der Gründungsgeschichte welcher Stadt steht der Sage nach ein Brudermord?",
+        "a": "Athen",
+        "b": "Rom",
+        "c": "London",
+        "d": "Paris",
+        "correct": "b",
+        "category": "8"
+    },
+    {
+        "question": "Wobei wird u. a. zwischen der Microrings- und der Clip-in-Technik unterschieden??",
+        "a": "Bluetooth-Lautsprecher",
+        "b": "Motortuning",
+        "c": "Hair Extensions",
+        "d": "Kaffeezubereitung",
+        "correct": "c",
+        "category": "9"
+    },
+    {
+        "question": "Was wurde im April erstmals seit 1996 wieder seit März 2018 von einem Mann geleitet?",
+        "a": "'Miss Germany'-Jury",
+        "b": "Bundesfamilienministerium",
+        "c": "DFB-Frauennationalteam",
+        "d": "'EMMA'-Redaktion",
+        "correct": "c",
+        "category": "10"
+    },
+    {
+        "question": "Von 857 im Jahr 2016 auf 797 im Jahr 2017 sank - wie der Presse zu entnehmen war - hierzulande die Zahl der ... ?",
+        "a": "Unternehmensinsolvenzen",
+        "b": "1,0-Abiturienten",
+        "c": "Wohnungseinbrüche",
+        "d": "Organspender",
+        "correct": "d",
+        "category": "11"
+    },
+    {
+        "question": "Welche beiden Bezeichnungen sind laut Duden für eine wandernde Frau korrekt?",
+        "a": "Wanderin & Wandrerin",
+        "b": "Wandrerin & Wandererin",
+        "c": "Wandererin & Wandrererin",
+        "d": "Wandrererin & Wanderin",
+        "correct": "a",
+        "category": "12"
+    },
+    {
+        "question": "Weil Annette von Droste-Hülshoff einst den 20-DM-Schein zierte, sah man auf dessen Rückseite unter anderem eine ... ?",
+        "a": "Tanne",
+        "b": "Pappel",
+        "c": "Buche",
+        "d": "Kokospalme",
+        "correct": "c",
+        "category": "13"
+    },
+    {
+        "question": "In welchem Film tauchte Harry Dean Stanton, der 2017 im Alter von 91 Jahren verstarb, im Frühjahr 2018 noch mal in Kino auf?",
+        "a": "Spooky",
+        "b": "Happy",
+        "c": "Tricky",
+        "d": "Lucky",
+        "correct": "d",
+        "category": "14"
+    },
+    {
+        "question": "Was war hierzulande kein Nr.-1-Hit, ale es Michael Jackson mit 'Billie Jean','Beat it' und 'Black Or White' jeweils auf die 2 schaffte?",
+        "a": "Too Shy",
+        "b": "Lambada",
+        "c": "Juliet",
+        "d": "Let's Talk About Sex!",
+        "correct": "b",
+        "category": "15"
+    },
+    {
+        "question": "Der südlichste Punkt des europäischen Festlands liegt in ...??",
+        "a": "Spanien",
+        "b": "Italien",
+        "c": "Portugal",
+        "d": "Griechenland",
+        "correct": "a",
+        "category": "7"
+    },
+    {
+        "question": "Die neue Bekanntschaft ist enttäuscht, wurde sie gerade von ihrer Verabredung ...?",
+        "a": "mit einer 1 benotet",
+        "b": "gelobt",
+        "c": "versetzt",
+        "d": "in die Ferien geschickt",
+        "correct": "c",
+        "category": "1"
+    },
+    {
+        "question": "Hat jemand einen Hausschuh in der Hand, kann man sagen, dass er den ... ?",
+        "a": "Schlapp schwantz",
+        "b": "Heul suhse",
+        "c": "Warm duuscher",
+        "d": "Pantoffel hält",
+        "correct": "d",
+        "category": "2"
+    },
+    {
+        "question": "Was verspricht großen Spaß für kleine Kinder?",
+        "a": "Bällebad",
+        "b": "Klötzchendusche",
+        "c": "Puppenmassage",
+        "d": "Puzzlesauna",
+        "correct": "a",
+        "category": "3"
+    },
+    {
+        "question": "Wenn jemand gerne das betreffende Milchprodukt isst, ...?",
+        "a": "but ter Milch",
+        "b": "sah ne Joghurt",
+        "c": "sau er Rahm",
+        "d": "Mag er Quark",
+        "correct": "d",
+        "category": "4"
+    },
+    {
+        "question": "Wobei geht es nicht um 'schreien' im Sinne von 'sehr laut rufen'?",
+        "a": "ich schreie",
+        "b": "du schreist",
+        "c": "er schreit",
+        "d": "wir schreiten",
+        "correct": "d",
+        "category": "5"
+    },
+    {
+        "question": "Woran denkt man - mit ein wenig Nostalgie - vermutlich als Erstes, wenn von 'A-Seite' und 'B-Seite' die Rede ist?",
+        "a": "Polaroidfoto",
+        "b": "Singleschallplatte",
+        "c": "Quartettkarte",
+        "d": "Telegramm",
+        "correct": "b",
+        "category": "6"
+    },
+    {
+        "question": "Welche Sängerin nahm 2018 in der DSDS-Jury neben Dieter Bohlen Platz?",
+        "a": "Pia Plötzlich",
+        "b": "Hanna Herzlich",
+        "c": "Ella Endlich",
+        "d": "Sara Sonderlich",
+        "correct": "c",
+        "category": "7"
+    },
+    {
+        "question": "Wer trägt eine sogenannte Warntracht?",
+        "a": "Gottesanbeterin",
+        "b": "Feuersalamander",
+        "c": "Grüne Mamba",
+        "d": "Dornhai",
+        "correct": "b",
+        "category": "8"
+    },
+    {
+        "question": "Worauf schwört so mancher bei seinen täglichen Essgewohnheiten?",
+        "a": "Breakfast Check-in",
+        "b": "Lunch Boarding",
+        "c": "Teatime Arrival",
+        "d": "Dinner Cancelling",
+        "correct": "d",
+        "category": "9"
+    },
+    {
+        "question": "Was ist einer aktuellen Vergleichsstudie zufolge im Alter hierzulande bei Männern im Schnitt etwa doppelt so hoch wie bei Frauen?",
+        "a": "Blutdruck",
+        "b": "Renteinkommen",
+        "c": "Fernsehkonsum",
+        "d": "Demenz-Risiko",
+        "correct": "b",
+        "category": "10"
+    },
+    {
+        "question": "Der damals 9-Jährige Salvatore Ferragamo machte um 1907 seiner Schwester zur Kommunion einer Freude, idem er ihr ...?",
+        "a": "eine Frisur zauberte",
+        "b": "ein Kleid schneiderte",
+        "c": "ein Paar Schuhe schusterte",
+        "d": "eine Brille anfertigte",
+        "correct": "c",
+        "category": "11"
+    },
+    {
+        "question": "Die Brüder Dennis und Yannic Seidenberg sehr erfolgreiche ...?",
+        "a": "Basketballspieler",
+        "b": "Eishockeyspieler",
+        "c": "Handballspieler",
+        "d": "Fußballspieler",
+        "correct": "b",
+        "category": "12"
+    },
+    {
+        "question": "In Katalonien schenken sich Liebende am 23. April, dem Feiertag Sant Jordi,tradionell ...?",
+        "a": "Bücher und Rosen",
+        "b": "Teller und Tulpen",
+        "c": "Wein und Narzissen",
+        "d": "Fotos und Veilchen",
+        "correct": "a",
+        "category": "13"
+    },
+    {
+        "question": "Was legte der deutsche Staatbürger Bahtiyar Duysak im November 2017 für 11 Minuten lahm?",
+        "a": "Trumps Twitter-Account",
+        "b": "Hamburger U-Bahnverkehr",
+        "c": "Stromversorgung in Moskau",
+        "d": "Sendebetrieb von RTL",
+        "correct": "a",
+        "category": "14"
+    },
+    {
+        "question": "Was wurde in der DDR Anfang der 1950er-Jahre abgeschafft?",
+        "a": "Rathäuser",
+        "b": "Pfarrgemeinden",
+        "c": "Finanzämter",
+        "d": "Postfillialen",
+        "correct": "c",
+        "category": "15"
+    },
+    {
+        "question": "Was man sich alleine nicht traut, könnte man vielleicht zu…?",
+        "a": "dienst fahrzeug",
+        "b": "miet auto",
+        "c": "zweit wagen",
+        "d": "Familien kutsche",
+        "correct": "c",
+        "category": "1"
+    },
+    {
+        "question": "Was ist erforderlich, um mit weniger Mehl auf die gleiche Stückzahl zu kommen?",
+        "a": "sich am Riemen reißen",
+        "b": "den Gürtel enger schnallen",
+        "c": "kleinere Brötchen backen",
+        "d": "auf die Bremse treten",
+        "correct": "c",
+        "category": "2"
+    },
+    {
+        "question": "Auch 2018 wurden im Oktober wegen des Endes der Sommerzeit hierzulande wieder unzählige…?",
+        "a": "Stühle verrückt",
+        "b": "Bilder abgehängt",
+        "c": "Tische verschoben ",
+        "d": "Uhren umgestellt",
+        "correct": "d",
+        "category": "3"
+    },
+    {
+        "question": "Was kann bei verstopften Abflussrohren Abhilfe schaffen?",
+        "a": "Klinke ins Waschbecken",
+        "b": "Henkel in die Dusche",
+        "c": "Knauf in die Badewanne",
+        "d": "Griff ins Klo",
+        "correct": "d",
+        "category": "4"
+    },
+    {
+        "question": "Welche Stadt im Norden Englands hat rund 300.000 Einwohner?",
+        "a": "Newcastle",
+        "b": "Newchurch",
+        "c": "Newhouse",
+        "d": "Newtemple",
+        "correct": "a",
+        "category": "5"
+    },
+    {
+        "question": "Andere können sich bemühen: Pál Dárdai …?",
+        "a": "übt Entschloßenena",
+        "b": "kämpft Willda",
+        "c": "arbeitet Bässa",
+        "d": "trainiert Hertha",
+        "correct": "d",
+        "category": "6"
+    },
+    {
+        "question": "Worum geht es wohl meistens, wenn die Frage „Wer ist denn Headliner?“ aufkommt?",
+        "a": "Kinofilme",
+        "b": "Musikfestival",
+        "c": "Kunstausstellungen",
+        "d": "Flugreisen",
+        "correct": "b",
+        "category": "7"
+    },
+    {
+        "question": "Was wird gerne auf drei Großbuchstaben reduziert, von denen einer gar nicht mal in dem vorkommt?",
+        "a": "Cocktailparty",
+        "b": "Picknick",
+        "c": "Barbecue",
+        "d": "Candle-Light-Dinner",
+        "correct": "c",
+        "category": "8"
+    },
+    {
+        "question": "Durch ihre Hochzeit mit Prinz Harry wurde aus Meghan Marke die …?",
+        "a": "Gräfin von Nottingham",
+        "b": "Baronin von Yorkshire",
+        "c": "Fürstin von Dartmoor",
+        "d": "Herzogin von Sussex",
+        "correct": "d",
+        "category": "9"
+    },
+    {
+        "question": "'Uh oh, uh oh, uh oh, oh no no. Uh oh, uh oh, uh oh, oh no no. Uh oh, uh oh, uh oh, oh no no. Uh oh, uh oh, uh oh, oh no no', singt …?",
+        "a": "Beyoncé in 'Crazy in Love'",
+        "b": "Madonna in 'Music'",
+        "c": "Lady Gaga in 'Paparazzi'",
+        "d": "Lena in 'Satellite'",
+        "correct": "a",
+        "category": "10"
+    },
+    {
+        "question": "Unter welchem Spitznamen kennen die Israelis ihren Ministerpräsidenten (2019)?",
+        "a": "Tim",
+        "b": "Struppi",
+        "c": "Bibi",
+        "d": "Tina",
+        "correct": "c",
+        "category": "11"
+    },
+    {
+        "question": "Welche deutsche Filmkomödie mit Bjarne Mädel und Lars Eisdinger begeisterte 2018 die Kinozuschauer?",
+        "a": "25 km/h",
+        "b": "250 PS",
+        "c": "20 Knoten",
+        "d": "Mach 3",
+        "correct": "a",
+        "category": "12"
+    },
+    {
+        "question": "Eine kennzeichnende Angabe wie „51/17-135“ gibt Auskunft zu den Abmessungen welchen Gegenstandes?",
+        "a": "Notebook-Festplatte",
+        "b": "Autoreifen",
+        "c": "Damenjeans",
+        "d": "Brillengestell",
+        "correct": "d",
+        "category": "13"
+    },
+    {
+        "question": "Finden sich um einen Stein herum zerschmetterte Schneckenhäuser, handelt es sich wohl um einen sogenannten, …?",
+        "a": "Amselkirche",
+        "b": "Drosselschmiede",
+        "c": "Finkenschule",
+        "d": "Starenmühle",
+        "correct": "b",
+        "category": "14"
+    },
+    {
+        "question": "Bei wem gehört es zur berufsbedingten Grundausstattung, wenn er einen Koller bekommt?",
+        "a": "Schornsteinfeger",
+        "b": "Bäcker",
+        "c": "Hufschmied",
+        "d": "Kardinal",
+        "correct": "a",
+        "category": "15"
+    },
+    {
+        "question": "Auf Safari kann man beobachten, wie Zebras durch die Savanne …??",
+        "a": "quadrate",
+        "b": "punkte",
+        "c": "blümchen",
+        "d": "streifen",
+        "correct": "d",
+        "category": "1"
+    },
+    {
+        "question": "Beim Anfahren am Berg bemerkt vor allem ungeübte Autofahrer des Öfteren: 'Oh, ich …!'?",
+        "a": "kopf stand",
+        "b": "flick flack",
+        "c": "rad schlagen",
+        "d": "rolle rückwärts",
+        "correct": "d",
+        "category": "2"
+    },
+    {
+        "question": "Was kann man auch ohne besondere Kenntnisse oder Fähigkeiten im Lederwarengeschäft erwerben?",
+        "a": "Segelschein",
+        "b": "Abitur",
+        "c": "schwarzer Gürtel",
+        "d": "Jodeldiplom",
+        "correct": "c",
+        "category": "3"
+    },
+    {
+        "question": "Klagt man über Gelenkschmerzen beim Anwinkeln des Unterarms, macht der Arzt wohl zunächst mal …?",
+        "a": "einen Kopfstand",
+        "b": "einen Ellenbogencheck",
+        "c": "eine Notbremse",
+        "d": "eine Blutgrätsche",
+        "correct": "b",
+        "category": "4"
+    },
+    {
+        "question": "Womit sind eher Geschäftsreisende als Theaterbesucher unterwegs?",
+        "a": "Hamletflieger",
+        "b": "Macbethboeing",
+        "c": "Othellojumbo",
+        "d": "Learjet",
+        "correct": "d",
+        "category": "5"
+    },
+    {
+        "question": "Als Alternative zur rotierenden Variante bevorzugen manche …?",
+        "a": "einen Echofön",
+        "b": "eine Schallzahnbürste",
+        "c": "einen Rauschrasierer",
+        "d": "eine Klangtoilettenspülung",
+        "correct": "b",
+        "category": "6"
+    },
+    {
+        "question": "Zur korrekten Entsorgung wird empfohlen, was unkenntlich unter den Hausmüll zu mischen?",
+        "a": "Chipstüte",
+        "b": "Medikamente",
+        "c": "Pornohefte",
+        "d": "Helene-Fischer-CDs",
+        "correct": "b",
+        "category": "7"
+    },
+    {
+        "question": "Wer trägt laut seinem Hit „tausend Tattoos auf der Haut“ - u. A. Astronaut, Sägeblatt, Kassette und Totenkopfmaske?",
+        "a": "Campino",
+        "b": "Clueso",
+        "c": "Sido",
+        "d": "Heino",
+        "correct": "c",
+        "category": "8"
+    },
+    {
+        "question": "Die neue EU-Datenschutzverordnung, die seit Mai 2018 gilt, stärkt ausdrücklich auch das 'Recht auf …'?",
+        "a": "Bedauerndürfen",
+        "b": "Verzeihenkönnen",
+        "c": "Versöhnenwollen",
+        "d": "Vergessenwerden",
+        "correct": "d",
+        "category": "9"
+    },
+    {
+        "question": "Wobei handelt es sich um eine Auberginen-Sesampaste?",
+        "a": "Garam Masala",
+        "b": "Guacamole",
+        "c": "Baba Ghanoush",
+        "d": "Tapenade",
+        "correct": "c",
+        "category": "10"
+    },
+    {
+        "question": "Wer hatte bei der Enthüllung seines Sterns auf dem 'Walk of Fame' in Hollywood seinen 101-jährigen Vater dabei?",
+        "a": "George Clooney",
+        "b": "Michael Douglas",
+        "c": "Harrison Ford",
+        "d": "John Travolta",
+        "correct": "b",
+        "category": "11"
+    },
+    {
+        "question": "Wer wurde 2018 mit dem Sieg bei den US Open zur ersten Japanerin, die einen Grand-Slam-Titel im Dameneinzel gewonnen hat?",
+        "a": "Heidi Tokyo",
+        "b": "Gisele Sapporo",
+        "c": "Naomi Osaka",
+        "d": "Miranda Kyoto",
+        "correct": "c",
+        "category": "12"
+    },
+    {
+        "question": "Seine Entscheidung für den Titelträger als 'Vogel des Jahres 2019' hätte der NABU mit den Worten verkünden können: 'Es ist die …!'?",
+        "a": "Meise überm Pony",
+        "b": "Lerche, nicht die Nachtigall",
+        "c": "Taube in der Hand",
+        "d": "hochintelligente Gans",
+        "correct": "b",
+        "category": "13"
+    },
+    {
+        "question": "Der Instagram-Post, der im Januar 2019 Kylie Jenners Rekord von 18 Millionen Likes übertraf zeigt ein gewöhnliches …?",
+        "a": "Hühnerei",
+        "b": "Einfamilienhaus",
+        "c": "weißes T-Shirt",
+        "d": "Hustenbonbon",
+        "correct": "a",
+        "category": "14"
+    },
+    {
+        "question": "Welcher Politiker saß 2018 am häufigsten als Talkgast bei 'Maischberger', 'Anne Will', 'Hart aber fair' oder 'Maybrit Illner'?",
+        "a": "Sahra Wagenknecht",
+        "b": "Jens Spahn",
+        "c": "Robert Habeck",
+        "d": "Olaf Scholz",
+        "correct": "c",
+        "category": "15"
+    }
+]
+
