@@ -1,32 +1,73 @@
+import com.google.gson.Gson;
+import java.io.*;
 import java.util.Random;
 import java.util.Scanner;
 
 public class Game {
-    private static boolean playing; //checken ob Spiel gespielt wird
-    private int save; //Sicherheitsstufe vom Spieler
-    private Scanner scanIn;
+    private final Scanner scanIn;
 
-    public Game (){
-        this.playing = true;
-        this.save = 0;
+    public Game() {
         this.scanIn = new Scanner(System.in);
     }
 
-    public void createQuestions(){
-        //Array mit Fragen
+    private Question[] createQuestions() throws IOException {
+        Gson gson = new Gson();
+        Question[] questions = gson.fromJson(new FileReader("C:\\Users\\sarah\\IdeaProjects\\questions.json"), Question[].class); //Auf Pfad achten
+        return questions;
     }
 
-    public static void checkJoker(Player p1, Joker fiftyFifty, Joker secondChance, Joker help, Question q1, Scanner scanIn){
-        if (p1.getAnswer() != 'k'){
-            switch(p1.getAnswer()){
+    public static Question[] getQuestionCategory(Question[] questions, int category){
+        int cnt = 0;
+        //Länge des Array herauszufinden mithilfe For-Schleife
+        for(int i = 0; i < questions.length; i++){
+            if(questions[i].getCategory() == category){
+               cnt++;
+            }
+        }
+        Question[] questionsCategory = new Question[cnt];
+        cnt = 0;
+        for(int i = 0; i < questions.length; i++){
+            if(questions[i].getCategory() == category){
+                questionsCategory[cnt] = questions[i];
+                cnt++;
+            }
+        }
+        return questionsCategory;
+    }
+
+    public static Question getQuestionFromCategory(Question[] questionsCategory){
+        Random random = new Random();
+        int randomInt = random.nextInt(questionsCategory.length);
+        Question q1 = questionsCategory[randomInt];
+        return q1;
+    }
+
+    public static void checkJoker(Player p1, Joker fiftyFifty, Joker secondChance, Joker help, Question q1, Scanner scanIn) {
+        if (p1.getAnswer() != 'k') {
+            switch (p1.getAnswer()) {
                 case 'f':
-                    fiftyFifty.useJoker(q1);
+                    if(!fiftyFifty.isUsed()) {
+                        fiftyFifty.useJoker(q1);
+                    } else {
+                        System.out.println("Du hast diesen Joker bereits verwendet");
+                        p1.chooseJoker(scanIn);
+                    }
                     break;
                 case 's':
-                    secondChance.useJoker(q1);
+                    if(!secondChance.isUsed()) {
+                        secondChance.useJoker(q1);
+                    } else {
+                        System.out.println("Du hast diesen Joker bereits verwendet");
+                        p1.chooseJoker(scanIn);
+                    }
                     break;
                 case 'h':
-                    help.useJoker(q1);
+                    if(!help.isUsed()) {
+                        help.useJoker(q1);
+                    } else {
+                        System.out.println("Du hast diesen Joker bereits verwendet");
+                        p1.chooseJoker(scanIn);
+                    }
                     break;
                 default:
                     System.out.println("Es ist ein Fehler passiert");
@@ -35,48 +76,67 @@ public class Game {
         }
     }
 
-    public void playGame(Player p1){
-        int cnt = 0;
-        //Initialisieren der Objekte --> main
-        Question q1 = new Question("In den Trockengebieten des vorderen Orients und Nordafirkas leben die ...?", 3, "Biologie & Medizin", "Frechenhoppelhasen", "Wildenhüpfhamster", "Keckenhopshunde", "Wüstenspringmäuse", 'd', false, false, false, false);
+    private void playGame(Player p1, Question[] questions) {
         Joker fiftyFifty = new Joker(1);
-        Joker secondChance =  new Joker(2);
+        Joker secondChance = new Joker(2);
         Joker help = new Joker(3);
+        Question[] gameQuestion;
 
         //Spielablauf
-        do{
+        do {
+            gameQuestion = getQuestionCategory(questions, p1.getKategorie());
+            Question q1 = getQuestionFromCategory(gameQuestion);
             q1.printQuestion();
-            if (cnt > 0) {
-                if(p1.leave(scanIn)){
-                    p1.printMoney();
-                    break;
-                }
-            }
 
             p1.chooseJoker(scanIn);
             checkJoker(p1, fiftyFifty, secondChance, help, q1, scanIn);
+
+            //Wegen Konsolenanwendung kann Spieler nur zu einem bestimmen Zeitpunkt Spiel beenden
+            if (p1.getKategorie() > 1) {
+                if (p1.leave(scanIn)) {
+                    p1.printMoneyWon(true);
+                    break;
+                }
+            }
             p1.makeGuess(scanIn);
 
             if (!q1.checkAnswer(p1)){
-                q1.printCorrectAnswer();
-                p1.printMoneyWon();
-                break;
+                if (q1.getSecondChance()){
+                    System.out.println("Das war leider nicht richtig. Probier's nochmal!");
+                    p1.makeGuess(scanIn);
+                    if (!q1.checkAnswer(p1)) {
+                        q1.printCorrectAnswer();
+                        p1.printMoneyWon(false);
+                        break;
+                    } else {
+                        p1.raiseCategory();
+                        System.out.println("Bravo du hast die Frage richtig beantwortet!");
+                        p1.printMoney();
+                    }
+                } else {
+                    q1.printCorrectAnswer();
+                    p1.printMoneyWon(false);
+                    break;
+                }
             } else {
-                p1.raiseMoney();
+                p1.raiseCategory();
                 System.out.println("Bravo du hast die Frage richtig beantwortet!");
                 p1.printMoney();
             }
-            cnt++;
-        } while (playing);
+        } while (p1.getKategorie() != 16);
+        if (p1.getKategorie() == 16){
+            System.out.println("Gratulation du hast 1.000.000€ gewonnen. Du bist ein Millionär");
+        }
     }
 
-    public static void main (String[] args){
+    public static void main(String[] args) throws IOException {
         //Initialisieren
         Game g1 = new Game();
-        Player p1 = new Player("test");
+        Question[] questions = g1.createQuestions();
+        Player p1 = new Player();
 
         //Spiel aufrufen
-        g1.playGame(p1);
+        g1.playGame(p1, questions);
     }
 
 }

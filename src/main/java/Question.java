@@ -1,7 +1,7 @@
 public class Question {
     private String question;
     private int category;
-    private String theme;
+    //private String theme;
     private String a;
     private String b;
     private String c;
@@ -10,59 +10,103 @@ public class Question {
     private boolean hideA;
     private boolean hideB;
     private boolean hideC;
-    private boolean hideD;//unterschieden zwischen gezeigt/unsichtbar (50:50)
+    private boolean hideD;
+    private boolean secondChance;
 
-    public Question(String question, int category, String theme, String a, String b, String c, String d, char  correct, boolean hideA, boolean hideB, boolean hideC, boolean hideD){
+    public Question(String question, int category, String a, String b, String c, String d, char correct) {
         this.question = question;
         this.category = category;
-        this.theme = theme;
+        //this.theme = theme;
         this.a = a;
         this.b = b;
         this.c = c;
         this.d = d;
         this.correct = correct;
 
-        this.hideA = hideA;
-        this.hideB = hideB;
-        this.hideC = hideC;
-        this.hideD = hideD;
+        this.hideA = false;
+        this.hideB = false;
+        this.hideC = false;
+        this.hideD = false;
+        this.secondChance = false;
     }
 
     //Getter
-    public String getQuestion(){
+    public String getQuestion() {
         return question;
     }
 
-    public char getCorrect(){
+    public int getCategory() {
+        return category;
+    }
+
+    public String getA() {
+        return a;
+    }
+
+    public String getB() {
+        return b;
+    }
+
+    public String getC() {
+        return c;
+    }
+
+    public String getD() {
+        return d;
+    }
+
+    public char getCorrect() {
         return correct;
     }
 
+    public boolean getHideA() {
+        return hideA;
+    }
 
-    public void changeHide(char answer, Joker fiftyFifty){
-        switch (answer){
+    public boolean getHideB() {
+        return hideB;
+    }
+
+    public boolean getHideC() {
+        return hideC;
+    }
+
+    public boolean getHideD() {
+        return hideD;
+    }
+
+    public boolean getSecondChance(){ return secondChance; }
+
+    //Methoden
+    public void changeSecondChance(){
+        this.secondChance = true;
+    }
+
+    public void changeHide(char answer, Joker fiftyFifty) {
+        switch (answer) {
             case 'a':
-                if (!hideA){
+                if (!hideA) {
                     hideA = true;
                 } else {
                     fiftyFifty.changeQuestion(this);
                 }
                 break;
             case 'b':
-                if (!hideB){
+                if (!hideB) {
                     hideB = true;
                 } else {
                     fiftyFifty.changeQuestion(this);
                 }
                 break;
             case 'c':
-                if (!hideC){
+                if (!hideC) {
                     hideC = true;
                 } else {
                     fiftyFifty.changeQuestion(this);
                 }
                 break;
             case 'd':
-                if (!hideD){
+                if (!hideD) {
                     hideD = true;
                 } else {
                     fiftyFifty.changeQuestion(this);
@@ -72,9 +116,10 @@ public class Question {
                 break;
         }
     }
-    public void printQuestion(){
+
+    public void printQuestion() {
         System.out.println(question);
-        if (!hideA){
+        if (!hideA) {
             System.out.println("a: " + a);
         }
         if (!hideB) {
@@ -88,16 +133,12 @@ public class Question {
         }
     }
 
-    public void printCorrectAnswer(){
+    public void printCorrectAnswer() {
         System.out.println("Die richtige Antwort war: " + correct);
     }
 
-    public boolean checkAnswer(Player p1){
-        if (p1.getAnswer() == correct){
-            return  true;
-        } else {
-            return false;
-        }
+    public boolean checkAnswer(Player p1) {
+        return p1.getAnswer() == correct;
     }
 
 }

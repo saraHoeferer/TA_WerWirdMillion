@@ -3,10 +3,14 @@
   <component name="NewModuleRootManager">
     <output-test url="file://$MODULE_DIR$/../../build/classes/java/test" />
     <exclude-output />
-    <content url="file://$MODULE_DIR$/../../src/test" />
+    <content url="file://$MODULE_DIR$/../../src/test">
+      <sourceFolder url="file://$MODULE_DIR$/../../src/test/java" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/../../src/test/resources" type="java-test-resource" />
+    </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module" module-name="TAWerWirdMillionär.main" />
+    <orderEntry type="library" name="Gradle: com.google.code.gson:gson:2.8.6" level="project" />
     <orderEntry type="library" name="Gradle: org.openjfx:javafx-controls:win:16" level="project" />
     <orderEntry type="library" name="Gradle: org.openjfx:javafx-graphics:16" level="project" />
     <orderEntry type="library" name="Gradle: org.openjfx:javafx-graphics:win:16" level="project" />
