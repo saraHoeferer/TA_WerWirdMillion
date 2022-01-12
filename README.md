@@ -10,7 +10,8 @@ Das Spiel wird über die Main Funktion in der "Game" Klasse gestartet (Rechtskli
 `public static void main(String[] args)`
 
 ### Spiel spielen
-> Alle Eingaben für den Spielablauf folgen über die Tastatur. 
+> Alle Eingaben für den Spielablauf folgen über die Tastatur.
+
 Es werden je nach Kategorie unterschiedliche Fragen gestellt.
 Sollte eine Frage richtig sein, so steigt man eine Stufe auf.
 
