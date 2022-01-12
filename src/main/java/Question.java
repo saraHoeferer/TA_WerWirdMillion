@@ -1,12 +1,11 @@
 public class Question {
-    private String question;
-    private int category;
-    //private String theme;
-    private String a;
-    private String b;
-    private String c;
-    private String d;
-    private char correct;
+    private final String question;
+    private final int category;
+    private final String a;
+    private final String b;
+    private final String c;
+    private final String d;
+    private final char correct;
     private boolean hideA;
     private boolean hideB;
     private boolean hideC;
@@ -16,7 +15,6 @@ public class Question {
     public Question(String question, int category, String a, String b, String c, String d, char correct) {
         this.question = question;
         this.category = category;
-        //this.theme = theme;
         this.a = a;
         this.b = b;
         this.c = c;
@@ -57,22 +55,6 @@ public class Question {
 
     public char getCorrect() {
         return correct;
-    }
-
-    public boolean getHideA() {
-        return hideA;
-    }
-
-    public boolean getHideB() {
-        return hideB;
-    }
-
-    public boolean getHideC() {
-        return hideC;
-    }
-
-    public boolean getHideD() {
-        return hideD;
     }
 
     public boolean getSecondChance(){ return secondChance; }
@@ -118,19 +100,29 @@ public class Question {
     }
 
     public void printQuestion() {
+        System.out.println();
         System.out.println(question);
         if (!hideA) {
             System.out.println("a: " + a);
+        } else {
+            System.out.println("a:");
         }
         if (!hideB) {
             System.out.println("b: " + b);
+        } else {
+            System.out.println("b:");
         }
         if (!hideC) {
             System.out.println("c: " + c);
+        } else {
+            System.out.println("c:");
         }
         if (!hideD) {
             System.out.println("d: " + d);
+        } else {
+            System.out.println("d:");
         }
+        System.out.println();
     }
 
     public void printCorrectAnswer() {

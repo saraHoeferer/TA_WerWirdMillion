@@ -11,21 +11,18 @@ public class Joker {
         this.random = '\0';
     }
 
-    public boolean isUsed(){
+    public boolean getUsed(){
         return used;
     }
 
-    public static int getRandomChar() {
+    public static char getRandomChar() {
         Random random = new Random();
-        String setOfChars = "abcd";
-
-        int randomInt = random.nextInt(setOfChars.length());
-        char randomChar = setOfChars.charAt(randomInt);
+        char randomChar = (char) (random.nextInt(4) + 'a'); //aus 4 aufeinanderfolgenden chars a, b, c, d ein char zufällig ziehen
         return randomChar;
     }
 
     public void changeQuestion(Question q1) {
-        random = (char) getRandomChar();
+        random = getRandomChar();
         if (random != q1.getCorrect()) {
             q1.changeHide(random, this);
         } else {
@@ -58,12 +55,13 @@ Telefonjoker
     }
 
     public char generateRandomWrongAnswer(Question q1){
-        Random r = new Random();
-        char randomChar = 'd';
-        while(randomChar == q1.getCorrect()) {
-            randomChar = (char) (r.nextInt(4) + 'a');
+        random = getRandomChar();
+        if (random != q1.getCorrect()) { //überprüfen ob gezogenes char mit correctAnswer nicht übereinstimmt
+            random = getRandomChar(); //random ist also die Antwort des Telefonjokers
+        } else {
+            generateRandomWrongAnswer(q1); //wenn random == correctAnswer -> Methode nochmal ausführen
         }
-        return randomChar;
+        return random;
     }
 
     public void telephoneHelpMe(Question q1){
@@ -196,6 +194,5 @@ Telefonjoker
                 this.used = true;
                 break;
         }
-        //Funktionen der verschiedenen Joker
     }
 }

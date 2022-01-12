@@ -1,14 +1,12 @@
 import java.util.Scanner;
 
 public class Player {
-    //private String name;
     private char answer;
     private int money;
     private int kategorie;
 
     //Setter/Konstruktor
     public Player() {
-        //this.name = name;
         this.answer = '\0';
         this.money = 0;
         this.kategorie = 1;
@@ -17,16 +15,6 @@ public class Player {
     //Getter
     public char getAnswer() {
         return answer;
-    }
-
-    /*
-    public String getName() {
-        return name;
-    }
-    */
-
-    public int getMoney() {
-        return money;
     }
 
     public int getKategorie(){
@@ -122,13 +110,14 @@ public class Player {
     }
 
     public void printMoneyWon(boolean leave) {
+        System.out.println();
         if (leave){
             System.out.println("Du hast " + money + "€ gewonnen!");
-        } else if (kategorie < 5) {
+        } else if (kategorie < 6) {
             System.out.println("Du hast 0€ gewonnen!");
-        } else if (kategorie < 10) {
+        } else if (kategorie < 11) {
             System.out.println("Du hast 500€ gewonnen!");
-        } else if (kategorie > 10) {
+        } else if (kategorie >= 11) {
             System.out.println("Du hast 16000€ gewonnen!");
         }
     }

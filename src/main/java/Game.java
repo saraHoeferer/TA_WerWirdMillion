@@ -1,5 +1,6 @@
 import com.google.gson.Gson;
 import java.io.*;
+import java.util.ArrayList;
 import java.util.Random;
 import java.util.Scanner;
 
@@ -12,33 +13,26 @@ public class Game {
 
     private Question[] createQuestions() throws IOException {
         Gson gson = new Gson();
-        Question[] questions = gson.fromJson(new FileReader("C:\\Users\\sarah\\IdeaProjects\\questions.json"), Question[].class); //Auf Pfad achten
+        String dirPath = new File("").getAbsolutePath();
+        dirPath += "\\questions.json";
+        Question[] questions = gson.fromJson(new FileReader(dirPath), Question[].class);
         return questions;
     }
 
-    public static Question[] getQuestionCategory(Question[] questions, int category){
-        int cnt = 0;
-        //Länge des Array herauszufinden mithilfe For-Schleife
+    public static ArrayList<Question> getQuestionCategory(Question[] questions, int category){
+        ArrayList<Question> questionsCategory = new ArrayList<>();
         for(int i = 0; i < questions.length; i++){
             if(questions[i].getCategory() == category){
-               cnt++;
-            }
-        }
-        Question[] questionsCategory = new Question[cnt];
-        cnt = 0;
-        for(int i = 0; i < questions.length; i++){
-            if(questions[i].getCategory() == category){
-                questionsCategory[cnt] = questions[i];
-                cnt++;
+                questionsCategory.add(questions[i]);
             }
         }
         return questionsCategory;
     }
 
-    public static Question getQuestionFromCategory(Question[] questionsCategory){
+    public static Question getQuestionFromCategory(ArrayList<Question> questionsCategory){
         Random random = new Random();
-        int randomInt = random.nextInt(questionsCategory.length);
-        Question q1 = questionsCategory[randomInt];
+        int randomInt = random.nextInt(questionsCategory.size());
+        Question q1 = questionsCategory.get(randomInt);
         return q1;
     }
 
@@ -46,32 +40,36 @@ public class Game {
         if (p1.getAnswer() != 'k') {
             switch (p1.getAnswer()) {
                 case 'f':
-                    if(!fiftyFifty.isUsed()) {
+                    if(!fiftyFifty.getUsed()) {
                         fiftyFifty.useJoker(q1);
                     } else {
                         System.out.println("Du hast diesen Joker bereits verwendet");
                         p1.chooseJoker(scanIn);
+                        checkJoker(p1, fiftyFifty, secondChance, help, q1, scanIn);
                     }
                     break;
                 case 's':
-                    if(!secondChance.isUsed()) {
+                    if(!secondChance.getUsed()) {
                         secondChance.useJoker(q1);
                     } else {
                         System.out.println("Du hast diesen Joker bereits verwendet");
                         p1.chooseJoker(scanIn);
+                        checkJoker(p1, fiftyFifty, secondChance, help, q1, scanIn);
                     }
                     break;
                 case 'h':
-                    if(!help.isUsed()) {
+                    if(!help.getUsed()) {
                         help.useJoker(q1);
                     } else {
                         System.out.println("Du hast diesen Joker bereits verwendet");
                         p1.chooseJoker(scanIn);
+                        checkJoker(p1, fiftyFifty, secondChance, help, q1, scanIn);
                     }
                     break;
                 default:
                     System.out.println("Es ist ein Fehler passiert");
                     p1.chooseJoker(scanIn);
+                    checkJoker(p1, fiftyFifty, secondChance, help, q1, scanIn);
             }
         }
     }
@@ -80,8 +78,9 @@ public class Game {
         Joker fiftyFifty = new Joker(1);
         Joker secondChance = new Joker(2);
         Joker help = new Joker(3);
-        Question[] gameQuestion;
+        ArrayList<Question> gameQuestion;
 
+        System.out.println("Willkommen bei Team Alphas 'Wer Wird Millionär'!");
         //Spielablauf
         do {
             gameQuestion = getQuestionCategory(questions, p1.getKategorie());
@@ -92,16 +91,16 @@ public class Game {
             checkJoker(p1, fiftyFifty, secondChance, help, q1, scanIn);
 
             //Wegen Konsolenanwendung kann Spieler nur zu einem bestimmen Zeitpunkt Spiel beenden
-            if (p1.getKategorie() > 1) {
-                if (p1.leave(scanIn)) {
+            if (p1.getKategorie() > 1 && p1.leave(scanIn)) {
                     p1.printMoneyWon(true);
                     break;
-                }
             }
+
             p1.makeGuess(scanIn);
 
             if (!q1.checkAnswer(p1)){
                 if (q1.getSecondChance()){
+                    System.out.println();
                     System.out.println("Das war leider nicht richtig. Probier's nochmal!");
                     p1.makeGuess(scanIn);
                     if (!q1.checkAnswer(p1)) {
@@ -110,6 +109,7 @@ public class Game {
                         break;
                     } else {
                         p1.raiseCategory();
+                        System.out.println();
                         System.out.println("Bravo du hast die Frage richtig beantwortet!");
                         p1.printMoney();
                     }
@@ -120,13 +120,18 @@ public class Game {
                 }
             } else {
                 p1.raiseCategory();
+                System.out.println();
                 System.out.println("Bravo du hast die Frage richtig beantwortet!");
                 p1.printMoney();
             }
         } while (p1.getKategorie() != 16);
+
         if (p1.getKategorie() == 16){
+            System.out.println();
             System.out.println("Gratulation du hast 1.000.000€ gewonnen. Du bist ein Millionär");
         }
+
+        System.out.println("Das Spiel ist zu Ende!");
     }
 
     public static void main(String[] args) throws IOException {
