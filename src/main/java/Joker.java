@@ -12,7 +12,7 @@ public class Joker {
         this.random = '\0'; //Zufallsvariable ist noch leer
     }
 
-    public boolean isUsed(){
+    public boolean getUsed(){
         return used;
     } //gibt true zurück, wenn Joker verwendet wurde
 
