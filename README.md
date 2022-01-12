@@ -9,15 +9,15 @@ Es ist ein Wissensspiel, wo man unterschiedliche Frage beantworten muss um zu ve
 Das Spiel würd über die Main Funktion in der "Game" Klasse gestartet (Rechtsklick auf main -> Run main)
 
 ### Spiel spielen
-Alle Eingaben für den Spielablauf folgen über die Tastatur. 
+> Alle Eingaben für den Spielablauf folgen über die Tastatur. 
 Es werden je nach Kategorie unterschiedliche Fragen gestellt.
 Sollte eine Frage richtig sein, so steigt man eine Stufe auf.
 
 ### Joker
 Es gibt drei verschiedene Joker.
-Fifty-fifty Joker: zwei der falschen Antworten werden ausgeblendet sodass nur die richtige und eine flasche Antwort überbleiben.
-Help Joker: Jemand aus unserem Team hilft dir die Frage zu beantworten. (Achtung: Die Antwort die wir geben muss nicht imemr stimmen)
-Second Chance Joker: Wenn man eine Frage falsch beantwortet hat, kann man danach nocheinmal eine Antwortmöglichkeit abgeben (Achtung: Joker muss dafür vorher ausgewählt werden)
+- **Fifty-fifty** Joker: zwei der falschen Antworten werden ausgeblendet sodass nur die richtige und eine flasche Antwort überbleiben.
+- **Help** Joker: Jemand aus unserem Team hilft dir die Frage zu beantworten. (Achtung: Die Antwort die wir geben muss nicht imemr stimmen)
+- **Second Chance** Joker: Wenn man eine Frage falsch beantwortet hat, kann man danach nocheinmal eine Antwortmöglichkeit abgeben (Achtung: Joker muss dafür vorher ausgewählt werden)
 
 ### Kategorie
 Die Kategorie sind:
