@@ -45,7 +45,7 @@ Wir haben 4 Klassen in unserem Programm
 - Game: Zuständig für die Erstellung des Fragen Arrays und den Spielablauf
 
 ### Fragen
-Unsere Fragen werden in einer JSON Datei gespeichert, die in der Game Klasse aufgerufen wird, um dem Fragenarray zu erstellen. `private Question[] createQuestions()`
+Unsere Fragen werden in einer JSON Datei gespeichert, die in der Game Klasse aufgerufen wird, um den Fragenarray zu erstellen. `private Question[] createQuestions()`
 > Es kann vorkommen, dass man einige Frage nach mehreren Spieldurchgängen doppelt beantwortet. Wir haben in unserem JSON insgesamt 166 Fragen
 
 ### JavaFX
