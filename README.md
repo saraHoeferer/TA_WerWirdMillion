@@ -1,8 +1,8 @@
 # Wer Wird Millionär - Team Alphas
 Wir haben in unserem Projekt das Spiel "Wer Wird Millionär" nachprogrammiert.
-> Es ist ein Wissensspiel, wo man unterschiedliche Frage beantworten muss um zu versuchen die Millionen zu gewinnen.
-Momentan befindet sich das Spiel in der Beta-Version.
-Es ist noch kein graphisches Interface vorhanden, das Spiel wird in der Konsole gespielt
+Es ist ein Wissensspiel, wo man unterschiedliche Frage beantworten muss um zu versuchen die Millionen zu gewinnen.
+> Momentan befindet sich das Spiel in der Beta-Version.
+>> Es ist noch kein graphisches Interface vorhanden, das Spiel wird in der Konsole gespielt
 
 ## Spiel
 ### Spiel starten
