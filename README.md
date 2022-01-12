@@ -24,14 +24,14 @@ Es gibt drei verschiedene Joker.
 ### Kategorie
 Die Kategorie sind:
 
-50€-> 100€ -> 200€ -> 300€ -> 500€ (Sicherheitsstufe) -> 1.000€ -> 2.000€ -> 4.000€ -> 8.000€ -> 16.000€ (Sicherheitsstufe) -> 32.000€ -> 64.000€ -> 125.000€ -> 500.000€ -> 1.000.0000€
+50€-> 100€ -> 200€ -> 300€ -> **500€ (Sicherheitsstufe)** -> 1.000€ -> 2.000€ -> 4.000€ -> 8.000€ -> **16.000€ (Sicherheitsstufe)** -> 32.000€ -> 64.000€ -> 125.000€ -> 500.000€ -> 1.000.0000€
 
 ### Ende
 Man kann das Spiel am Anfang jeder Frage (außer der ersten) verlassen.
-Das Spiel endet automatisch beim Erreichen der Million oder wenn man eine Frage falsch beantwortet
+> Das Spiel endet automatisch beim Erreichen der Million oder wenn man eine Frage falsch beantwortet
 
 ### Gewinn
-Sollte man freiwillig das Spiel verlassen so gewinnt man den Betrag wo man als letztes gestanden ist.
-Sollte man eine Frage falsch beantworten fällt man auf die jeweilige Sicherheitsstufe zurück (Wenn man vor der 500€ Frage verliert so gewinnt man 0€)
-Sollte man ein bis zur Million schaffen und gewinnt man die Million
+- Sollte man freiwillig das Spiel verlassen so gewinnt man den Betrag wo man als letztes gestanden ist.
+- Sollte man eine Frage falsch beantworten fällt man auf die jeweilige Sicherheitsstufe zurück (Wenn man vor der 500€ Frage verliert so gewinnt man 0€)
+- Sollte man ein bis zur Million schaffen und gewinnt man die Million
 
