@@ -54,4 +54,4 @@ Unsere Fragen werden in einer JSON Datei gespeichert, die in der Game Klasse auf
 > Es kann vorkommen, dass man einige Frage nach mehreren Spieldurchgängen doppelt beantwortet. Wir haben knapp 150 Fragen und diese werden jede Runde random ausgesucht.
 
 ### JavaFX
-> Noch haben wir nicht begonnen ein graphisches Interface für unser Programm zu erstellen. Die HelloFX Klasse ist nur für Testzwecke da
+> Noch haben wir nicht begonnen ein graphisches Interface für unser Programm zu erstellen. Die HelloFX Klasse, MainController Klasse und die fxml Datei sind nur für Testzwecke da
