@@ -45,13 +45,13 @@ Man kann das Spiel am Anfang jeder Frage (außer der ersten) verlassen.
 ### Klassen
 Wir haben 4 Klassen in unserem Programm
 - Player: Regelt alle Eingabe des Spielers sowie die Ausgabe der Geldbeträge
-- Question: Zuständig für die Ausgabe der Frage, überprüfen der richtigen Antwort und verstecken von Antwortmöglichkeiten für den fifty-fifty Joker
+- Question: Zuständig für die Ausgabe der Frage, überprüfen der richtigen Antwort, verstecken von Antwortmöglichkeiten für den fifty-fifty Joker und für den Second Chance Joker
 - Joker: Regelt die Funktionen der einzelnen Joker
-- Game: Zuständig für die Erstellung des Fragen Arrays und den Spielablauf
+- Game: Zuständig für die Erstellung des Fragen Arrays, Zuteilung der Fragen zu den jeweiligen Kategorien, Überprüfen der Joker (Used oder nicht?) und den Spielablauf
 
 ### Fragen
 Unsere Fragen werden in einer JSON Datei gespeichert, die in der Game Klasse aufgerufen wird, um den Fragenarray zu erstellen. `private Question[] createQuestions()`
-> Es kann vorkommen, dass man einige Frage nach mehreren Spieldurchgängen doppelt beantwortet. Wir haben in unserem JSON insgesamt 166 Fragen
+> Es kann vorkommen, dass man einige Frage nach mehreren Spieldurchgängen doppelt beantwortet. Wir haben knapp 150 Fragen und diese werden jede Runde random ausgesucht.
 
 ### JavaFX
 > Noch haben wir nicht begonnen ein graphisches Interface für unser Programm zu erstellen. Die HelloFX Klasse ist nur für Testzwecke da
