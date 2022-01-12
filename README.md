@@ -7,6 +7,7 @@ Es ist ein Wissensspiel, wo man unterschiedliche Frage beantworten muss um zu ve
 ## Spiel
 ### Spiel starten
 Das Spiel würd über die Main Funktion in der "Game" Klasse gestartet (Rechtsklick auf main -> Run main)
+> public static void main(String[] args)
 
 ### Spiel spielen
 > Alle Eingaben für den Spielablauf folgen über die Tastatur. 
@@ -31,7 +32,21 @@ Man kann das Spiel am Anfang jeder Frage (außer der ersten) verlassen.
 > Das Spiel endet automatisch beim Erreichen der Million oder wenn man eine Frage falsch beantwortet
 
 ### Gewinn
-- Sollte man freiwillig das Spiel verlassen so gewinnt man den Betrag wo man als letztes gestanden ist.
+- Sollte man freiwillig das Spiel verlassen so gewinnt man den Betrag bei der man als letztes gestanden ist.
 - Sollte man eine Frage falsch beantworten fällt man auf die jeweilige Sicherheitsstufe zurück (Wenn man vor der 500€ Frage verliert so gewinnt man 0€)
-- Sollte man ein bis zur Million schaffen und gewinnt man die Million
+- Sollte man es bis zur Million schaffen, gewinnt man die Million
 
+## Code
+### Klassen
+Wir haben 4 Klassen in unserem Programm
+- Player: Regelt alle Eingabe des Spielers sowie die Ausgabe der Geldbeträge
+- Question: Zuständig für die Ausgabe der Frage, Überprüfen der richtigen Antwort und verstecken von Antwortmöglichkeitn für den fifty-fifty Joker
+- Joker: Reglt die Funktionen der einzelnen Joker
+- Game: Zuständig für die Erstellung des Fragen Arrays und den Spielablauf
+
+###Fragen
+Unsere Fragen werden in einer JSON Datei gespeichert, die in der Game Klasse aufgerufen wird um dem Fragenarray zu erstellen.
+> Es kann vorkommen, dass man einige Frage nach mehreren Spieldurchgängen doppelt beanwortet. Wir haben in unserem JSON insgesamt 166 Fragem
+
+###JavaFX
+> Noch haben wir nicht begonnen ein graphisches Interface für unser Programm zu erstellen. Die HelloFX Klasse ist nur für Testzwecke da
