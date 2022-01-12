@@ -38,7 +38,7 @@ Man kann das Spiel am Anfang jeder Frage (außer der ersten) verlassen.
 
 ### Gewinn
 - Sollte man freiwillig das Spiel verlassen so gewinnt man den Betrag bei dem man als letztes gestanden ist.
-- Sollte man eine Frage falsch beantworten fällt man auf die jeweilige Sicherheitsstufe zurück (Wenn man vor der 500€ Frage verliert, so gewinnt man 0€)
+- Sollte man eine Frage falsch beantworten fällt man auf die jeweilige Sicherheitsstufe zurück. Wenn man vor der 500€ Frage verliert, so gewinnt man 0€.
 - Sollte man es bis zur Million schaffen, gewinnt man die Million
 
 ## Code
