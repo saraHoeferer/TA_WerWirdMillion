@@ -16,11 +16,14 @@ Sollte eine Frage richtig sein, so steigt man eine Stufe auf.
 ### Joker
 Es gibt drei verschiedene Joker.
 - **Fifty-fifty** Joker: zwei der falschen Antworten werden ausgeblendet sodass nur die richtige und eine flasche Antwort überbleiben.
-- **Help** Joker: Jemand aus unserem Team hilft dir die Frage zu beantworten. (Achtung: Die Antwort die wir geben muss nicht imemr stimmen)
-- **Second Chance** Joker: Wenn man eine Frage falsch beantwortet hat, kann man danach nocheinmal eine Antwortmöglichkeit abgeben (Achtung: Joker muss dafür vorher ausgewählt werden)
+- **Help** Joker: Jemand aus unserem Team hilft dir die Frage zu beantworten. 
+> (Achtung: Die Antwort die wir geben muss nicht immer stimmen)
+- **Second Chance** Joker: Wenn man eine Frage falsch beantwortet hat, kann man danach nocheinmal eine Antwortmöglichkeit abgeben
+> (Achtung: Joker muss dafür vorher ausgewählt werden)
 
 ### Kategorie
 Die Kategorie sind:
+
 50€-> 100€ -> 200€ -> 300€ -> 500€ (Sicherheitsstufe) -> 1.000€ -> 2.000€ -> 4.000€ -> 8.000€ -> 16.000€ (Sicherheitsstufe) -> 32.000€ -> 64.000€ -> 125.000€ -> 500.000€ -> 1.000.0000€
 
 ### Ende
