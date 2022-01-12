@@ -6,7 +6,7 @@ Es ist ein Wissensspiel, wo man unterschiedliche Frage beantworten muss, um zu v
 
 ## Spiel
 ### Spielregeln
-> Um eine Millionen Euro zu gewinnen, muss man 15 verschiedene Fragen beantworten. Diese können aus allen möglichen Themengebieten sein. Bei der Beantwortung einer Frage hat man vier verschiedene und vorgegebene Antwortmöglichkeiten. Aus diesen muss man die richtige wählen. Falls man die Antwort nicht kennt und auch nicht raten möchte, hat man zur Unterstützung auch noch drei verschiedene Joker, welche man jeweils ein Mal einsetzen darf. Bei welcher Frage man dies macht, bleibt einem selbst überlassen. Man kann auch bei einer Frage mehrere Joker einsetzen.
+> Um eine Millionen Euro zu gewinnen, muss man 15 verschiedene Fragen beantworten. Diese können aus allen möglichen Themengebieten sein. Bei der Beantwortung einer Frage hat man vier verschiedene und vorgegebene Antwortmöglichkeiten. Aus diesen muss man die richtige wählen. Falls man die Antwort nicht kennt und auch nicht raten möchte, hat man zur Unterstützung auch noch drei verschiedene Joker, welche man jeweils ein Mal einsetzen darf. Bei welcher Frage man dies macht, bleibt einem selbst überlassen.
 
 > Wenn man nicht die richtige Antwort kennt und auch nicht raten möchte, kann man jederzeit aussteigen und erhält so das bis dahin erspielte Geld. Beantwortet man eine Frage falsch, fällt man auf einen festgelegten Betrag zurück und darf nur diesen mitnehmen.
 ### Spiel starten
