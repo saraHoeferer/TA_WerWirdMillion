@@ -1,7 +1,7 @@
 <component name="libraryTable">
-  <library name="Gradle: org.openjfx:javafx-fxml:win:16">
+  <library name="Gradle: org.openjfx:javafx-fxml:mac:16">
     <CLASSES>
-      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.openjfx/javafx-fxml/16/369f646fc29d2223cc98cfc3c059f2409b3e8fcb/javafx-fxml-16-win.jar!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.openjfx/javafx-fxml/16/7e4f07a331991485560673a398d6988cc805b67f/javafx-fxml-16-mac.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>
