@@ -7,7 +7,7 @@ Es ist ein Wissensspiel, wo man unterschiedliche Frage beantworten muss um zu ve
 ## Spiel
 ### Spiel starten
 Das Spiel würd über die Main Funktion in der "Game" Klasse gestartet (Rechtsklick auf main -> Run main)
-> public static void main(String[] args)
+`public static void main(String[] args)`
 
 ### Spiel spielen
 > Alle Eingaben für den Spielablauf folgen über die Tastatur. 
@@ -44,9 +44,9 @@ Wir haben 4 Klassen in unserem Programm
 - Joker: Reglt die Funktionen der einzelnen Joker
 - Game: Zuständig für die Erstellung des Fragen Arrays und den Spielablauf
 
-###Fragen
+### Fragen
 Unsere Fragen werden in einer JSON Datei gespeichert, die in der Game Klasse aufgerufen wird um dem Fragenarray zu erstellen.
 > Es kann vorkommen, dass man einige Frage nach mehreren Spieldurchgängen doppelt beanwortet. Wir haben in unserem JSON insgesamt 166 Fragem
 
-###JavaFX
+### JavaFX
 > Noch haben wir nicht begonnen ein graphisches Interface für unser Programm zu erstellen. Die HelloFX Klasse ist nur für Testzwecke da
