@@ -44,10 +44,10 @@ Man kann das Spiel am Anfang jeder Frage (außer der ersten) verlassen.
 ## Code
 ### Klassen
 Wir haben 4 Klassen in unserem Programm
-- Player: Regelt alle Eingabe des Spielers sowie die Ausgabe der Geldbeträge
-- Question: Zuständig für die Ausgabe der Frage, überprüfen der richtigen Antwort, verstecken von Antwortmöglichkeiten für den fifty-fifty Joker und für den Second Chance Joker
-- Joker: Regelt die Funktionen der einzelnen Joker
-- Game: Zuständig für die Erstellung des Fragen Arrays, Zuteilung der Fragen zu den jeweiligen Kategorien, Überprüfen der Joker (Used oder nicht?) und den Spielablauf
+- **Player**: Regelt alle Eingabe des Spielers sowie die Ausgabe der Geldbeträge
+- **Question**: Zuständig für die Ausgabe der Frage, überprüfen der richtigen Antwort, verstecken von Antwortmöglichkeiten für den fifty-fifty Joker und für den Second Chance Joker
+- **Joker**: Regelt die Funktionen der einzelnen Joker
+- **Game**: Zuständig für die Erstellung des Fragen Arrays, Zuteilung der Fragen zu den jeweiligen Kategorien, Überprüfen der Joker (Used oder nicht?) und den Spielablauf
 
 ### Fragen
 Unsere Fragen werden in einer JSON Datei gespeichert, die in der Game Klasse aufgerufen wird, um den Fragenarray zu erstellen. `private Question[] createQuestions()`
