@@ -4,13 +4,17 @@ import java.util.ArrayList;
 import java.util.Random;
 import java.util.Scanner;
 
+//Steuerung des Spiels
+
 public class Game {
+    //Instanzvariable und Konstruktor zum Einlesen der Eingabe von der Konsole
     private final Scanner scanIn;
 
     public Game() {
         this.scanIn = new Scanner(System.in);
     }
 
+    //Einbinden der Fragen mittels der Gson-Methode fromJson(), Rückgabe eines Question[]
     private Question[] createQuestions() throws IOException {
         Gson gson = new Gson();
         String dirPath = new File("").getAbsolutePath();
@@ -19,6 +23,8 @@ public class Game {
         return questions;
     }
 
+    //Rückgabe einer ArrayList<Question>, die jeweils die Fragen einer bestimmten Kategorie enthält
+    //die Fragen kommen aus dem Question[]
     public static ArrayList<Question> getQuestionCategory(Question[] questions, int category){
         ArrayList<Question> questionsCategory = new ArrayList<>();
         for(int i = 0; i < questions.length; i++){
@@ -29,6 +35,7 @@ public class Game {
         return questionsCategory;
     }
 
+    //Rückgabe einer zufällig ausgewählten Frage einer bestimmten Kategorie aus der ArrayList<Question>
     public static Question getQuestionFromCategory(ArrayList<Question> questionsCategory){
         Random random = new Random();
         int randomInt = random.nextInt(questionsCategory.size());
@@ -36,6 +43,9 @@ public class Game {
         return q1;
     }
 
+    /*Überprüfung, ob der gewählte Joker bereits verwendet worden ist, jeder Joker darf nur 1x ausgewählt werden
+    Wurde ein bereits verwendeter Joker nochmals gewählt, darf man nochmals einen oder keinen Joker wählen
+     */
     public static void checkJoker(Player p1, Joker fiftyFifty, Joker secondChance, Joker help, Question q1, Scanner scanIn) {
         if (p1.getAnswer() != 'k') {
             switch (p1.getAnswer()) {
@@ -74,6 +84,7 @@ public class Game {
         }
     }
 
+    //Steuerung des Spiels
     private void playGame(Player p1, Question[] questions) {
         Joker fiftyFifty = new Joker(1);
         Joker secondChance = new Joker(2);
@@ -81,44 +92,50 @@ public class Game {
         ArrayList<Question> gameQuestion;
 
         System.out.println("Willkommen bei Team Alphas 'Wer Wird Millionär'!");
-        //Spielablauf
+
+        //Frage der passenden Kategorie wird angezeigt, solange Kategorie 16 noch nicht gewonnen worden ist (s. while)
         do {
             gameQuestion = getQuestionCategory(questions, p1.getKategorie());
             Question q1 = getQuestionFromCategory(gameQuestion);
             q1.printQuestion();
 
+            //Auswahl des Jokers
             p1.chooseJoker(scanIn);
             checkJoker(p1, fiftyFifty, secondChance, help, q1, scanIn);
 
-            //Wegen Konsolenanwendung kann Spieler nur zu einem bestimmen Zeitpunkt Spiel beenden
+            /* Ab Kategorie 2 kann man das Spiel beenden und erhält den bisher gewonnenen Geldbetrag
+            Wegen Konsolenanwendung kann Spieler nur zu einem bestimmen Zeitpunkt Spiel beenden
+             */
             if (p1.getKategorie() > 1 && p1.leave(scanIn)) {
                     p1.printMoneyWon(true);
                     break;
             }
 
+            //Auswahl einer Antwort, Überprüfung auf Richtigkeit
             p1.makeGuess(scanIn);
 
-            if (!q1.checkAnswer(p1)){
-                if (q1.getSecondChance()){
+            if (!q1.checkAnswer(p1)){               //Antwort ist falsch
+                if (q1.getSecondChance()){          //SecondChance-Joker war gewählt worden, man darf nochmal wählen
                     System.out.println();
                     System.out.println("Das war leider nicht richtig. Probier's nochmal!");
                     p1.makeGuess(scanIn);
-                    if (!q1.checkAnswer(p1)) {
+                    if (!q1.checkAnswer(p1)) {      //Wieder falsche Antwort, verloren
                         q1.printCorrectAnswer();
                         p1.printMoneyWon(false);
                         break;
-                    } else {
+                    } else {                        //Zweite Antwort war richtig
                         p1.raiseCategory();
                         System.out.println();
                         System.out.println("Bravo du hast die Frage richtig beantwortet!");
                         p1.printMoney();
                     }
-                } else {
+                } else {                            //Antwort ist falsch ohne SecondChance Joker, verloren
+
                     q1.printCorrectAnswer();
                     p1.printMoneyWon(false);
                     break;
                 }
-            } else {
+            } else {                                //Antwort ist richtig, nächste Kategorie
                 p1.raiseCategory();
                 System.out.println();
                 System.out.println("Bravo du hast die Frage richtig beantwortet!");
