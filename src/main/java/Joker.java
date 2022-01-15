@@ -12,7 +12,7 @@ public class Joker {
         this.random = '\0'; //Zufallsvariable ist noch leer
     }
 
-    public boolean getUsed(){
+    public boolean getUsed() {
         return used;
     } //gibt true zurück, wenn Joker verwendet wurde
 
@@ -58,7 +58,7 @@ Wahrscheinlichkeiten für Telefonjoker
         return randomNumber;
     }
 
-    public char generateRandomWrongAnswer(Question q1){ //zufällig eine der 3 falschen Antworten ziehen
+    public char generateRandomWrongAnswer(Question q1) { //zufällig eine der 3 falschen Antworten ziehen
         random = getRandomChar();
         if (random != q1.getCorrect()) { //überprüfen ob gezogenes char mit correctAnswer nicht übereinstimmt
             random = getRandomChar(); //random ist also die Antwort des Telefonjokers
@@ -68,113 +68,85 @@ Wahrscheinlichkeiten für Telefonjoker
         return random;
     }
 
-    public void telephoneHelpMe(Question q1){
+    public void telephoneHelpMe(Question q1) {
         char givenAnswer; //Antwortmöglichkeit, die der Telefonjoker als Antwort gibt
-        if(q1.getCategory() < 6){ //Kategorie 1-5
-            if(generateRandomNumber() < 91){ //90% Wahrscheinlichkeit auf richtige Antwort
+        if (q1.getCategory() < 6) { //Kategorie 1-5
+            if (generateRandomNumber() < 91) { //90% Wahrscheinlichkeit auf richtige Antwort
                 givenAnswer = q1.getCorrect();
                 System.out.println("Susi: 'Ich bin mir zu 100 Prozent sicher, dass " + givenAnswer + " richtig ist.'");
-            }
-            else{
+            } else {
                 givenAnswer = generateRandomWrongAnswer(q1);
                 System.out.println("Susi: 'Ich bin mir nicht sicher. Ich glaube die Antwort ist " + givenAnswer + ".'");
             }
-        }
-
-        else if(q1.getCategory() < 8){ //Kategorie 6-7
-            if(generateRandomNumber() < 86){ //85% Wahrscheinlichkeit auf richtige Antwort
+        } else if (q1.getCategory() < 8) { //Kategorie 6-7
+            if (generateRandomNumber() < 86) { //85% Wahrscheinlichkeit auf richtige Antwort
                 givenAnswer = q1.getCorrect();
                 System.out.println("Chrisi: 'Das ist einfach! Die richtige Antwort ist " + givenAnswer + ".'");
-            }
-            else{
+            } else {
                 givenAnswer = generateRandomWrongAnswer(q1);
                 System.out.println("Chrisi: 'Ganz schön schwierig für den Anfang! " + givenAnswer + " könnte stimmen.'");
             }
-        }
-
-        else if(q1.getCategory() == 8){ //Kategorie 8
-            if(generateRandomNumber() < 81){ //80% Wahrscheinlichkeit auf richtige Antwort
+        } else if (q1.getCategory() == 8) { //Kategorie 8
+            if (generateRandomNumber() < 81) { //80% Wahrscheinlichkeit auf richtige Antwort
                 givenAnswer = q1.getCorrect();
                 System.out.println("Sophia: 'Wenn mich nicht alles täuscht, sollte " + givenAnswer + " stimmen.'");
-            }
-            else{
+            } else {
                 givenAnswer = generateRandomWrongAnswer(q1);
                 System.out.println("Sophia: 'Wissen tu ich es nicht, aber ich tendiere zu " + givenAnswer + ".'");
             }
-        }
-
-        else if(q1.getCategory() == 9){ //Kategorie 9
-            if(generateRandomNumber() < 78){ //77% Wahrscheinlichkeit auf richtige Antwort
+        } else if (q1.getCategory() == 9) { //Kategorie 9
+            if (generateRandomNumber() < 78) { //77% Wahrscheinlichkeit auf richtige Antwort
                 givenAnswer = q1.getCorrect();
                 System.out.println("Taha: 'Das hab ich letztens erst wieder gelesen! Antwort " + givenAnswer + " ist richtig.'");
-            }
-            else{
+            } else {
                 givenAnswer = generateRandomWrongAnswer(q1);
                 System.out.println("Taha: 'Das ist eine gute Frage... Ich würde " + givenAnswer + " nehmen - ohne Garantie!'");
             }
-        }
-
-        else if(q1.getCategory() == 10){ //Kategorie 10
-            if(generateRandomNumber() < 76){ //75% Wahrscheinlichkeit auf richtige Antwort
+        } else if (q1.getCategory() == 10) { //Kategorie 10
+            if (generateRandomNumber() < 76) { //75% Wahrscheinlichkeit auf richtige Antwort
                 givenAnswer = q1.getCorrect();
                 System.out.println("Sara: 'Ich glaube, dass " + givenAnswer + " die richtige Antwort ist.'");
-            }
-            else{
+            } else {
                 givenAnswer = generateRandomWrongAnswer(q1);
                 System.out.println("Sara: 'Ich weiß es leider nicht. Tippen würde ich aber auf " + givenAnswer + ".'");
             }
-        }
-
-        else if(q1.getCategory() == 11){ //Kategorie 11
-            if(generateRandomNumber() < 74){ //73% Wahrscheinlichkeit auf richtige Antwort
+        } else if (q1.getCategory() == 11) { //Kategorie 11
+            if (generateRandomNumber() < 74) { //73% Wahrscheinlichkeit auf richtige Antwort
                 givenAnswer = q1.getCorrect();
                 System.out.println("Susi: 'Mit hoher Wahrscheinlichkeit ist " + givenAnswer + " die richtige Antwort.'");
-            }
-            else{
+            } else {
                 givenAnswer = generateRandomWrongAnswer(q1);
                 System.out.println("Susi: 'Schwierige Frage. Ich bin mir nicht sehr sicher, würde aber " + givenAnswer + " nehmen.'");
             }
-        }
-
-        else if(q1.getCategory() == 12){ //Kategorie 12
-            if(generateRandomNumber() < 71){ //70% Wahrscheinlichkeit auf richtige Antwort
+        } else if (q1.getCategory() == 12) { //Kategorie 12
+            if (generateRandomNumber() < 71) { //70% Wahrscheinlichkeit auf richtige Antwort
                 givenAnswer = q1.getCorrect();
                 System.out.println("Chrisi: 'Ich glaube, dass die richtige Antwort " + givenAnswer + " ist.'");
-            }
-            else{
+            } else {
                 givenAnswer = generateRandomWrongAnswer(q1);
                 System.out.println("Chrisi: '" + givenAnswer + " wäre mein Tipp. Aber wissen tu ich es leider nicht.'");
             }
-        }
-
-        else if(q1.getCategory() == 13){ //Kategorie 13
-            if(generateRandomNumber() < 67){ //66% Wahrscheinlichkeit auf richtige Antwort
+        } else if (q1.getCategory() == 13) { //Kategorie 13
+            if (generateRandomNumber() < 67) { //66% Wahrscheinlichkeit auf richtige Antwort
                 givenAnswer = q1.getCorrect();
                 System.out.println("Sophia: 'Ich bin mir recht sicher, dass " + givenAnswer + " richtig ist.");
-            }
-            else{
+            } else {
                 givenAnswer = generateRandomWrongAnswer(q1);
                 System.out.println("Sophia: '" + givenAnswer + " könnte die richtige Antwort sein. Ich bin mir aber leider nicht sicher.'");
             }
-        }
-
-        else if(q1.getCategory() == 14){ //Kategorie 14
-            if(generateRandomNumber() < 62){ //61% Wahrscheinlichkeit auf richtige Antwort
+        } else if (q1.getCategory() == 14) { //Kategorie 14
+            if (generateRandomNumber() < 62) { //61% Wahrscheinlichkeit auf richtige Antwort
                 givenAnswer = q1.getCorrect();
                 System.out.println("Taha: 'Eine echt schwierige Frage, aber die richtige Antwort sollte " + givenAnswer + " sein.'");
-            }
-            else{
+            } else {
                 givenAnswer = generateRandomWrongAnswer(q1);
                 System.out.println("Taha: 'Ich weiß es nicht, würde aber auf " + givenAnswer + " tippen.'");
             }
-        }
-
-        else if(q1.getCategory() == 15){ //Kategorie 15
-            if(generateRandomNumber() < 56){ //55% Wahrscheinlichkeit auf richtige Antwort
+        } else if (q1.getCategory() == 15) { //Kategorie 15
+            if (generateRandomNumber() < 56) { //55% Wahrscheinlichkeit auf richtige Antwort
                 givenAnswer = q1.getCorrect();
                 System.out.println("Sara: 'Ich bin mir nicht ganz sicher, glaube aber, dass Antwort " + givenAnswer + " richtig ist.'");
-            }
-            else{
+            } else {
                 givenAnswer = generateRandomWrongAnswer(q1);
                 System.out.println("Sara: 'Ich tippe zwar auf " + givenAnswer + ", würde aber an deiner Stelle lieber das Geld nehmen.'");
             }

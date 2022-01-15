@@ -57,10 +57,12 @@ public class Question {
         return correct;
     }
 
-    public boolean getSecondChance(){ return secondChance; }
+    public boolean getSecondChance() {
+        return secondChance;
+    }
 
     //Methoden
-    public void changeSecondChance(){
+    public void changeSecondChance() {
         this.secondChance = true;
     }
 

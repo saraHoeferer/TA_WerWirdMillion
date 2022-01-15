@@ -22,7 +22,7 @@
         "a": "einfältig",
         "b": "limitiert",
         "c": "doof",
-        "d": "unterbilichtet",
+        "d": "unterbelichtet",
         "correct": "b",
         "category": "3"
     },
@@ -31,7 +31,7 @@
         "a": "Groatien",
         "b": "Grefeld",
         "c": "Grakau",
-        "d": "Great",
+        "d": "Greta",
         "correct": "d",
         "category": "4"
     },
@@ -63,7 +63,7 @@
         "category": "7"
     },
      {
-        "question": "Von welchen laut Deutschem Tiefkühlinstitut nur tiefgefroren erhältlichen Produkt isst der Deutsche im Schnitt 24 Stück pro Jahr?",
+        "question": "Von welchen laut deutschem Tiefkühlinstitut nur tiefgefroren erhältlichen Produkt isst der Deutsche im Schnitt 24 Stück pro Jahr?",
         "a": "Fischstäbchen",
         "b": "Salami-Pizzen",
         "c": "Pommes frites",
@@ -118,7 +118,7 @@
     },
      {
         "question": "Wovon ist betroffen, wer unter Daltonismus leidet?",
-        "a": "Farbenblindhiet",
+        "a": "Farbenblindheit",
         "b": "Pollenallergie",
         "c": "Schluckauf",
         "d": "Migräne",
@@ -172,7 +172,7 @@
 
     },
     {
-        "question": "Offenbar zählen sowhol der FBI- als auch der Facebook-Chef zur wachsenden Gemeinde der Computer-User, die ihre ...?",
+        "question": "Offenbar zählen sowohl der FBI- als auch der Facebook-Chef zur wachsenden Gemeinde der Computer-User, die ihre ...?",
         "a": "Tastaturen unlesbar mache",
         "b": "Webcams abkleben",
         "c": "Mäuse anketten",
@@ -208,7 +208,7 @@
         "category": "8"
     },
     {
-        "question": "An welchem Gerät findet man häufig einen Objetivrevolver?",
+        "question": "An welchem Gerät findet man häufig einen Objektivrevolver?",
         "a": "DVD-Player",
         "b": "Mikroskop",
         "c": "Wagenheber",
@@ -227,10 +227,10 @@
     },
     {
         "question": "Welche 1911 von August von Trott zu Solz in Preußen eingeführte Regelung ist auch heute noch weit verbreitet?",
-        "a": "Schaltjahr: 366 Tage",
-        "b": "Arbeitswoche: 35 Stunden",
-        "c": "Schulstunde: 45 Minuten",
-        "d": "Bundesliga: 15:30",
+        "a": "Schaltjahr - 366 Tage",
+        "b": "Arbeitswoche - 35 Stunden",
+        "c": "Schulstunde - 45 Minuten",
+        "d": "Bundesliga - 15:30",
         "correct": "c",
         "category": "11"
     },
@@ -307,7 +307,7 @@
         "category": "4"
     },
     {
-        "question": "Wer behauptet in einem Nr. 1 Hit: 'meine ligaschlanken Waden san a Wahnsinn für die Madln'?",
+        "question": "Wer behauptet in einem Nr. 1 Hit: 'meine gigaschlanken Waden san a Wahnsinn für die Madln'?",
         "a": "Sepp aus Kärnten",
         "b": "Xaver aus Bayern",
         "c": "Anton aus Tirol",
@@ -379,7 +379,7 @@
         "category": "12"
     },
     {
-        "question": "Die Hauptstädte wievieler EU-Staaten befinden sich genau eine Zeitzone weiter westlich als Berlin?",
+        "question": "Die Hauptstädte wie vieler EU-Staaten befinden sich genau eine Zeitzone weiter westlich als Berlin?",
         "a": "keine",
         "b": "eine",
         "c": "zwei",
@@ -578,10 +578,10 @@
     },
       {
         "question": "Für wen ich Sympathien hege, dem bin ich ...?",
-        "a": "geprüuft",
+        "a": "geprüft",
         "b": "gemessen",
         "c": "gezählt",
-        "d": "gezählt",
+        "d": "gewogen",
         "correct": "d",
         "category": "5"
     },
@@ -622,7 +622,7 @@
         "category": "9"
     },
       {
-        "question": "Wen sieht man total blau in der Realverfilmung von Disneys 'Alladin'",
+        "question": "Wen sieht man total blau in der Realverfilmung von Disneys 'Aladdin'",
         "a": "Will Smith",
         "b": "Robert Downey Jr.",
         "c": "Bryan Cranston",
@@ -635,7 +635,7 @@
         "a": "Hybridlücke",
         "b": "Dieselschlitz",
         "c": "Turboloch",
-        "d": "Enspritzspalt",
+        "d": "Einspritzspalt",
         "correct": "c",
         "category": "11"
     },
@@ -667,7 +667,7 @@
         "category": "14"
     },
       {
-        "question": "Wie viele Kilometer ist man dem Ermittelpunkt am Nordpol näher als am Äquator?",
+        "question": "Wie viele Kilometer ist man dem Erdmittelpunkt am Nordpol näher als am Äquator?",
         "a": "ca. 2 km",
         "b": "etwas mehr als 20 km",
         "c": "rund 200 km",
@@ -696,7 +696,7 @@
       {
         "question": "Steht der 'Ice Age'-Held Manni vor Gericht, kommt es sozusagen zu einem ...?",
         "a": "Grundsatz-Urteil",
-        "b": "Präsidenz-Fall",
+        "b": "Präzedenz-Fall",
         "c": "Mammut-Prozess",
         "d": "Eil-Verfahren",
         "correct": "c",
@@ -739,7 +739,7 @@
         "category": "7"
     },
       {
-        "question": "Liest man im Rezept 'Schale kreuzweise einhitzen und dann 20 Minuten in den Ofen', so geht es wohl um die Zubereitung von ...?",
+        "question": "Liest man im Rezept 'Schale kreuzweise einritzen und dann 20 Minuten in den Ofen', so geht es wohl um die Zubereitung von ...?",
         "a": "Esskastanien",
         "b": "Hokkaido-Kürbissen",
         "c": "Birne Helene",
@@ -814,7 +814,7 @@
         "question": "Vor welchem 'Sturm' wird im Wetterbericht wohl kaum gewarnt?",
         "a": "Schneesturm",
         "b": "Wirbelsturm",
-        "c": "Herbssturm",
+        "c": "Herbststurm",
         "d": "Aussichtsturm",
         "correct": "d",
         "category": "1"
@@ -938,7 +938,7 @@
         "category": "14"
     },
      {
-        "question": "Wer Anfang 2020 jeweils gut 1.400 Euro in 'Känguru', 'Buffalo' oder 'Wiener Philharmoniker' investierte, kaufte  namenhafte ...?",
+        "question": "Wer Anfang 2020 jeweils gut 1.400 Euro in 'Känguru', 'Buffalo' oder 'Wiener Philharmoniker' investierte, kaufte  namhafte ...?",
         "a": "Herrenschuhe",
         "b": "Rotweine",
         "c": "Goldmünzen",
@@ -956,7 +956,7 @@
         "category": "7"
     },
     {
-        "question": "Wird schon die letzte Strophe gesungen, ist man blad am Ende des ... ?",
+        "question": "Wird schon die letzte Strophe gesungen, ist man bald am Ende des ... ?",
         "a": "Scheffield",
         "b": "Nottinghämm",
         "c": "Brisstel",
@@ -1073,7 +1073,7 @@
         "category": "14"
     },
     {
-        "question": "Was war hierzulande kein Nr.-1-Hit, ale es Michael Jackson mit 'Billie Jean','Beat it' und 'Black Or White' jeweils auf die 2 schaffte?",
+        "question": "Was war hierzulande kein Nr.-1-Hit, als es Michael Jackson mit 'Billie Jean','Beat it' und 'Black Or White' jeweils auf die 2 schaffte?",
         "a": "Too Shy",
         "b": "Lambada",
         "c": "Juliet",
@@ -1103,7 +1103,7 @@
         "question": "Hat jemand einen Hausschuh in der Hand, kann man sagen, dass er den ... ?",
         "a": "Schlapp schwantz",
         "b": "Heul suhse",
-        "c": "Warm duuscher",
+        "c": "Warm duscher",
         "d": "Pantoffel hält",
         "correct": "d",
         "category": "2"
@@ -1174,7 +1174,7 @@
     {
         "question": "Was ist einer aktuellen Vergleichsstudie zufolge im Alter hierzulande bei Männern im Schnitt etwa doppelt so hoch wie bei Frauen?",
         "a": "Blutdruck",
-        "b": "Renteinkommen",
+        "b": "Renteneinkommen",
         "c": "Fernsehkonsum",
         "d": "Demenz-Risiko",
         "correct": "b",
@@ -1199,7 +1199,7 @@
         "category": "12"
     },
     {
-        "question": "In Katalonien schenken sich Liebende am 23. April, dem Feiertag Sant Jordi,tradionell ...?",
+        "question": "In Katalonien schenken sich Liebende am 23. April, dem Feiertag Sant Jordi, traditionell ...?",
         "a": "Bücher und Rosen",
         "b": "Teller und Tulpen",
         "c": "Wein und Narzissen",
@@ -1208,7 +1208,7 @@
         "category": "13"
     },
     {
-        "question": "Was legte der deutsche Staatbürger Bahtiyar Duysak im November 2017 für 11 Minuten lahm?",
+        "question": "Was legte der deutsche Staatsbürger Bahtiyar Duysak im November 2017 für 11 Minuten lahm?",
         "a": "Trumps Twitter-Account",
         "b": "Hamburger U-Bahnverkehr",
         "c": "Stromversorgung in Moskau",
@@ -1221,7 +1221,7 @@
         "a": "Rathäuser",
         "b": "Pfarrgemeinden",
         "c": "Finanzämter",
-        "d": "Postfillialen",
+        "d": "Postfilialen",
         "correct": "c",
         "category": "15"
     },

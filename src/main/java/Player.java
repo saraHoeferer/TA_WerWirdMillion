@@ -4,13 +4,13 @@ public class Player {
     //private Klassenvariablen
     private char answer;
     private int money;
-    private int kategorie;
+    private int category;
 
     //Konstruktor
     public Player() {
         this.answer = '\0';
         this.money = 0;
-        this.kategorie = 1;
+        this.category = 1;
     }
 
     //Gettermethode für Antwort
@@ -19,8 +19,8 @@ public class Player {
     }
 
     //Gettermethode um Kategorie zu bekommen
-    public int getKategorie(){
-        return kategorie;
+    public int getCategory() {
+        return category;
     }
 
     //Methode um eine Antwortmöglichkeit einzugeben
@@ -46,7 +46,7 @@ public class Player {
     public boolean leave(Scanner scanIn) {
         answer = '\0';
         while (answer != 'y' && answer != 'n') {
-            System.out.print("Möchtest du das Spiel beenden? (y) - Ja, (n) - Nein:");
+            System.out.print("\nMöchtest du das Spiel beenden? (y) - Ja, (n) - Nein:");
             answer = scanIn.next().charAt(0);
         }
         return answer == 'y';
@@ -54,12 +54,12 @@ public class Player {
 
     //Methode um die Kategorie nach jeder Frage um eins zu erhöhen
     public void raiseCategory() {
-        kategorie++;
+        category++;
     }
 
     //Methode um aus Kategorie den Geldbetrag zu ermitteln
     public void switchMoney() {
-        switch (kategorie) { //Kategorie wird geswitched
+        switch (category) { //Kategorie wird geswitched
             case 2:
                 money = 50;
                 break;
@@ -120,13 +120,13 @@ public class Player {
     //Methode um Geld nach Ende des Spiels auszugeben
     public void printMoneyWon(boolean leave) {
         System.out.println();
-        if (leave){
+        if (leave) {
             System.out.println("Du hast " + money + "€ gewonnen!");
-        } else if (kategorie < 6) { //wenn du eine Frage falsch beantwortet hast und nicht weiter als Kategorie 4 gekommen bist
+        } else if (category < 6) { //wenn du eine Frage falsch beantwortet hast und nicht weiter als Kategorie 4 gekommen bist
             System.out.println("Du hast 0€ gewonnen!");
-        } else if (kategorie < 11) { //wenn du eine Frage falsch beantwortet hast und nicht weiter als Kategorie 9 gekommen bist
+        } else if (category < 11) { //wenn du eine Frage falsch beantwortet hast und nicht weiter als Kategorie 9 gekommen bist
             System.out.println("Du hast 500€ gewonnen!");
-        } else if (kategorie >= 11) { //wenn du eine Frage falsch beantwortet hast und höher als Kategorie 10 warst
+        } else if (category >= 11) { //wenn du eine Frage falsch beantwortet hast und höher als Kategorie 10 warst
             System.out.println("Du hast 16000€ gewonnen!");
         }
     }

@@ -1,4 +1,5 @@
 import com.google.gson.Gson;
+
 import java.io.*;
 import java.util.ArrayList;
 import java.util.Random;
@@ -25,10 +26,10 @@ public class Game {
 
     //Rückgabe einer ArrayList<Question>, die jeweils die Fragen einer bestimmten Kategorie enthält
     //die Fragen kommen aus dem Question[]
-    public static ArrayList<Question> getQuestionCategory(Question[] questions, int category){
+    public static ArrayList<Question> getQuestionCategory(Question[] questions, int category) {
         ArrayList<Question> questionsCategory = new ArrayList<>();
-        for(int i = 0; i < questions.length; i++){
-            if(questions[i].getCategory() == category){
+        for (int i = 0; i < questions.length; i++) {
+            if (questions[i].getCategory() == category) {
                 questionsCategory.add(questions[i]);
             }
         }
@@ -36,7 +37,7 @@ public class Game {
     }
 
     //Rückgabe einer zufällig ausgewählten Frage einer bestimmten Kategorie aus der ArrayList<Question>
-    public static Question getQuestionFromCategory(ArrayList<Question> questionsCategory){
+    public static Question getQuestionFromCategory(ArrayList<Question> questionsCategory) {
         Random random = new Random();
         int randomInt = random.nextInt(questionsCategory.size());
         Question q1 = questionsCategory.get(randomInt);
@@ -50,28 +51,28 @@ public class Game {
         if (p1.getAnswer() != 'k') {
             switch (p1.getAnswer()) {
                 case 'f':
-                    if(!fiftyFifty.getUsed()) {
+                    if (!fiftyFifty.getUsed()) {
                         fiftyFifty.useJoker(q1);
                     } else {
-                        System.out.println("Du hast diesen Joker bereits verwendet");
+                        System.out.println("Du hast diesen Joker bereits verwendet\n");
                         p1.chooseJoker(scanIn);
                         checkJoker(p1, fiftyFifty, secondChance, help, q1, scanIn);
                     }
                     break;
                 case 's':
-                    if(!secondChance.getUsed()) {
+                    if (!secondChance.getUsed()) {
                         secondChance.useJoker(q1);
                     } else {
-                        System.out.println("Du hast diesen Joker bereits verwendet");
+                        System.out.println("Du hast diesen Joker bereits verwendet\n");
                         p1.chooseJoker(scanIn);
                         checkJoker(p1, fiftyFifty, secondChance, help, q1, scanIn);
                     }
                     break;
                 case 'h':
-                    if(!help.getUsed()) {
+                    if (!help.getUsed()) {
                         help.useJoker(q1);
                     } else {
-                        System.out.println("Du hast diesen Joker bereits verwendet");
+                        System.out.println("Du hast diesen Joker bereits verwendet\n");
                         p1.chooseJoker(scanIn);
                         checkJoker(p1, fiftyFifty, secondChance, help, q1, scanIn);
                     }
@@ -95,7 +96,7 @@ public class Game {
 
         //Frage der passenden Kategorie wird angezeigt, solange Kategorie 16 noch nicht gewonnen worden ist (s. while)
         do {
-            gameQuestion = getQuestionCategory(questions, p1.getKategorie());
+            gameQuestion = getQuestionCategory(questions, p1.getCategory());
             Question q1 = getQuestionFromCategory(gameQuestion);
             q1.printQuestion();
 
@@ -106,16 +107,17 @@ public class Game {
             /* Ab Kategorie 2 kann man das Spiel beenden und erhält den bisher gewonnenen Geldbetrag
             Wegen Konsolenanwendung kann Spieler nur zu einem bestimmen Zeitpunkt Spiel beenden
              */
-            if (p1.getKategorie() > 1 && p1.leave(scanIn)) {
-                    p1.printMoneyWon(true);
-                    break;
+            if (p1.getCategory() > 1 && p1.leave(scanIn)) {
+                q1.printCorrectAnswer();
+                p1.printMoneyWon(true);
+                break;
             }
 
             //Auswahl einer Antwort, Überprüfung auf Richtigkeit
             p1.makeGuess(scanIn);
 
-            if (!q1.checkAnswer(p1)){               //Antwort ist falsch
-                if (q1.getSecondChance()){          //SecondChance-Joker war gewählt worden, man darf nochmal wählen
+            if (!q1.checkAnswer(p1)) {               //Antwort ist falsch
+                if (q1.getSecondChance()) {          //SecondChance-Joker war gewählt worden, man darf nochmal wählen
                     System.out.println();
                     System.out.println("Das war leider nicht richtig. Probier's nochmal!");
                     p1.makeGuess(scanIn);
@@ -141,9 +143,9 @@ public class Game {
                 System.out.println("Bravo du hast die Frage richtig beantwortet!");
                 p1.printMoney();
             }
-        } while (p1.getKategorie() != 16);
+        } while (p1.getCategory() != 16);
 
-        if (p1.getKategorie() == 16){
+        if (p1.getCategory() == 16) {
             System.out.println();
             System.out.println("Gratulation du hast 1.000.000€ gewonnen. Du bist ein Millionär");
         }
