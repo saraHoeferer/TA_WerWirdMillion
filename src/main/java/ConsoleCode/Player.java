@@ -1,3 +1,5 @@
+package ConsoleCode;
+
 import java.util.Scanner;
 
 public class Player {
@@ -23,6 +25,8 @@ public class Player {
         return category;
     }
 
+    public int getMoney() {return money;}
+
     //Methode um eine Antwortmöglichkeit einzugeben
     public void makeGuess(Scanner scanIn) {
         answer = '\0';
@@ -32,8 +36,11 @@ public class Player {
         }
     }
 
+    public void changeCategory(int currenCategory){
+        category = currenCategory;
+    }
 
-    //Methode zur Abfrage nach Joker
+    //Methode zur Abfrage nach ConsoleCode.Joker
     public void chooseJoker(Scanner scanIn) {
         answer = '\0';
         while (answer != 'f' && answer != 'h' && answer != 's' && answer != 'k') {
@@ -112,22 +119,24 @@ public class Player {
     }
 
     //Methode um das Geld nach jeder Frage bezüglich der Kategorie auf Konsole auszugeben
-    public void printMoney() {
+    public String printMoney() {
         this.switchMoney();
-        System.out.println("Du stehst bei " + money + "€!");
+        String moneyWon = "Du stehst bei " + money + " Euro!";
+        return moneyWon;
     }
 
     //Methode um Geld nach Ende des Spiels auszugeben
-    public void printMoneyWon(boolean leave) {
-        System.out.println();
+    public String printMoneyWon(boolean leave) {
+        String moneyWon = "";
         if (leave) {
-            System.out.println("Du hast " + money + "€ gewonnen!");
+            moneyWon = "Du hast " + money + "Euro gewonnen!";
         } else if (category < 6) { //wenn du eine Frage falsch beantwortet hast und nicht weiter als Kategorie 4 gekommen bist
-            System.out.println("Du hast 0€ gewonnen!");
+            moneyWon = "Du hast 0 Euro gewonnen!";
         } else if (category < 11) { //wenn du eine Frage falsch beantwortet hast und nicht weiter als Kategorie 9 gekommen bist
-            System.out.println("Du hast 500€ gewonnen!");
+            moneyWon = "Du hast 500 Euro gewonnen!";
         } else if (category >= 11) { //wenn du eine Frage falsch beantwortet hast und höher als Kategorie 10 warst
-            System.out.println("Du hast 16000€ gewonnen!");
+            moneyWon = "Du hast 16000 Euro gewonnen!";
         }
+        return moneyWon;
     }
 }

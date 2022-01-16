@@ -1,6 +1,6 @@
 package ConsoleCode;
-import com.google.gson.Gson;
 
+import com.google.gson.Gson;
 
 import java.io.*;
 import java.nio.charset.StandardCharsets;
@@ -18,25 +18,18 @@ public class Game {
         this.scanIn = new Scanner(System.in);
     }
 
-    //Einbinden der Fragen mittels der Gson-Methode fromJson(), Rückgabe eines Question[]
-    /*private Question[] createQuestions() throws IOException {
+    //Einbinden der Fragen mittels der Gson-Methode fromJson(), Rückgabe eines ConsoleCode.Question[]
+    public Question[] createQuestions() throws IOException {
         Gson gson = new Gson();
         String dirPath = new File("").getAbsolutePath();
         dirPath += "\\questions.json";
-        Question[] questions = gson.fromJson(new FileReader(dirPath), Question[].class);
+        Question[] questions = gson.fromJson(new FileReader(dirPath, StandardCharsets.UTF_8), Question[].class);
         return questions;
     }
 
-     */
-    public Question[] createQuestions() throws IOException {
-        Gson gson = new Gson();
-        Question[] questions = gson.fromJson(new FileReader("/Users/susikloss/IdeaProjects/TA_WerWirdMillion/questions.json", StandardCharsets.UTF_8), Question[].class);
-        return questions;
-    }
-
-    //Rückgabe einer ArrayList<Question>, die jeweils die Fragen einer bestimmten Kategorie enthält
-    //die Fragen kommen aus dem Question[]
-    public static ArrayList<Question> getQuestionCategory(Question[] questions, int category) {
+    //Rückgabe einer ArrayList<ConsoleCode.Question>, die jeweils die Fragen einer bestimmten Kategorie enthält
+    //die Fragen kommen aus dem ConsoleCode.Question[]
+    public ArrayList<Question> getQuestionCategory(Question[] questions, int category) {
         ArrayList<Question> questionsCategory = new ArrayList<>();
         for (int i = 0; i < questions.length; i++) {
             if (questions[i].getCategory() == category) {
@@ -46,16 +39,16 @@ public class Game {
         return questionsCategory;
     }
 
-    //Rückgabe einer zufällig ausgewählten Frage einer bestimmten Kategorie aus der ArrayList<Question>
-    public static Question getQuestionFromCategory(ArrayList<Question> questionsCategory) {
+    //Rückgabe einer zufällig ausgewählten Frage einer bestimmten Kategorie aus der ArrayList<ConsoleCode.Question>
+    public Question getQuestionFromCategory(ArrayList<Question> questionsCategory) {
         Random random = new Random();
         int randomInt = random.nextInt(questionsCategory.size());
         Question q1 = questionsCategory.get(randomInt);
         return q1;
     }
 
-    /*Überprüfung, ob der gewählte Joker bereits verwendet worden ist, jeder Joker darf nur 1x ausgewählt werden
-    Wurde ein bereits verwendeter Joker nochmals gewählt, darf man nochmals einen oder keinen Joker wählen
+    /*Überprüfung, ob der gewählte ConsoleCode.Joker bereits verwendet worden ist, jeder ConsoleCode.Joker darf nur 1x ausgewählt werden
+    Wurde ein bereits verwendeter ConsoleCode.Joker nochmals gewählt, darf man nochmals einen oder keinen ConsoleCode.Joker wählen
      */
     public static void checkJoker(Player p1, Joker fiftyFifty, Joker secondChance, Joker help, Question q1, Scanner scanIn) {
         if (p1.getAnswer() != 'k') {
@@ -127,7 +120,7 @@ public class Game {
             p1.makeGuess(scanIn);
 
             if (!q1.checkAnswer(p1)) {               //Antwort ist falsch
-                if (q1.getSecondChance()) {          //SecondChance-Joker war gewählt worden, man darf nochmal wählen
+                if (q1.getSecondChance()) {          //SecondChance-ConsoleCode.Joker war gewählt worden, man darf nochmal wählen
                     System.out.println();
                     System.out.println("Das war leider nicht richtig. Probier's nochmal!");
                     p1.makeGuess(scanIn);
@@ -141,7 +134,7 @@ public class Game {
                         System.out.println("Bravo du hast die Frage richtig beantwortet!");
                         p1.printMoney();
                     }
-                } else {                            //Antwort ist falsch ohne SecondChance Joker, verloren
+                } else {                            //Antwort ist falsch ohne SecondChance ConsoleCode.Joker, verloren
 
                     q1.printCorrectAnswer();
                     p1.printMoneyWon(false);
