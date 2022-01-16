@@ -25,6 +25,8 @@ public class Player {
         return category;
     }
 
+    public int getMoney() {return money;}
+
     //Methode um eine Antwortmöglichkeit einzugeben
     public void makeGuess(Scanner scanIn) {
         answer = '\0';
@@ -34,6 +36,9 @@ public class Player {
         }
     }
 
+    public void changeCategory(int currenCategory){
+        category = currenCategory;
+    }
 
     //Methode zur Abfrage nach ConsoleCode.Joker
     public void chooseJoker(Scanner scanIn) {

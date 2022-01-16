@@ -18,6 +18,9 @@ public class Joker {
         return used;
     } //gibt true zurück, wenn ConsoleCode.Joker verwendet wurde
 
+    public void changeUsed(){
+        used = true;
+    }
     public static char getRandomChar() { //wählt aus den 4 Antwortmöglichkeiten einen Buchstaben aus; Rückgabewert ist char nicht int
         Random random = new Random();
         char randomChar = (char) (random.nextInt(4) + 'a'); //aus 4 aufeinanderfolgenden chars a, b, c, d ein char zufällig ziehen

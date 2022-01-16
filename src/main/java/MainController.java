@@ -2,28 +2,12 @@ import ConsoleCode.Game;
 import ConsoleCode.Joker;
 import ConsoleCode.Player;
 import ConsoleCode.Question;
-import com.google.gson.Gson;
-import javafx.animation.PauseTransition;
-import javafx.animation.Timeline;
-import javafx.application.Application;
-import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.input.MouseEvent;
-import javafx.scene.paint.Color;
-import javafx.util.Duration;
-
-import java.io.File;
-import java.io.FileReader;
 import java.io.IOException;
-import java.nio.charset.StandardCharsets;
-import java.util.Random;
-import java.util.concurrent.Executor;
-import java.util.concurrent.Executors;
-import java.util.concurrent.ScheduledExecutorService;
-import java.util.concurrent.TimeUnit;
 
 public class MainController {
     @FXML
@@ -51,57 +35,64 @@ public class MainController {
     private Button buttonTelephone;
 
     @FXML
-    private Label money1;
+    private Label labelCat1;
 
     @FXML
-    private Label money2;
+    private Label labelCat2;
 
     @FXML
-    private Label money3;
+    private Label labelCat3;
 
     @FXML
-    private Label money4;
+    private Label labelCat4;
 
     @FXML
-    private Label money5;
+    private Label labelCat5;
 
     @FXML
-    private Label money6;
+    private Label labelCat6;
 
     @FXML
-    private Label money7;
+    private Label labelCat7;
 
     @FXML
-    private Label money8;
+    private Label labelCat8;
 
     @FXML
-    private Label money9;
+    private Label labelCat9;
 
     @FXML
-    private Label money10;
+    private Label labelCat10;
 
     @FXML
-    private Label money11;
+    private Label labelCat11;
 
     @FXML
-    private Label money12;
+    private Label labelCat12;
 
     @FXML
-    private Label money13;
+    private Label labelCat13;
 
     @FXML
-    private Label money14;
+    private Label labelCat14;
 
     @FXML
-    private Label money15;
+    private Label labelCat15;
 
-    private Game currentGame = new Game();
+    @FXML
+    private Label labelOutput;
+
+    @FXML
+    private Button buttonLeave;
+
+    private final Game currentGame = new Game();
     private Question[] questions;
     private Question currentQuestion;
-    private Player currentPlayer = new Player();
-    private Joker fiftyFifty = new Joker(1);
-    private Joker telephone = new Joker(3);
-    private PauseTransition delay = new PauseTransition(Duration.seconds(5));
+    private final Player currentPlayer = new Player();
+    private final Joker fiftyFifty = new Joker(1);
+    private final Joker secondChance = new Joker(2);
+    private final Joker telephone = new Joker(3);
+    private boolean left;
 
     @FXML
     private void initialize() {
@@ -111,39 +102,40 @@ public class MainController {
             e.printStackTrace();
         }
         makeNextQuestion();
-
-//        ConsoleCode.Question q1 = new ConsoleCode.Question("Da es keinen wolligen Pelz trägt, hat es wenig Sinn, wenn ich das ...?", 5, "Hummer zange", "Fischer messer", "Geflügel schere","Eier löffel", 'c');
-//        labelQ.setText(q1.getQuestion());
-//        buttonA.setText("a: " + q1.getA());
-//        buttonB.setText("b: " + q1.getB());
-//        buttonC.setText("c: " + q1.getC());
-//        buttonD.setText("d: " + q1.getD());
     }
 
     @FXML
-    private void actionPerformed(ActionEvent e) throws InterruptedException {
+    private void actionPerformed(ActionEvent e){
         String buttonName = ((Button)e.getSource()).getId();
         char fieldName = Character.toLowerCase(buttonName.charAt(buttonName.length()-1));
         if(fieldName == currentQuestion.getCorrect()){
             changeCategory(currentPlayer.getCategory());
-            ((Button)e.getSource()).setStyle("-fx-background-color: #9aff9a");
+            // ((Button) e.getSource()).setStyle("-fx-background-color: #36f546");
+            if(currentQuestion.getSecondChance()){
+                currentQuestion.chamgeSecondChanceBack();
+            }
+            if(currentPlayer.getCategory() == 15){
+                labelCat14.setStyle("-fx-background-color: #ffffff");
+                labelCat15.setStyle("-fx-background-color: #ffd447");
+                labelQ.setText("Herzlichen Glueckwunsch! Du bist jetzt ein Millionaer."); //Umlaute funktionieren bei setText nicht...
+                labelQ.setStyle("-fx-text-fill: #ff5900; -fx-font-weight: bold");
+            }
             currentPlayer.raiseCategory();
             makeNextQuestion();
-        } else {
-            ((Button)e.getSource()).setStyle("-fx-background-color: #EE3B3B");
+            if(true){
+                labelOutput.setText("");
+            }
             currentPlayer.switchMoney();
-            labelQ.setText(currentPlayer.printMoneyWon(false));
+        }else{
+            //((Button) e.getSource()).setStyle("-fx-background-color: #ff1414");
+            if(currentQuestion.getSecondChance()){
+                labelOutput.setText("Das war noch nicht richtig. Probier es nochmal.");
+                currentQuestion.chamgeSecondChanceBack();
+            }else {
+                currentPlayer.printMoneyWon(false);
+                currentPlayer.changeCategory(16); //SPIEL BEENDEN?
+            }
         }
-    }
-
-    @FXML
-    void changeColor(MouseEvent event) {
-        ((Button)event.getSource()).setStyle("-fx-background-color: #d1fffa");
-    }
-
-    @FXML
-    void changeColorBack(MouseEvent event) {
-        ((Button)event.getSource()).setStyle("-fx-background-color: #a2fff4");
     }
 
     private void makeNextQuestion() {
@@ -154,6 +146,124 @@ public class MainController {
         buttonC.setText("C: " + currentQuestion.getC());
         buttonD.setText("D: " + currentQuestion.getD());
 
+    }
+
+    @FXML
+    void changeColorASAP(MouseEvent event){
+        if(event.getSource().equals(buttonFiftyFifty)){
+            if(!fiftyFifty.getUsed()) {
+                buttonFiftyFifty.setStyle("-fx-background-color: #ffe9a1");
+            }else
+                buttonFiftyFifty.setStyle("-fx-background-color: #9c9992; -fx-text-fill: #454340;");
+        }
+        else if(event.getSource().equals(buttonTelephone)){
+            if(!telephone.getUsed()) {
+                buttonTelephone.setStyle("-fx-background-color: #ffe9a1");
+            }else
+                buttonTelephone.setStyle("-fx-background-color: #9c9992; -fx-text-fill: #454340;");
+        }
+        else if(event.getSource().equals(buttonSecondChance)){
+            if(!secondChance.getUsed()) {
+                buttonSecondChance.setStyle("-fx-background-color: #ffe9a1");
+            }else
+                buttonSecondChance.setStyle("-fx-background-color: #9c9992; -fx-text-fill: #454340;");
+        }
+        else if(event.getSource().equals(buttonLeave)){
+            buttonLeave.setStyle("-fx-background-color: #9c9992; -fx-text-fill: #454340;");
+        }
+        /*else {
+            String buttonName = ((Button)event.getSource()).getId();
+            char fieldName = Character.toLowerCase(buttonName.charAt(buttonName.length()-1));
+            if(fieldName == currentQuestion.getCorrect()) {
+                ((Button) event.getSource()).setStyle("-fx-background-color: #36f546");
+            }else{
+                ((Button) event.getSource()).setStyle("-fx-background-color: #ff1414");
+           }
+
+        }
+
+         */
+    }
+
+    @FXML
+    void leaveGame(ActionEvent event) {
+        currentPlayer.switchMoney();
+        labelQ.setText("Das Spiel ist hiermit beendet. Du hast " + currentPlayer.getMoney() + " Euro gewonnen!");
+        labelQ.setStyle("-fx-text-fill: black; -fx-font-weight: bold");
+        left = true;
+        currentPlayer.changeCategory(16);
+    }
+
+    @FXML
+    void changeColor(MouseEvent event) {
+        if(event.getSource().equals(buttonLeave)){
+            if(!left){
+                buttonLeave.setStyle("-fx-background-color: #ff9191");
+            }
+            else {
+                buttonLeave.setStyle("-fx-background-color: #9c9992; -fx-text-fill: #454340;");
+            }
+        }
+        else if(event.getSource().equals(buttonFiftyFifty)){
+            if(!fiftyFifty.getUsed()) {
+                buttonFiftyFifty.setStyle("-fx-background-color: #ffe9a1");
+            }else {
+                buttonFiftyFifty.setStyle("-fx-background-color: #9c9992; -fx-text-fill: #454340;");
+            }
+        }
+        else if(event.getSource().equals(buttonTelephone)){
+            if(!telephone.getUsed()) {
+                buttonTelephone.setStyle("-fx-background-color: #ffe9a1");
+            }else {
+                buttonTelephone.setStyle("-fx-background-color: #9c9992; -fx-text-fill: #454340;");
+            }
+        }
+        else if(event.getSource().equals(buttonSecondChance)){
+            if(!secondChance.getUsed()) {
+                buttonSecondChance.setStyle("-fx-background-color: #ffe9a1");
+            }else {
+                buttonSecondChance.setStyle("-fx-background-color: #9c9992; -fx-text-fill: #454340;");
+            }
+        }
+        else {
+            ((Button) event.getSource()).setStyle("-fx-background-color: #d1fffa");
+        }
+    }
+
+    @FXML
+    void changeColorBack(MouseEvent event) {
+        if(event.getSource().equals(buttonLeave)){
+            if(!left){
+                buttonLeave.setStyle("-fx-background-color: #ff8787");
+            }
+            else {
+                buttonLeave.setStyle("-fx-background-color: #9c9992; -fx-text-fill: #454340;");
+            }
+        }
+        else if(event.getSource().equals(buttonFiftyFifty)){
+            if(!fiftyFifty.getUsed()) {
+                buttonFiftyFifty.setStyle("-fx-background-color: #ffe07a");
+            }else {
+                buttonFiftyFifty.setStyle("-fx-background-color: #9c9992; -fx-text-fill: #454340;");
+            }
+        }
+        else if(event.getSource().equals(buttonTelephone)){
+            if(!telephone.getUsed()) {
+                buttonTelephone.setStyle("-fx-background-color: #ffe07a");
+            }else {
+                buttonTelephone.setStyle("-fx-background-color: #9c9992; -fx-text-fill: #454340;");
+            }
+        }
+        else if(event.getSource().equals(buttonSecondChance)){
+            if(!secondChance.getUsed()) {
+                buttonSecondChance.setStyle("-fx-background-color: #ffe07a");
+            }else {
+                buttonSecondChance.setStyle("-fx-background-color: #9c9992; -fx-text-fill: #454340;");
+            }
+        }
+        else {
+            ((Button) event.getSource()).setStyle("-fx-background-color: #a2fff4");
+        }
     }
 
     private void printFiftyFiftyQuestion () {
@@ -187,106 +297,126 @@ public class MainController {
         if (!fiftyFifty.getUsed()) {
             fiftyFifty.useJoker(currentQuestion);
             printFiftyFiftyQuestion();
+        } else {
+            labelOutput.setText("Du hast diesen Joker bereits verwendet.");
+            labelOutput.setStyle("-fx-text-fill: red");
         }
     }
 
     @FXML
     void useTelephone(ActionEvent e){
         if (!telephone.getUsed()){
-            labelQ.setText(telephone.telephoneHelpMe(currentQuestion));
+            labelOutput.setStyle("-fx-text-fill: black; -fx-text-weight: bold");
+            labelOutput.setText(telephone.telephoneHelpMe(currentQuestion));
+        } else {
+            labelOutput.setText("Du hast diesen Joker bereits verwendet.");
+            labelOutput.setStyle("-fx-text-fill: red");
         }
     }
 
     @FXML
+    void useSecondChance(ActionEvent event) {
+        if(secondChance.getUsed()){
+            labelOutput.setText("Du hast diesen Joker bereits verwendet.");
+            labelOutput.setStyle("-fx-text-fill: red");
+        }
+        else{
+            secondChance.changeUsed();
+            currentQuestion.changeSecondChance();
+            labelOutput.setText("Second Chance Joker ist jetzt aktiv!");
+            labelOutput.setStyle("-fx-text-fill: #ff9f00");
+        }
+    }
+    @FXML
     void changeCategory(int category){
         if (category == 1){
-            money1.setStyle("-fx-background-color: #9aff9a");
+            labelCat1.setStyle("-fx-background-color: #ffd447");
         } else {
-            money1.setStyle("-fx-background-color: #b8ffec;");
+            labelCat1.setStyle("-fx-background-color: #b8ffec;");
         }
 
         if (category == 2){
-            money2.setStyle("-fx-background-color: #9aff9a");
+            labelCat2.setStyle("-fx-background-color: #ffd447");
         } else {
-            money2.setStyle("-fx-background-color: #ffffff;");
+            labelCat2.setStyle("-fx-background-color: #ffffff;");
         }
 
         if (category == 3){
-            money3.setStyle("-fx-background-color: #9aff9a");
+            labelCat3.setStyle("-fx-background-color: #ffd447");
         } else {
-            money3.setStyle("-fx-background-color: #b8ffec;");
+            labelCat3.setStyle("-fx-background-color: #b8ffec;");
         }
 
         if (category == 4){
-            money4.setStyle("-fx-background-color: #9aff9a");
+            labelCat4.setStyle("-fx-background-color: #ffd447");
         } else {
-            money4.setStyle("-fx-background-color: #ffffff;");
+            labelCat4.setStyle("-fx-background-color: #ffffff;");
         }
 
        if (category == 5){
-            money5.setStyle("-fx-background-color: #9aff9a");
+            labelCat5.setStyle("-fx-background-color: #ffd447");
         } else {
-            money5.setStyle("-fx-background-color: #DBDBDB;");
+            labelCat5.setStyle("-fx-background-color: #b8ffec;");
         }
 
         if (category == 6){
-            money6.setStyle("-fx-background-color: #9aff9a");
+            labelCat6.setStyle("-fx-background-color: #ffd447");
         } else {
-            money6.setStyle("-fx-background-color: #b8ffec;");
+            labelCat6.setStyle("-fx-background-color: #ffffff;");
         }
 
         if (category == 7){
-            money7.setStyle("-fx-background-color: #9aff9a");
+            labelCat7.setStyle("-fx-background-color: #ffd447");
         } else {
-            money7.setStyle("-fx-background-color: #ffffff;");
+            labelCat7.setStyle("-fx-background-color: #b8ffec;");
         }
 
         if (category == 8){
-            money8.setStyle("-fx-background-color: #9aff9a");
+            labelCat8.setStyle("-fx-background-color: #ffd447");
         } else {
-            money8.setStyle("-fx-background-color: #b8ffec;");
+            labelCat8.setStyle("-fx-background-color: #ffffff;");
         }
 
         if (category == 9){
-            money9.setStyle("-fx-background-color: #9aff9a");
+            labelCat9.setStyle("-fx-background-color: #ffd447");
         } else {
-            money9.setStyle("-fx-background-color: #ffffff;");
+            labelCat9.setStyle("-fx-background-color: #b8ffec;");
         }
 
         if (category == 10){
-            money10.setStyle("-fx-background-color: #9aff9a");
+            labelCat10.setStyle("-fx-background-color: #ffd447");
         } else {
-            money10.setStyle("-fx-background-color: #DBDBDB;");
+            labelCat10.setStyle("-fx-background-color: #ffffff;");
         }
 
         if (category == 11){
-            money11.setStyle("-fx-background-color: #9aff9a");
+            labelCat11.setStyle("-fx-background-color: #ffd447");
         } else {
-            money11.setStyle("-fx-background-color: #b8ffec;");
+            labelCat11.setStyle("-fx-background-color: #b8ffec;");
         }
 
         if (category == 12){
-            money12.setStyle("-fx-background-color: #9aff9a");
+            labelCat12.setStyle("-fx-background-color: #ffd447");
         } else {
-            money12.setStyle("-fx-background-color: #ffffff;");
+            labelCat12.setStyle("-fx-background-color: #ffffff;");
         }
 
         if (category == 13){
-            money13.setStyle("-fx-background-color: #9aff9a");
+            labelCat13.setStyle("-fx-background-color: #ffd447");
         } else {
-            money13.setStyle("-fx-background-color: #b8ffec;");
+            labelCat13.setStyle("-fx-background-color: #b8ffec;");
         }
 
         if (category == 14){
-            money14.setStyle("-fx-background-color: #9aff9a");
+            labelCat14.setStyle("-fx-background-color: #ffd447");
         } else {
-            money14.setStyle("-fx-background-color: #ffffff;");
+            labelCat14.setStyle("-fx-background-color: #ffffff;");
         }
 
         if (category == 15){
-            money15.setStyle("-fx-background-color: #9aff9a");
+            labelCat15.setStyle("-fx-background-color: #ffd447");
         } else {
-            money15.setStyle("-fx-background-color: #DBDBDB;");
+            labelCat15.setStyle("-fx-background-color: #b8ffec;");
         }
     }
 }
