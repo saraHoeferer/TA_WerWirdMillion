@@ -1,3 +1,8 @@
+package ConsoleCode;
+
+import ConsoleCode.Joker;
+import ConsoleCode.Player;
+
 public class Question {
     private final String question;
     private final int category;
@@ -61,11 +66,28 @@ public class Question {
         return secondChance;
     }
 
+    public boolean isHideA (){
+        return  hideA;
+    }
+
+    public boolean isHideB (){
+        return hideB;
+    }
+
+    public boolean isHideC(){
+        return hideC;
+    }
+
+    public boolean isHideD(){
+        return hideD;
+    }
+
     //Methoden
     public void changeSecondChance() {
         this.secondChance = true;
     }
 
+    public void chamgeSecondChanceBack() {this.secondChance = false;}
     public void changeHide(char answer, Joker fiftyFifty) {
         switch (answer) {
             case 'a':
