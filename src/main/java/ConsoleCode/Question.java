@@ -1,3 +1,8 @@
+package ConsoleCode;
+
+import ConsoleCode.Joker;
+import ConsoleCode.Player;
+
 public class Question {
     private final String question;
     private final int category;
@@ -59,6 +64,22 @@ public class Question {
 
     public boolean getSecondChance() {
         return secondChance;
+    }
+
+    public boolean isHideA (){
+        return  hideA;
+    }
+
+    public boolean isHideB (){
+        return hideB;
+    }
+
+    public boolean isHideC(){
+        return hideC;
+    }
+
+    public boolean isHideD(){
+        return hideD;
     }
 
     //Methoden

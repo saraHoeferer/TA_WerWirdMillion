@@ -1,19 +1,29 @@
+import ConsoleCode.Game;
+import ConsoleCode.Joker;
+import ConsoleCode.Player;
+import ConsoleCode.Question;
 import com.google.gson.Gson;
+import javafx.animation.PauseTransition;
+import javafx.animation.Timeline;
+import javafx.application.Application;
+import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.paint.Color;
+import javafx.util.Duration;
 
-import java.awt.*;
-import java.awt.event.ActionListener;
 import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
 import java.util.Random;
+import java.util.concurrent.Executor;
+import java.util.concurrent.Executors;
+import java.util.concurrent.ScheduledExecutorService;
+import java.util.concurrent.TimeUnit;
 
 public class MainController {
     @FXML
@@ -40,22 +50,69 @@ public class MainController {
     @FXML
     private Button buttonTelephone;
 
+    @FXML
+    private Label money1;
 
+    @FXML
+    private Label money2;
+
+    @FXML
+    private Label money3;
+
+    @FXML
+    private Label money4;
+
+    @FXML
+    private Label money5;
+
+    @FXML
+    private Label money6;
+
+    @FXML
+    private Label money7;
+
+    @FXML
+    private Label money8;
+
+    @FXML
+    private Label money9;
+
+    @FXML
+    private Label money10;
+
+    @FXML
+    private Label money11;
+
+    @FXML
+    private Label money12;
+
+    @FXML
+    private Label money13;
+
+    @FXML
+    private Label money14;
+
+    @FXML
+    private Label money15;
+
+    private Game currentGame = new Game();
     private Question[] questions;
-    private int currentCategory;
     private Question currentQuestion;
+    private Player currentPlayer = new Player();
+    private Joker fiftyFifty = new Joker(1);
+    private Joker telephone = new Joker(3);
+    private PauseTransition delay = new PauseTransition(Duration.seconds(5));
 
     @FXML
     private void initialize() {
         try {
-            questions = createQuestions();
+            questions = currentGame.createQuestions();
         } catch (IOException e) {
             e.printStackTrace();
         }
-        currentCategory = 1;
         makeNextQuestion();
 
-//        Question q1 = new Question("Da es keinen wolligen Pelz trägt, hat es wenig Sinn, wenn ich das ...?", 5, "Hummer zange", "Fischer messer", "Geflügel schere","Eier löffel", 'c');
+//        ConsoleCode.Question q1 = new ConsoleCode.Question("Da es keinen wolligen Pelz trägt, hat es wenig Sinn, wenn ich das ...?", 5, "Hummer zange", "Fischer messer", "Geflügel schere","Eier löffel", 'c');
 //        labelQ.setText(q1.getQuestion());
 //        buttonA.setText("a: " + q1.getA());
 //        buttonB.setText("b: " + q1.getB());
@@ -64,12 +121,18 @@ public class MainController {
     }
 
     @FXML
-    private void actionPerformed(ActionEvent e){
+    private void actionPerformed(ActionEvent e) throws InterruptedException {
         String buttonName = ((Button)e.getSource()).getId();
         char fieldName = Character.toLowerCase(buttonName.charAt(buttonName.length()-1));
         if(fieldName == currentQuestion.getCorrect()){
-            currentCategory++;
+            changeCategory(currentPlayer.getCategory());
+            ((Button)e.getSource()).setStyle("-fx-background-color: #9aff9a");
+            currentPlayer.raiseCategory();
             makeNextQuestion();
+        } else {
+            ((Button)e.getSource()).setStyle("-fx-background-color: #EE3B3B");
+            currentPlayer.switchMoney();
+            labelQ.setText(currentPlayer.printMoneyWon(false));
         }
     }
 
@@ -84,89 +147,148 @@ public class MainController {
     }
 
     private void makeNextQuestion() {
-        currentQuestion = getQuestionFromCategory(getQuestionCategory(questions, currentCategory));
+        currentQuestion = currentGame.getQuestionFromCategory(currentGame.getQuestionCategory(questions, currentPlayer.getCategory()));
         labelQ.setText(currentQuestion.getQuestion());
         buttonA.setText("A: " + currentQuestion.getA());
         buttonB.setText("B: " + currentQuestion.getB());
         buttonC.setText("C: " + currentQuestion.getC());
         buttonD.setText("D: " + currentQuestion.getD());
+
     }
 
-    private Question[] createQuestions() throws IOException {
-        Gson gson = new Gson();
-        String dirPath = new File("").getAbsolutePath();
-        dirPath += "\\questions.json";
-
-        Question[] questions = gson.fromJson(new FileReader(dirPath, StandardCharsets.UTF_8), Question[].class);
-        return questions;
-    }
-
-    public static Question[] getQuestionCategory(Question[] questions, int category){
-        int cnt = 0;
-        //Länge des Array herauszufinden mithilfe For-Schleife
-        for(int i = 0; i < questions.length; i++){
-            if(questions[i].getCategory() == category){
-                cnt++;
-            }
+    private void printFiftyFiftyQuestion () {
+        labelQ.setText(currentQuestion.getQuestion());
+        if (!currentQuestion.isHideA()) {
+            buttonA.setText("A: " + currentQuestion.getA());
+        } else {
+            buttonA.setText("A: ");
         }
-        Question[] questionsCategory = new Question[cnt];
-        cnt = 0;
-        for(int i = 0; i < questions.length; i++){
-            if(questions[i].getCategory() == category){
-                questionsCategory[cnt] = questions[i];
-                cnt++;
-            }
+        if (!currentQuestion.isHideB()) {
+            buttonB.setText("B: " + currentQuestion.getB());
+        }  else {
+            buttonB.setText("B: ");
         }
-        return questionsCategory;
+        if (!currentQuestion.isHideC()) {
+            buttonC.setText("C: " + currentQuestion.getC());
+        }  else {
+            buttonC.setText("C: ");
+        }
+        if (!currentQuestion.isHideD()) {
+            buttonD.setText("D: " + currentQuestion.getD());
+        }  else {
+            buttonD.setText("D: ");
+        }
     }
 
-    public static Question getQuestionFromCategory(Question[] questionsCategory){
-        Random random = new Random();
-        int randomInt = random.nextInt(questionsCategory.length);
-        Question q1 = questionsCategory[randomInt];
-        return q1;
-    }
-
-    //use 50 : 50 Joker
+    //use 50 : 50 ConsoleCode.Joker
     //
-
     @FXML
     void useFiftyFifty(ActionEvent e) {
-        char random = getRandomChar();
-        for(int i = 0; i <= 2; i++)
-            if (random == currentQuestion.getCorrect()) {
-                random = getRandomChar();
-                i--;
-            } else{
-                switch(random){
-                    case 'a':
-                        buttonA.setText("A: ");
-                        break;
-                    case 'b':
-                        buttonB.setText("B: ");
-                        break;
-                    case 'c':
-                        buttonC.setText("C: ");
-                        break;
-                    case 'd':
-                        buttonD.setText("D: ");
-                        break;
-                }
-
-            }
+        if (!fiftyFifty.getUsed()) {
+            fiftyFifty.useJoker(currentQuestion);
+            printFiftyFiftyQuestion();
+        }
     }
 
-    public static char getRandomChar() { //wählt aus den 4 Antwortmöglichkeiten einen Buchstaben aus; Rückgabewert ist char nicht int
-        Random random = new Random();
-        char randomChar = (char) (random.nextInt(4) + 'a'); //aus 4 aufeinanderfolgenden chars a, b, c, d ein char zufällig ziehen
-        return randomChar;
+    @FXML
+    void useTelephone(ActionEvent e){
+        if (!telephone.getUsed()){
+            labelQ.setText(telephone.telephoneHelpMe(currentQuestion));
+        }
     }
 
+    @FXML
+    void changeCategory(int category){
+        if (category == 1){
+            money1.setStyle("-fx-background-color: #9aff9a");
+        } else {
+            money1.setStyle("-fx-background-color: #b8ffec;");
+        }
 
+        if (category == 2){
+            money2.setStyle("-fx-background-color: #9aff9a");
+        } else {
+            money2.setStyle("-fx-background-color: #ffffff;");
+        }
 
+        if (category == 3){
+            money3.setStyle("-fx-background-color: #9aff9a");
+        } else {
+            money3.setStyle("-fx-background-color: #b8ffec;");
+        }
 
+        if (category == 4){
+            money4.setStyle("-fx-background-color: #9aff9a");
+        } else {
+            money4.setStyle("-fx-background-color: #ffffff;");
+        }
 
+       if (category == 5){
+            money5.setStyle("-fx-background-color: #9aff9a");
+        } else {
+            money5.setStyle("-fx-background-color: #DBDBDB;");
+        }
 
+        if (category == 6){
+            money6.setStyle("-fx-background-color: #9aff9a");
+        } else {
+            money6.setStyle("-fx-background-color: #b8ffec;");
+        }
+
+        if (category == 7){
+            money7.setStyle("-fx-background-color: #9aff9a");
+        } else {
+            money7.setStyle("-fx-background-color: #ffffff;");
+        }
+
+        if (category == 8){
+            money8.setStyle("-fx-background-color: #9aff9a");
+        } else {
+            money8.setStyle("-fx-background-color: #b8ffec;");
+        }
+
+        if (category == 9){
+            money9.setStyle("-fx-background-color: #9aff9a");
+        } else {
+            money9.setStyle("-fx-background-color: #ffffff;");
+        }
+
+        if (category == 10){
+            money10.setStyle("-fx-background-color: #9aff9a");
+        } else {
+            money10.setStyle("-fx-background-color: #DBDBDB;");
+        }
+
+        if (category == 11){
+            money11.setStyle("-fx-background-color: #9aff9a");
+        } else {
+            money11.setStyle("-fx-background-color: #b8ffec;");
+        }
+
+        if (category == 12){
+            money12.setStyle("-fx-background-color: #9aff9a");
+        } else {
+            money12.setStyle("-fx-background-color: #ffffff;");
+        }
+
+        if (category == 13){
+            money13.setStyle("-fx-background-color: #9aff9a");
+        } else {
+            money13.setStyle("-fx-background-color: #b8ffec;");
+        }
+
+        if (category == 14){
+            money14.setStyle("-fx-background-color: #9aff9a");
+        } else {
+            money14.setStyle("-fx-background-color: #ffffff;");
+        }
+
+        if (category == 15){
+            money15.setStyle("-fx-background-color: #9aff9a");
+        } else {
+            money15.setStyle("-fx-background-color: #DBDBDB;");
+        }
+    }
 }
 
 
