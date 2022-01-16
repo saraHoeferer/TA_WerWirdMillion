@@ -1,6 +1,9 @@
+package ConsoleCode;
 import com.google.gson.Gson;
 
+
 import java.io.*;
+import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.Random;
 import java.util.Scanner;
@@ -16,11 +19,18 @@ public class Game {
     }
 
     //Einbinden der Fragen mittels der Gson-Methode fromJson(), Rückgabe eines Question[]
-    private Question[] createQuestions() throws IOException {
+    /*private Question[] createQuestions() throws IOException {
         Gson gson = new Gson();
         String dirPath = new File("").getAbsolutePath();
         dirPath += "\\questions.json";
         Question[] questions = gson.fromJson(new FileReader(dirPath), Question[].class);
+        return questions;
+    }
+
+     */
+    public Question[] createQuestions() throws IOException {
+        Gson gson = new Gson();
+        Question[] questions = gson.fromJson(new FileReader("/Users/susikloss/IdeaProjects/TA_WerWirdMillion/questions.json", StandardCharsets.UTF_8), Question[].class);
         return questions;
     }
 
