@@ -1494,6 +1494,141 @@
         "d": "Olaf Scholz",
         "correct": "c",
         "category": "15"
-    }
+    },
+    {
+        "question": "Ist der Ackerboden fest und verkrustet, braucht der Bauer ...?",
+        "a": "eine gute Vahrt",
+        "b": "eine gute Raise",
+        "c": "einen guten Pflug",
+        "d": "schöne Färien",
+        "correct": "c",
+        "category": "1"
+    },
+    {
+        "question": "Wo kann man nicht einfach einen Anfangsbuchstaben austauschen, um daraus eine patzige, aber passende Antwort zu machen?",
+        "a": "weswegen",
+        "b" : "wieso",
+        "c" : "weshalb",
+        "d" : "warum",
+        "correct": "b",
+        "category": "2"
+    },
+    {
+        "question": "Welches Verb wird in Verbindung mit dem Wind ebenso wie in Bezug auf Impfungen verwendet?",
+        "a": "aufmöbeln",
+        "b": "aufhübschen",
+        "c": "auffrischen",
+        "d": "aufpolieren",
+        "correct": "c",
+        "category": "3"
+    },
+    {
+        "question": "Zwischen den Gewinnern der Champions und der Europa League findet alljährlich das Spiel um den UEFA Super ...?",
+        "a": "Prä tohria",
+        "b": "Wint huck",
+        "c": "Cup statt",
+        "d": "Nei rohbi",
+        "correct": "c",
+        "category": "4"
+    },
+    {
+        "question": "Was wurde laut Duden mit geringem Startkapital gegründet?",
+        "a": "Garagenfirma",
+        "b": "Kellerunternehmen",
+        "c": "Speichergeschäft",
+        "d": "Waschküchenbetrieb",
+        "correct": "a,
+        "category": "5"
+    },
+     {
+       "question": "Wenn "der Schuss nach hinten losgeht", passt meist auch die Redensart "sich ..."?",
+        "a": "aufs eigene Ohr hauen",
+        "b": "das eigene Herz brechen",
+        "c": "ins eigene Fleisch schneiden",
+        "d": "das eigene Bein ausreißen",
+        "correct": "c",
+        "category": "6"
+    },
+     {
+        "question": "Welche praktische Anzeige erleichtert die Nutzung des betreffenden Geräts?",
+        "a": "Röststoppschild am Toaster",
+        "b": "Wendetacho am Grill",
+        "c": "Backampel am Waffeleisen",
+        "d": "Rührparkuhr am Mixer",
+        "correct": "c",
+        "category": "7"
+    },
+     {
+        "question": "Wer hatte am 14. September 2003 seinen ersten Auftritt im Zuge von etwas mehr Gendergerechtigkeit?",
+        "a": "Mainzelmädchen",
+        "b": "Strichmädchen",
+        "c": "Sandmädchen",
+        "d": "Alphamädchen",
+        "correct": "a",
+        "category": "8"
+    },
+     {
+       "question": "Welche legendäre Band verlor Ende Juli 2021 mit dem Tod von Dusty Hill eines seiner drei Mitglieder?",
+        "a": "Metallica",
+        "b": "ZZ Top",
+        "c": "Guns N' Roses",
+        "d": "AC/DC",
+        "correct": "b",
+        "category": "9"
+    },
+     {
+        "question": "Unter welchem Namen ist der wieder angesagte Bubikragen in der Modewelt auch bekannt?",
+        "a": "Aladdin-Kragen",
+        "b": "Dumbo-Kragen",
+        "c": "Peter-Pan-Kragen",
+        "d": "Michy-Maus-Kragen",
+        "correct": "c",
+        "category": "10"
+    },
+     {
+        "question": "Wozu ist ein sogenanntes IPL-Gerät gedacht?",
+        "a": "Haut tönen",
+        "b": "Zähne bleichen",
+        "c": "Haare entfernen",
+        "d": "Nägel schneiden",
+        "correct": "c",
+        "category": "11"
+    },
+     {
+        "question": "Welches ist kein lusophones Land?",
+        "a": "Vietnam",
+        "b": "Angola",
+        "c": "Brasilien",
+        "d": "Portugal",
+        "correct": "a",
+        "category": "12"
+    },
+     {
+        "question": "Wer dürfte am ehesten etwas mit den Begriffen "Piscine", "Beau Rivage", "Casino" und "Rascasse" anfangen können?",
+        "a": "Weintrinker",
+        "b": "Formel-1-Fans",
+        "c": "Asterix-Leser",
+        "d": "Kunstliebhaber",
+        "correct": "b",
+        "category": "13"
+    },
+     {
+        "question": "Was gehört zu den sogenannten Akren?",
+        "a": "Finger und Zehen",
+        "b": "Zugspitze und Montblanc",
+        "c": "Zeus und Apollo",
+        "d": "Fische und Vögel",
+        "correct": "a",
+        "category": "14"
+    },
+    {
+        "question": "Bei welchem dieser weltbekannten Modehäuser steht einer der beiden Buchstaben nicht für einen Eigennamen?",
+        "a": "A&F",
+        "b": "C&A",
+        "c": "H&M",
+        "d": "P&C",
+        "correct": "c",
+        "category": "15"
+    } 
 ]
 
