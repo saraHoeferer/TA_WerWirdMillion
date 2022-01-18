@@ -17,13 +17,19 @@ public class Game {
     public Game() {
         this.scanIn = new Scanner(System.in);
     }
-
+/*
     //Einbinden der Fragen mittels der Gson-Methode fromJson(), Rückgabe eines ConsoleCode.Question[]
     public Question[] createQuestions() throws IOException {
         Gson gson = new Gson();
         String dirPath = new File("").getAbsolutePath();
         dirPath += "\\questions.json";
         Question[] questions = gson.fromJson(new FileReader(dirPath, StandardCharsets.UTF_8), Question[].class);
+        return questions;
+    }
+ */
+    public Question[] createQuestions() throws IOException {
+        Gson gson = new Gson();
+        Question[] questions = gson.fromJson(new FileReader("/Users/sophiaholzl/Documents/Programmieren/TA_WerWirdMillion/questions.json", StandardCharsets.UTF_8), Question[].class);
         return questions;
     }
 
