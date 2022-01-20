@@ -12,7 +12,7 @@ public class Player {
     public Player() {
         this.answer = '\0';
         this.money = 0;
-        this.category = 14;
+        this.category = 1;
     }
 
     //Gettermethode für Antwort
