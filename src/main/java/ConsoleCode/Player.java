@@ -4,20 +4,13 @@ import java.util.Scanner;
 
 public class Player {
     //private Klassenvariablen
-    private char answer;
     private int money;
     private int category;
 
     //Konstruktor
     public Player() {
-        this.answer = '\0';
         this.money = 0;
         this.category = 1;
-    }
-
-    //Gettermethode für Antwort
-    public char getAnswer() {
-        return answer;
     }
 
     //Gettermethode um Kategorie zu bekommen
@@ -27,36 +20,8 @@ public class Player {
 
     public int getMoney() {return money;}
 
-    //Methode um eine Antwortmöglichkeit einzugeben
-    public void makeGuess(Scanner scanIn) {
-        answer = '\0';
-        while (answer != 'a' && answer != 'b' && answer != 'c' && answer != 'd') {
-            System.out.print("Wähle eine Antwortmöglichkeit:");
-            answer = scanIn.next().charAt(0);
-        }
-    }
-
     public void changeCategory(int currentCategory){
         category = currentCategory; //refactored
-    }
-
-    //Methode zur Abfrage nach ConsoleCode.Joker
-    public void chooseJoker(Scanner scanIn) {
-        answer = '\0';
-        while (answer != 'f' && answer != 'h' && answer != 's' && answer != 'k') {
-            System.out.print("Wähle einen Joker (f) - \"50:50 Joker\", (h) - \"Help\", (s) - \"Second Chance\" oder (k) - \"Keinen Joker verwenden\" :");
-            answer = scanIn.next().charAt(0);
-        }
-    }
-
-    //Methode zur Abfrage ob man das Spiel verlassen möchte
-    public boolean leave(Scanner scanIn) {
-        answer = '\0';
-        while (answer != 'y' && answer != 'n') {
-            System.out.print("\nMöchtest du das Spiel beenden? (y) - Ja, (n) - Nein:");
-            answer = scanIn.next().charAt(0);
-        }
-        return answer == 'y';
     }
 
     //Methode um die Kategorie nach jeder Frage um eins zu erhöhen
@@ -116,13 +81,6 @@ public class Player {
                 money = 0;
                 break;
         }
-    }
-
-    //Methode um das Geld nach jeder Frage bezüglich der Kategorie auf Konsole auszugeben
-    public String printMoney() {
-        this.switchMoney();
-        String moneyWon = "Du stehst bei " + money + " Euro!";
-        return moneyWon;
     }
 
     //Methode um Geld nach Ende des Spiels auszugeben
