@@ -21,9 +21,8 @@ public class Game {
     //Einbinden der Fragen mittels der Gson-Methode fromJson(), Rückgabe eines ConsoleCode.Question[]
     public Question[] createQuestions() throws IOException {
         Gson gson = new Gson();
-        String dirPath = new File("").getAbsolutePath();
-        dirPath += "\\questions.json";
-        Question[] questions = gson.fromJson(new FileReader(dirPath, StandardCharsets.UTF_8), Question[].class); // UTF_8 for mutated vowels
+
+        Question[] questions = gson.fromJson(new FileReader("/Users/susikloss/IdeaProjects/TA_WerWirdMillion/questions.json", StandardCharsets.UTF_8), Question[].class); // UTF_8 for mutated vowels
         return questions;
     }
 

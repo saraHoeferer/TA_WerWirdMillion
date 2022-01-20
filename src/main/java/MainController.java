@@ -30,12 +30,15 @@ public class MainController {
     @FXML
     private Button buttonA = new Button();
 
+    // label for printing the question
     @FXML
     private Button buttonB = new Button();
 
+    // joker - buttons
     @FXML
     private Button buttonC = new Button();
 
+    // labels for displaying all categories
     @FXML
     private Button buttonD = new Button();
 
@@ -81,9 +84,11 @@ public class MainController {
     @FXML
     private Label labelCat9 = new Label();
 
+    // label for displaying statements regarding use of jokers
     @FXML
     private Label labelCat10 = new Label();
 
+    // button for leaving the game (and win money of current category)
     @FXML
     private Label labelCat11 = new Label();
 
@@ -149,8 +154,11 @@ public class MainController {
         HelloFX.stage.show();
     }
 
+
+
     @FXML
     private Label labelMoneyWon = new Label(); // print money won
+
 
     @FXML
     private Button buttonEndGame = new Button(); // switch to start window
