@@ -23,13 +23,13 @@ public class Game {
         Gson gson = new Gson();
         String dirPath = new File("").getAbsolutePath();
         dirPath += "\\questions.json";
-        Question[] questions = gson.fromJson(new FileReader(dirPath, StandardCharsets.UTF_8), Question[].class);
+        Question[] questions = gson.fromJson(new FileReader(dirPath, StandardCharsets.UTF_8), Question[].class); // UTF_8 for mutated vowels
         return questions;
     }
 
     //Rückgabe einer ArrayList<ConsoleCode.Question>, die jeweils die Fragen einer bestimmten Kategorie enthält
     //die Fragen kommen aus dem ConsoleCode.Question[]
-    public ArrayList<Question> getQuestionCategory(Question[] questions, int category) {
+    public ArrayList<Question> getQuestionCategory(Question[] questions, int category) { //Fragen einer Kategorie
         ArrayList<Question> questionsCategory = new ArrayList<>();
         for (int i = 0; i < questions.length; i++) {
             if (questions[i].getCategory() == category) {
@@ -40,7 +40,7 @@ public class Game {
     }
 
     //Rückgabe einer zufällig ausgewählten Frage einer bestimmten Kategorie aus der ArrayList<ConsoleCode.Question>
-    public Question getQuestionFromCategory(ArrayList<Question> questionsCategory) {
+    public Question getQuestionFromCategory(ArrayList<Question> questionsCategory) { //Frage aus Fragenkatalog einer Kategorie auswählen
         Random random = new Random();
         int randomInt = random.nextInt(questionsCategory.size());
         Question q1 = questionsCategory.get(randomInt);
@@ -165,5 +165,4 @@ public class Game {
         //Spiel aufrufen
         g1.playGame(p1, questions);
     }
-
 }

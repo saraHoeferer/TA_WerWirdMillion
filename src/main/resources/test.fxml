@@ -23,19 +23,19 @@
          <font>
             <Font size="13.0" />
          </font></Label>
-      <Button fx:id="buttonA" layoutX="54.0" layoutY="333.0" mnemonicParsing="false" onAction="#actionPerformed" onMouseClicked="#changeColorASAP" onMouseEntered="#changeColor" onMouseExited="#changeColorBack" prefHeight="62.0" prefWidth="227.0" style="-fx-background-color: #A2FFF4;" text="buttonA" wrapText="true">
+      <Button fx:id="buttonA" layoutX="54.0" layoutY="333.0" mnemonicParsing="false" onMouseClicked="#actionPerformed" onMouseEntered="#changeColor" onMouseExited="#changeColorBack" onMousePressed="#changeColorASAP" prefHeight="62.0" prefWidth="227.0" style="-fx-background-color: #A2FFF4;" text="buttonA" wrapText="true">
          <font>
             <Font size="13.0" />
          </font></Button>
-      <Button fx:id="buttonB" layoutX="287.0" layoutY="333.0" mnemonicParsing="false" onAction="#actionPerformed" onMouseClicked="#changeColorASAP" onMouseEntered="#changeColor" onMouseExited="#changeColorBack" prefHeight="62.0" prefWidth="227.0" style="-fx-background-color: #A2FFF4;" text="buttonB" wrapText="true">
+      <Button fx:id="buttonB" layoutX="287.0" layoutY="333.0" mnemonicParsing="false" onMouseClicked="#actionPerformed"  onMouseEntered="#changeColor" onMouseExited="#changeColorBack" onMousePressed="#changeColorASAP" prefHeight="62.0" prefWidth="227.0" style="-fx-background-color: #A2FFF4;" text="buttonB" wrapText="true">
          <font>
             <Font size="13.0" />
          </font></Button>
-      <Button fx:id="buttonC" layoutX="54.0" layoutY="403.0" mnemonicParsing="false" onAction="#actionPerformed" onMouseClicked="#changeColorASAP" onMouseEntered="#changeColor" onMouseExited="#changeColorBack" prefHeight="62.0" prefWidth="227.0" style="-fx-background-color: #A2FFF4;" text="buttonC" wrapText="true">
+      <Button fx:id="buttonC" layoutX="54.0" layoutY="403.0" mnemonicParsing="false" onMouseClicked="#actionPerformed" onMouseEntered="#changeColor" onMouseExited="#changeColorBack" onMousePressed="#changeColorASAP" prefHeight="62.0" prefWidth="227.0" style="-fx-background-color: #A2FFF4;" text="buttonC" wrapText="true">
          <font>
             <Font size="13.0" />
          </font></Button>
-      <Button fx:id="buttonD" layoutX="287.0" layoutY="403.0" mnemonicParsing="false" onAction="#actionPerformed" onMouseClicked="#changeColorASAP" onMouseEntered="#changeColor" onMouseExited="#changeColorBack" prefHeight="62.0" prefWidth="227.0" style="-fx-background-color: #A2FFF4;" text="buttonD" wrapText="true">
+      <Button fx:id="buttonD" layoutX="287.0" layoutY="403.0" mnemonicParsing="false" onMouseClicked="#actionPerformed" onMouseEntered="#changeColor" onMouseExited="#changeColorBack" onMousePressed="#changeColorASAP" prefHeight="62.0" prefWidth="227.0" style="-fx-background-color: #A2FFF4;" text="buttonD" wrapText="true">
          <font>
             <Font size="13.0" />
          </font></Button>
