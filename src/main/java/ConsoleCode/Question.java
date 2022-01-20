@@ -88,6 +88,7 @@ public class Question {
     }
 
     public void changeSecondChanceBack() {this.secondChance = false;}
+
     public void changeHide(char answer, Joker fiftyFifty) {
         switch (answer) {
             case 'a':
@@ -122,39 +123,5 @@ public class Question {
                 break;
         }
     }
-
-    public void printQuestion() {
-        System.out.println();
-        System.out.println(question);
-        if (!hideA) {
-            System.out.println("a: " + a);
-        } else {
-            System.out.println("a:");
-        }
-        if (!hideB) {
-            System.out.println("b: " + b);
-        } else {
-            System.out.println("b:");
-        }
-        if (!hideC) {
-            System.out.println("c: " + c);
-        } else {
-            System.out.println("c:");
-        }
-        if (!hideD) {
-            System.out.println("d: " + d);
-        } else {
-            System.out.println("d:");
-        }
-        System.out.println();
-    }
-
-    public void printCorrectAnswer() {
-        System.out.println("Die richtige Antwort war: " + correct);
-    }
-
-    public boolean checkAnswer(Player p1) {
-        return p1.getAnswer() == correct;
-    }
-
 }
+
