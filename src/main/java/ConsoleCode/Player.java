@@ -12,7 +12,7 @@ public class Player {
     public Player() {
         this.answer = '\0';
         this.money = 0;
-        this.category = 1;
+        this.category = 14;
     }
 
     //Gettermethode für Antwort
@@ -36,8 +36,8 @@ public class Player {
         }
     }
 
-    public void changeCategory(int currenCategory){
-        category = currenCategory;
+    public void changeCategory(int currentCategory){
+        category = currentCategory; //refactored
     }
 
     //Methode zur Abfrage nach ConsoleCode.Joker
@@ -129,13 +129,15 @@ public class Player {
     public String printMoneyWon(boolean leave) {
         String moneyWon = "";
         if (leave) {
-            moneyWon = "Du hast " + money + "Euro gewonnen!";
+            moneyWon = "Du hast " + money + " Euro gewonnen!";
         } else if (category < 6) { //wenn du eine Frage falsch beantwortet hast und nicht weiter als Kategorie 4 gekommen bist
-            moneyWon = "Du hast 0 Euro gewonnen!";
+            moneyWon = "Du gehst leider leer aus!";
         } else if (category < 11) { //wenn du eine Frage falsch beantwortet hast und nicht weiter als Kategorie 9 gekommen bist
             moneyWon = "Du hast 500 Euro gewonnen!";
-        } else if (category >= 11) { //wenn du eine Frage falsch beantwortet hast und höher als Kategorie 10 warst
+        } else if(category < 15){ //wenn du eine Frage falsch beantwortet hast und höher als Kategorie 10 warst
             moneyWon = "Du hast 16000 Euro gewonnen!";
+        } else if(category == 15){
+            moneyWon = "Gl\u00fcckwunsch! Du bist Million\u00e4r.";
         }
         return moneyWon;
     }

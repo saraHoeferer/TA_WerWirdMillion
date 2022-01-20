@@ -11,13 +11,13 @@
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module" module-name="TAWerWirdMillionär.main" />
     <orderEntry type="library" name="Gradle: com.google.code.gson:gson:2.8.6" level="project" />
-    <orderEntry type="library" name="Gradle: org.openjfx:javafx-fxml:win:16" level="project" />
-    <orderEntry type="library" name="Gradle: org.openjfx:javafx-controls:16" level="project" />
-    <orderEntry type="library" name="Gradle: org.openjfx:javafx-controls:win:16" level="project" />
-    <orderEntry type="library" name="Gradle: org.openjfx:javafx-graphics:16" level="project" />
-    <orderEntry type="library" name="Gradle: org.openjfx:javafx-graphics:win:16" level="project" />
-    <orderEntry type="library" name="Gradle: org.openjfx:javafx-base:16" level="project" />
-    <orderEntry type="library" name="Gradle: org.openjfx:javafx-base:win:16" level="project" />
+    <orderEntry type="library" name="Gradle: org.openjfx:javafx-fxml:win:17" level="project" />
+    <orderEntry type="library" name="Gradle: org.openjfx:javafx-controls:17" level="project" />
+    <orderEntry type="library" name="Gradle: org.openjfx:javafx-controls:win:17" level="project" />
+    <orderEntry type="library" name="Gradle: org.openjfx:javafx-graphics:17" level="project" />
+    <orderEntry type="library" name="Gradle: org.openjfx:javafx-graphics:win:17" level="project" />
+    <orderEntry type="library" name="Gradle: org.openjfx:javafx-base:17" level="project" />
+    <orderEntry type="library" name="Gradle: org.openjfx:javafx-base:win:17" level="project" />
     <orderEntry type="library" name="Gradle: org.junit.jupiter:junit-jupiter-api:5.7.0" level="project" />
     <orderEntry type="library" name="Gradle: org.junit.platform:junit-platform-commons:1.7.0" level="project" />
     <orderEntry type="library" name="Gradle: org.apiguardian:apiguardian-api:1.1.0" level="project" />
