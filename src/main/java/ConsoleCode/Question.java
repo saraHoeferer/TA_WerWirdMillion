@@ -87,7 +87,7 @@ public class Question {
         this.secondChance = true;
     }
 
-    public void chamgeSecondChanceBack() {this.secondChance = false;}
+    public void changeSecondChanceBack() {this.secondChance = false;}
     public void changeHide(char answer, Joker fiftyFifty) {
         switch (answer) {
             case 'a':
