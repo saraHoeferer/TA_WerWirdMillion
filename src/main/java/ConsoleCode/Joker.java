@@ -3,13 +3,11 @@ package ConsoleCode;
 import java.util.Random;
 
 public class Joker {
-    private final int function; //1 - 50:50, 2 - Second Chance, 3 - Telephone ConsoleCode.Joker / bestimmt, welcher ConsoleCode.Joker was macht
     private boolean used; //gibt true - ConsoleCode.Joker bereits verwendet bzw. false - ConsoleCode.Joker noch nicht verwendet
     private char random; //zufälliges char aus a, b, c, d
 
     //Konstruktor der ConsoleCode.Joker Klasse
-    public Joker(int function) {
-        this.function = function; //den Membervariablen werden ihre Werte zugewiesen
+    public Joker() {
         this.used = false; //ConsoleCode.Joker sind am Anfang alle noch nicht verwendet
         this.random = '\0'; //Zufallsvariable ist noch leer
     }
@@ -21,6 +19,7 @@ public class Joker {
     public void changeUsed(){
         used = true;
     }
+
     public static char getRandomChar() { //wählt aus den 4 Antwortmöglichkeiten einen Buchstaben aus; Rückgabewert ist char nicht int
         Random random = new Random();
         char randomChar = (char) (random.nextInt(4) + 'a'); //aus 4 aufeinanderfolgenden chars a, b, c, d ein char zufällig ziehen
@@ -163,22 +162,9 @@ Wahrscheinlichkeiten für Telefonjoker
 
     //Funktionen der verschiedenen ConsoleCode.Joker abrufen
     //Methode, um ConsoleCode.Joker zu verwenden
-    public void useJoker(Question q1) {
-        switch (function) {
-            case 1: //FiftyFifty
-                changeQuestion(q1); //verbirgt eine falsche Antwortmöglichkeit
-                changeQuestion(q1); //verbirgt eine weitere falsche Antwortmöglichkeit
-                this.used = true; //used auf true setzen - wichtig, um ConsoleCode.Joker nur einmal verwenden zu können
-                q1.printQuestion(); //gibt Frage ohne 2 falschen Antwortmöglichkeiten aus
-                break;
-            case 2: //Second Chance (2 mal raten bei einer Frage)
-                q1.changeSecondChance(); //ändert secondChance auf true, ist somit aktiv
-                this.used = true;
-                break;
-            case 3: //Telephone
-                telephoneHelpMe(q1); //ruft Telefonjokermethode auf (oben genauer erklärt)
-                this.used = true;
-                break;
-        }
+    public void useFiftyFiftyJoker(Question q1) {
+        changeQuestion(q1); //verbirgt eine falsche Antwortmöglichkeit
+        changeQuestion(q1); //verbirgt eine weitere falsche Antwortmöglichkeit
+        this.used = true; //used auf true setzen - wichtig, um ConsoleCode.Joker nur einmal verwenden zu können
     }
 }
