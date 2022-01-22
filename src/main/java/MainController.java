@@ -113,9 +113,9 @@ public class MainController {
     private Question[] questions; // array of questions
     private Question currentQuestion; // new object of the Question class
     private final Player currentPlayer = new Player(); // new object of the Player class
-    private final Joker fiftyFifty = new Joker(1); // new 50 : 50 Joker
-    private final Joker secondChance = new Joker(2); // new second chance Joker
-    private final Joker telephone = new Joker(3); // new telephone Joker
+    private final Joker fiftyFifty = new Joker(); // new 50 : 50 Joker
+    private final Joker secondChance = new Joker(); // new second chance Joker
+    private final Joker telephone = new Joker(); // new telephone Joker
     private boolean left; // true when leaveButton is pressed
 
     // initialize the game board
@@ -397,7 +397,7 @@ public class MainController {
     @FXML
     void useFiftyFifty(ActionEvent e) { // use 50:50 Joker
         if (!fiftyFifty.getUsed()) {
-            fiftyFifty.useJoker(currentQuestion);
+            fiftyFifty.useFiftyFiftyJoker(currentQuestion);
             printFiftyFiftyQuestion();
         } else {
             labelOutput.setText("Du hast diesen Joker bereits verwendet.");
