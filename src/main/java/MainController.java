@@ -376,7 +376,7 @@ public class MainController {
 
     // print question if 50:50 Joker is used
     private void printFiftyFiftyQuestion() { // working with booleans from Question class
-        abelQ.setText(currentQuestion.getQuestion());
+        labelQ.setText(currentQuestion.getQuestion());
         if (!currentQuestion.isHideA()) { // if answer not hidden yet
             buttonA.setText("A: " + currentQuestion.getA());
         } else {
