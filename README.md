@@ -48,15 +48,15 @@ You can quit the game at the beginning of each question. Then, a window will ope
 ### Classes
 We have six classes in our program
 - **Player**: Controls the spending of money and the increase of the category.
-- **question**: Responsible for hiding answer choices for the fifty-fifty joker and using the second chance joker.
-- **joker**: Controls the functions of each joker
-- **game**: Responsible for creating the question array and assigning the questions to their respective categories.
+- **Question**: Responsible for hiding answer choices for the fifty-fifty joker and using the second chance joker.
+- **Joker**: Controls the functions of each joker
+- **Game**: Responsible for creating the question array and assigning the questions to their respective categories.
 - **HelloFX**: Responsible for starting the graphical user interface
 - **MainController**: Responsible for the game flow in the GUI and calling new windows.
 
 ### Questions
 Our questions are stored in a JSON file called in the Game class to create the question array. `private ConsoleCode.Question[] createQuestions()`
-> you may answer some questions twice after several playthroughs. We have close to 150 questions, and they are randomly picked each round.
+> You may answer some questions twice after several playthroughs. We have close to 150 questions, and they are randomly picked each round.
 
 ### JavaFX
 > We have programmed our GUI using JavaFX. The MainController class and the FXML files for styling the GUI are important here.
