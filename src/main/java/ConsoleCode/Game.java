@@ -7,34 +7,35 @@ import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.Random;
 
-//Steuerung des Spiels
-
+//Game Control class
 public class Game {
-    //Einbinden der Fragen mittels der Gson-Methode fromJson(), Rückgabe eines ConsoleCode.Question[]
-    public Question[] createQuestions() throws IOException {
+
+    //createQuestions imports the json-questions file using Gson-method fromJson()
+    public Question[] createQuestions() throws IOException {        //IOException class signals failure during the import
         Gson gson = new Gson();
 
-        Question[] questions = gson.fromJson(new FileReader("/Users/susikloss/IdeaProjects/TA_WerWirdMillion/questions.json", StandardCharsets.UTF_8), Question[].class); // UTF_8 for mutated vowels
-        return questions;
+        Question[] questions = gson.fromJson(new FileReader("/Users/susikloss/IdeaProjects/TA_WerWirdMillion/questions.json", StandardCharsets.UTF_8), Question[].class); // UTF_8 is needed for mutated vowels
+        return questions;              // return of Question array
     }
 
-    //Rückgabe einer ArrayList<ConsoleCode.Question>, die jeweils die Fragen einer bestimmten Kategorie enthält
-    //die Fragen kommen aus dem ConsoleCode.Question[]
-    public ArrayList<Question> getQuestionCategory(Question[] questions, int category) { //Fragen einer Kategorie
+
+    //getQuestionCategory is a getter method that creates an ArrayList of questions for one  of the 15 game categories
+    public ArrayList<Question> getQuestionCategory(Question[] questions, int category) {        //method takes Question array and a category between 1 and 15 as parameters
         ArrayList<Question> questionsCategory = new ArrayList<>();
-        for (int i = 0; i < questions.length; i++) {
+        for (int i = 0; i < questions.length; i++) {              //all questions of the passed category are added to an ArrayList
             if (questions[i].getCategory() == category) {
                 questionsCategory.add(questions[i]);
             }
         }
-        return questionsCategory;
+        return questionsCategory;      //return of ArrayList of a certain category
     }
 
-    //Rückgabe einer zufällig ausgewählten Frage einer bestimmten Kategorie aus der ArrayList<ConsoleCode.Question>
-    public Question getQuestionFromCategory(ArrayList<Question> questionsCategory) { //Frage aus Fragenkatalog einer Kategorie auswählen
+
+    //getQuestionFromCategory is a getter method that returns a random question from the ArrayList of a certain category
+    public Question getQuestionFromCategory(ArrayList<Question> questionsCategory) {          //method takes ArrayList of a certain category as parameter
         Random random = new Random();
-        int randomInt = random.nextInt(questionsCategory.size());
+        int randomInt = random.nextInt(questionsCategory.size());    //random integer between 0 and size of ArrayList is created
         Question q1 = questionsCategory.get(randomInt);
-        return q1;
+        return q1;                    //return of question at index equal to random integer
     }
 }
