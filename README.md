@@ -31,7 +31,7 @@ There are three different jokers.
 ### Categories
 The categories are (also displayed in the GUI on the right side):
 
-50€-> 100€ -> 200€ -> 300€ -> **500€ (1st Saftey level)** -> 1.000€ -> 2.000€ -> 4.000€ -> 8.000€ -> **16.000€ (2nd Saftey level)** -> 32.000€ -> 64.000€ -> 125.000€ -> 500.000€ -> 1.000.0000€
+50€-> 100€ -> 200€ -> 300€ -> **500€ (1st security level)** -> 1.000€ -> 2.000€ -> 4.000€ -> 8.000€ -> **16.000€ (2nd security level)** -> 32.000€ -> 64.000€ -> 125.000€ -> 500.000€ -> 1.000.0000€
 
 >The amount you are currently standing at is highlighted in the GUI on the right side.
 
