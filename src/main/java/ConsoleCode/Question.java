@@ -35,15 +35,15 @@ public class Question {
         this.secondChance = false;
     }
 
-    //getter
+    //getter -- for the question.
     public String getQuestion() {
         return question;
     }
-
+    //Getter -- for the category.
     public int getCategory() {
         return category;
     }
-
+    // Getter a-d -- the answer possibilities for the questions.
     public String getA() {
         return a;
     }
@@ -59,15 +59,15 @@ public class Question {
     public String getD() {
         return d;
     }
-
+    // Getter -- for the Correct answer.
     public char getCorrect() {
         return correct;
     }
-
+    // Getter -- for the second Chance Joker.
     public boolean getSecondChance() {
         return secondChance;
     }
-
+    // Getter hideA/D -- for our fifty-fifty Joker
     public boolean isHideA (){
         return  hideA;
     }
@@ -84,13 +84,13 @@ public class Question {
         return hideD;
     }
 
-    //methods
+    //Method which allows us to use the Second Chance Joker.
     public void changeSecondChance() {
         this.secondChance = true;
     }
-
+    //Method that renews the Second Chance Joker.
     public void changeSecondChanceBack() {this.secondChance = false;}
-
+    // Method in which one wrong answer is hidden when the fifty-fifty Joker is called upon. Method is used twice. See Method 'useFiftyFiftyJoker'.
     public void changeHide(char answer, Joker fiftyFifty) {
         switch (answer) {
             case 'a':
