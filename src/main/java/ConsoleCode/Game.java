@@ -7,19 +7,20 @@ import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.Random;
 
-//Game Control class
+//Game class
 public class Game {
 
     //createQuestions imports the json-questions file using Gson-method fromJson()
     public Question[] createQuestions() throws IOException {        //IOException class signals failure during the import
         Gson gson = new Gson();
-
-        Question[] questions = gson.fromJson(new FileReader("/Users/susikloss/IdeaProjects/TA_WerWirdMillion/questions.json", StandardCharsets.UTF_8), Question[].class); // UTF_8 is needed for mutated vowels
+        String dirPath = new File("").getAbsolutePath();
+        dirPath += "\\questions.json";
+        Question[] questions = gson.fromJson(new FileReader(dirPath, StandardCharsets.UTF_8), Question[].class);  // UTF_8 is needed for mutated vowels
         return questions;              // return of Question array
     }
 
 
-    //getQuestionCategory is a getter method that creates an ArrayList of questions for one  of the 15 game categories
+    //getQuestionCategory is a getter method that creates an ArrayList of questions for one of the 15 game categories
     public ArrayList<Question> getQuestionCategory(Question[] questions, int category) {        //method takes Question array and a category between 1 and 15 as parameters
         ArrayList<Question> questionsCategory = new ArrayList<>();
         for (int i = 0; i < questions.length; i++) {              //all questions of the passed category are added to an ArrayList

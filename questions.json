@@ -1629,6 +1629,416 @@
         "d": "P&C",
         "correct": "c",
         "category": "15"
-    } 
+    },
+    {
+        "question": "Inhaltsreichs, gehaltvoll - oder auch: ...?",
+        "a": "verhörstark",
+        "b": "alibischwach",
+        "c": "aussagekräftig",
+        "d": "leugnenzwecklos",
+        "correct": "c",
+        "category": "1"
+    },
+    {
+        "question": "Wenn jemand im Geschäft potenzielle Käufer berät, dann bedient ...?",
+        "a": "er Kunden",
+        "b": "aus Spähen",
+        "c": "ent Decken",
+        "d": "auf Spüren",
+        "correct": "a",
+        "category": "2"
+    },
+    {
+        "question": "Was wird mit einer abgeschlossenen Angelegenheit redensartlich gemacht?",
+        "a": "im Büro müde geworden",
+        "b": "unterm Schreibtisch gechillt",
+        "c": "zu den Akten gelegt",
+        "d": "auf der Tastatur eingenickt",
+        "correct": "c",
+        "category": "3"
+    },
+    {
+        "question": "Was bedeutet mit einem 'un' davor so viel wie 'schwerflällig' oder 'tollpatschig'?",
+        "a": "wirbel",
+        "b": "gelenk",
+        "c": "knochen",
+        "d": "muskel",
+        "correct": "b",
+        "category": "4"
+    },
+
+    {
+        "question": "Bildete sich der Medizin-Nobelpreisträger von 1905 literarisch weiter, dann las Robert ...?",
+        "a": "Diät Ratgeber",
+        "b": "Speise Karten",
+        "c": "Back Rezepte",
+        "d": "Koch Bücher",
+        "correct": "d",
+        "category": "5"
+    },
+
+    {
+        "question": "Welche Haarfarbe steht nicht nur Bäckereifachverkäuferinnen?",
+        "a": "brötchenschwarz",
+        "b": "semmelblond",
+        "c": "schrippenrot",
+        "d": "weckenbraun",
+        "correct": "b",
+        "category": "6"
+    },
+
+    {
+        "question": "Welche Partei holt bei der Bundestagswahl über 165.000 Zweitstimmen?",
+        "a": "Hertz",
+        "b": "Watt",
+        "c": "Ampere",
+        "d": "Volt",
+        "correct": "d",
+        "category": "7"
+    },
+
+    {
+        "question": "Was kann man mit einer Kreuzung nicht nur verkehrstechnisch sinnvoll, sondern auch sprachlich korrekt machen?",
+        "a": "bekreisverkehren",
+        "b": "zebrabestreifen",
+        "c": "beampeln",
+        "d": "stoppbeschildern",
+        "correct": "c",
+        "category": "8"
+    },
+
+    {
+        "question": "Welche Band feiert 2021 ihr 30-jähriges Jubiläum mit dem neuen Album 'Krone der Schöpfung'?",
+        "a": "Die Prinzen",
+        "b": "Scooter",
+        "c": "The BossHoss",
+        "d": "Sportfreunde Stiller",
+        "correct": "a",
+        "category": "9"
+    },
+    {
+        "question": "Sein neues Amt als Bundestrainer bedeutet für Hansi Flick die Rückkehr auf die Trainerbank, die er wann verlassen hatte?",
+        "a": "2006, bei Löws Amtsbeginn",
+        "b": "2010, weil RB Salzburg rief",
+        "c": "2014, nach dem WM-Titel",
+        "d": "2018, nach dem WM-Aus",
+        "correct": "c",
+        "category": "10"
+    },
+    {
+        "question": "Wer unter der sogenannten Stewardessenkrankheit leidet, geht am besten zum ...?",
+        "a": "Internisten",
+        "b": "Orthopäden",
+        "c": "Hautarzt",
+        "d": "Zahnarzt",
+        "correct": "c",
+        "category": "11"
+    },
+    {
+        "question": "Jüngster Milliardär der Welt ist laut 'Forbes'-Liste 2021 der 19-jährige Deutsche Kevin David Lehmann, ein ...?",
+        "a": "Golf-Wunderkind",
+        "b": "Klassenlotterie-Gewinner",
+        "c": "Las-Vegas-Poker-Champion",
+        "d": "Drogeriemarktketten-Erbe",
+        "correct": "d",
+        "category": "12"
+    },
+    {
+        "question": "Welches heimliche Liebespaar verwendet einst die aus dem Radio entlehnten Decknamen 'Fred' und 'Gladys' füreinander?",
+        "a": "JFK & Marilyn Monroe",
+        "b": "Prinz Charles & Camilla",
+        "c": "Fürst Rainer & Grace Kelly",
+        "d": "Brad Pitt & Angelina Jolie",
+        "correct": "b",
+        "category": "13"
+    },
+    {
+        "question": "Welches saisonale Phänomen hat es in die neueste, 28. Auflage des Rechtschreibdudens geschafft?",
+        "a": "Strandfrisur",
+        "b": "Reisebräune",
+        "c": "Urlaubsbart",
+        "d": "Ferienpfunde",
+        "correct": "c",
+        "category": "14"
+    },
+    {
+        "question": "Wer war der erste US-Präsident, dessen Amtszeit - wie bis heute üblich - an einem 20. Januar um 12 Uhr mittags begann?",
+        "a": "Ulysses S. Grant",
+        "b": "Franklin D. Roosevelt",
+        "c": "Dwight D. Eisenhower",
+        "d": "Lyndon B. Johnson",
+        "correct": "b",
+        "category": "15"
+    },
+    {
+        "question": "Genehmigt sich der Beckenbauer einen Cognac, dann trinkt der ...?",
+        "a": "Teebaum Öl",
+        "b": "Melissen Geist",
+        "c": "Schüßler Salz",
+        "d": "Frank Branntwein",
+        "correct": "d",
+        "category": "1"
+    },
+    {
+        "question": "Auch nachdem ich das verlorene Kleingeld wieder aufgesammelt hatte, lagen auf dem Boden noch ein paar ...?",
+        "a": "Herz stück",
+        "b": "Mittel punkt",
+        "c": "Na bel",
+        "d": "Cent rum",
+        "correct": "d",
+        "category": "2"
+    },
+    {
+        "question": "Was gehört zu so manchem Flusslauf?",
+        "a": "Vorderfuß",
+        "b": "Rückhand",
+        "c": "Seitenarm",
+        "d": "Überbein",
+        "correct": "c",
+        "category": "3"
+    },
+    {
+        "question": "Menschen mit Schuhgröße 50 leben ganz wörtlich genommen ...?",
+        "a": "über ihre Verhältnisse",
+        "b": "auf großem Fuß",
+        "c": "wie die Made im Speck",
+        "d": "in Saus und Braus",
+        "correct": "b",
+        "category": "4"
+    },
+    {
+        "question": "Wer die Übersetzung von 'history' in sein Vokabelheft notiert, der ...?",
+        "a": "macht 'Karriere'",
+        "b": "sorgt für 'Furore'",
+        "c": "schreibt 'Geschichte'",
+        "d": "setzt sich ein 'Denkmal'",
+        "correct": "c",
+        "category": "5"
+    },
+    {
+        "question": "Eine am 22. April vom Bundestag beschlossene Gesetzesreform beinhaltet das 'Recht auf ...?'",
+        "a": "schnelles Internet",
+        "b": "regelmäßige Maniküre",
+        "c": "schicke Markenklamotten",
+        "d": "einen eigenen Garten",
+        "correct": "a",
+        "category": "6"
+    },
+    {
+        "question": "Nach den Leitsätzen des Deutschen Lebensmittelbuchs gehört in Deutschland - mit Ausnahme von Bayern - ...?",
+        "a": "Leber in Leberkäse",
+        "b": "Sand in Sandkuchen",
+        "c": "Fisch in Fischstäbchen",
+        "d": "Baby in Babybrei",
+        "correct": "a",
+        "category": "7"
+    },
+    {
+        "question": "Was war die 2021 verstorbene Heide Keller in der Rolle ihres Lebens als Beatrice von Ledebur von Beruf?",
+        "a": "Chefärztin",
+        "b": "Chefsekretärin",
+        "c": "Chefköchin",
+        "d": "Chefhostess",
+        "correct": "d",
+        "category": "8"
+    },
+    {
+        "question": "Wo ist es oft verpflichtend, sich vor dem Betreten mit 'Tür frei' anzukündigen und die Antwort 'Tür ist frei' abzuwarten?",
+        "a": "Kegelbahn",
+        "b": "Reitbahn",
+        "c": "Achterbahn",
+        "d": "U-Bahn",
+        "correct": "b",
+        "category": "9"
+    },
+    {
+        "question": "Als was dienen schon Mal Stücke aus Metallen wie z. B. Aluminium, Magnesium und Zink?",
+        "a": "Ebbediode",
+        "b": "Mankokathode",
+        "c": "Opferanode",
+        "d": "Minustriode",
+        "correct": "c",
+        "category": "10"
+    },
+    {
+        "question": "Wer stellte fest, er fände sein 'Gesicht komisch ohne Brille', als er - nach 46 Jahren - die Sehhilfe plötzlich weglassen konnte?",
+        "a": "Jürgen Klopp",
+        "b": "Götz Alsmann",
+        "c": "Ralph Caspers",
+        "d": "Armin Laschet",
+        "correct": "a",
+        "category": "11"
+    },
+    {
+        "question": "Den Deutschen Buchpreis 2021 erhielt Antje Rávik Strubel für ihren Roman mit den Titel ...?",
+        "a": "Schwarzer Mann",
+        "b": "Blaue Frau",
+        "c": "Grüner Junge",
+        "d": "Blondes Mädchen",
+        "correct": "b",
+        "category": "12"
+    },
+    {
+        "question": "Was ist gleich bei drei DAX-Unternehmen im Namen enthalten?",
+        "a": "Allianz",
+        "b": "Bayer",
+        "c": "Siemens",
+        "d": "Volkswagen",
+        "correct": "c",
+        "category": "13"
+    },
+    {
+        "question": "In den ersten drei Jahrzehnten des Dameneinzels von Wimbledon - zwischen 1884 und 1914 - war May Sutton die einzige ...?",
+        "a": "erfolgreiche Titelverteidigerin",
+        "b": "verheiratete Teilnehmerin",
+        "c": "nichtadelige Startberechtigte",
+        "d": "nichtbritische Finalistin",
+        "correct": "d",
+        "category": "14"
+    },
+    {
+        "question": "Zur Stammmutter einer neuen Hunderasse wurde die um 1819 von einem gewissen Jack Russell erstandene Terrierhündin namens ...?",
+        "a": "Obama",
+        "b": "Clinton",
+        "c": "Trump",
+        "d": "Biden",
+        "correct": "c",
+        "category": "15"
+    },
+    {
+        "question": "Es gehören ...?",
+        "a": "Landkarten in den Landkasten",
+        "b": "Fahrkarten in den Fahrkasten",
+        "c": "Postkarten in den Postkasten",
+        "d": "Freikarten in den Freikasten",
+        "correct": "c",
+        "category": "1"
+    },
+    {
+        "question": "Wer sich niveauvoll ausdrückt, spricht ...?",
+        "a": "lauflinks",
+        "b": "fahrrechts",
+        "c": "fliegunten",
+        "d": "gehoben",
+        "correct": "d",
+        "category": "2"
+    },
+    {
+        "question": "Wobei handelt es sich um ein Mineral?",
+        "a": "Omal",
+        "b": "Opal",
+        "c": "Mamal",
+        "d": "Papal",
+        "correct": "b",
+        "category": "3"
+    },
+    {
+        "question": "Über der Förster und seine Ehefrau hieß es, zu Hause habe sie das Sagen, aber im ...?",
+        "a": "La vend el",
+        "b": "Pfeffer min ze",
+        "c": "Ka mil le",
+        "d": "Wald meist er",
+        "correct": "d",
+        "category": "4"
+    },
+    {
+        "question": "Kürzlich (2021) feierte man das Jubiläum '50 Jahre ...'?",
+        "a": "Telefonseelsorge 440",
+        "b": "Auskunft 330",
+        "c": "Zeitansage 220",
+        "d": "Polizeiruf 110",
+        "correct": "d",
+        "category": "5"
+    },
+    {
+        "question": "Welcher dieser Deals verdankt seine Bezeichnung nicht der Ware, die dabei den Besitzer wechselt?",
+        "a": "Haustürgeschäft",
+        "b": "Gemäldeauktion",
+        "c": "Gebrauchtwagenkauf",
+        "d": "Rauschgifthandel",
+        "correct": "a",
+        "category": "6"
+    },
+    {
+        "question": "Was wird in einer Sennerei üblicherweise produziert?",
+        "a": "Käse",
+        "b": "Wein",
+        "c": "Salami",
+        "d": "Schokolade",
+        "correct": "a",
+        "category": "7"
+    },
+    {
+        "question": "Was führte zur Disqualifikation von Jürgen Hingsen bei den Olympischen Sommerspielen in Seoul?",
+        "a": "ein Dopingtest",
+        "b": "zwei Dribbelfehler",
+        "c": "drei Fehlstarts",
+        "d": "vier Reifenpannen",
+        "correct": "c",
+        "category": "8"
+    },
+    {
+        "question": "Weil er mit dem ersten Tag einer Woche begann und dem letzten Tag einer Woche endete, sprach man 2021 von 'perfekten ...'?",
+        "a": "Januar",
+        "b": "Februar",
+        "c": "März",
+        "d": "April",
+        "correct": "b",
+        "category": "9"
+    },
+    {
+        "question": "Nomen est omen: 'Perseverance' - Beharrlichkeit - ist eine Erfolgsvoraussetzung bei der ambitionierten Forschungsmission ...?",
+        "a": "im ewigen Eis",
+        "b": "auf dem Grund des Pazifik",
+        "c": "auf dem Mars",
+        "d": "auf dem Gipfel des Everest",
+        "correct": "c",
+        "category": "10"
+    },
+    {
+        "question": "Ihre am 4. Juni 2021 geborene Tochter stellten Harry und Meghan der Welt unter welchen Rufnamen vor?",
+        "a": "Lili",
+        "b": "Lily",
+        "c": "Lilli",
+        "d": "Lilly",
+        "correct": "a",
+        "category": "11"
+    },
+    {
+        "question": "Welche Fleetwood-Mac-Hit beginnt mit 'Can you hear me calling out your name? You know that I'm falling an I don't know what to say'?",
+        "a": "Everybody",
+        "b": "Everywhere",
+        "c": "Everyday",
+        "d": "Everything",
+        "correct": "b",
+        "category": "12"
+    },
+    {
+        "question": "Auf den Nutzen der sogenannten Taschenfolie, die häufig eine schwarze und weiße Seite hat, schwören sehr viele ...?",
+        "a": "Spargelbauern",
+        "b": "Tennisspieler",
+        "c": "Camper",
+        "d": "Hundebesitzer",
+        "correct": "a",
+        "category": "13"
+    },
+    {
+        "question": "Wo bestritt Alexander Zverev 2020 sein erstes Grand-Slam-Finale überhaupt - und verlor gegen den Österreicher Dominic Thiem?",
+        "a": "Melbourne",
+        "b": "Paris",
+        "c": "London",
+        "d": "New York",
+        "correct": "d",
+        "category": "14"
+    },
+    {
+        "question": "Wessen Namen trug der Mammutbaum General Sherman, der vom Volumen des Stammes her größte Baum der Erde, eine Zeit lang?",
+        "a": "Richard Wagner",
+        "b": "Otto von Bismarck",
+        "c": "Karl Marx",
+        "d": "Albert Einstein",
+        "correct": "c",
+        "category": "15"
+    }
 ]
 

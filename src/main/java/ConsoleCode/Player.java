@@ -1,31 +1,19 @@
 package ConsoleCode;
 
-import java.util.Scanner;
-
 public class Player {
-    //private class variables
+    //private instance variables
     private int money;
     private int category;
 
     //Constructor
     public Player() {
         this.money = 0;
-        this.category = 1;
+        this.category = 14;
     }
 
     //Getter-method to get the current category
     public int getCategory() {
         return category;
-    }
-
-    //Getter-method to get the current amount of money
-    public int getMoney() {
-        return money;
-    }
-
-    //method to set the category with the associated number (for switchMoney())
-    public void changeCategory(int currentCategory){
-        category = currentCategory; //refactored
     }
 
     //method to raise the category after every question
@@ -96,7 +84,7 @@ public class Player {
             moneyWon = "Du gehst leider leer aus!";
         } else if (category < 11) { //if a question is answered wrong and the contestant was under category 11
             moneyWon = "Du hast 500 Euro gewonnen!";
-        } else if(category < 16){ //wenn du eine Frage falsch beantwortet hast und höher als Kategorie 10 warst
+        } else if(category < 16){ //if a question is answered wrong and the contestant was higher than category 11
             moneyWon = "Du hast 16000 Euro gewonnen!";
         }
         return moneyWon;

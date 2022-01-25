@@ -1,8 +1,5 @@
 package ConsoleCode;
 
-import ConsoleCode.Joker;
-import ConsoleCode.Player;
-
 public class Question {
     //instance variables
     private final String question;
@@ -43,6 +40,7 @@ public class Question {
     public int getCategory() {
         return category;
     }
+
     // Getter a-d -- the answer possibilities for the questions.
     public String getA() {
         return a;
@@ -90,17 +88,18 @@ public class Question {
     }
     //Method that renews the Second Chance Joker.
     public void changeSecondChanceBack() {this.secondChance = false;}
+
     // Method in which one wrong answer is hidden when the fifty-fifty Joker is called upon. Method is used twice. See Method 'useFiftyFiftyJoker'.
-    public void changeHide(char answer, Joker fiftyFifty) {
-        switch (answer) {
+    public void changeHide(char answer, Joker fiftyFifty) { // answer == randomChar
+        switch (answer) { //switch random Char
             case 'a':
-                if (!hideA) {
-                    hideA = true;
+                if (!hideA) { //check if boolean hide is false - check if answer is not hidden
+                    hideA = true; //set boolean hide true - answer is hidden
                 } else {
-                    fiftyFifty.changeQuestion(this);
+                    fiftyFifty.changeQuestion(this); //if answer is already hidden -> call upon changeQuestion function again to get new randomChar
                 }
                 break;
-            case 'b':
+            case 'b': // same as above
                 if (!hideB) {
                     hideB = true;
                 } else {

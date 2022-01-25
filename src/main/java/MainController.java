@@ -16,19 +16,16 @@ import java.io.IOException;
 
 public class MainController {
 
-    // possible answers
+    // buttons for possible answers
     @FXML
     private Button buttonA = new Button();
 
-    // label for printing the question
     @FXML
     private Button buttonB = new Button();
 
-    // joker - buttons
     @FXML
     private Button buttonC = new Button();
 
-    // labels for displaying all categories
     @FXML
     private Button buttonD = new Button();
 
@@ -74,11 +71,9 @@ public class MainController {
     @FXML
     private Label labelCat9 = new Label();
 
-    // label for displaying statements regarding use of jokers
     @FXML
     private Label labelCat10 = new Label();
 
-    // button for leaving the game (and win money of current category)
     @FXML
     private Label labelCat11 = new Label();
 
@@ -102,6 +97,15 @@ public class MainController {
     @FXML
     private Button buttonLeave = new Button();
 
+    @FXML
+    private Label labelMoneyWon = new Label(); // print money won
+
+    @FXML
+    private Button buttonEndGame = new Button(); // switch to start window
+
+    @FXML
+    private Button buttonPlayAgain = new Button(); // switch to main window (shows directly first question again)
+
     // instance variables
     private final Game currentGame = new Game(); // new object of the Game class
     private Question[] questions; // array of questions
@@ -123,6 +127,21 @@ public class MainController {
         makeNextQuestion(); // printing first question on the game board
     }
 
+    private void makeNextQuestion() { // print question and possible answers
+        currentQuestion = currentGame.getQuestionFromCategory(currentGame.getQuestionCategory(questions, currentPlayer.getCategory()));
+        labelQ.setText(currentQuestion.getQuestion());
+        buttonA.setText("A: " + currentQuestion.getA());
+        buttonA.setMouseTransparent(false); // if false -> button is clickable, if true -> button is not clickable
+
+        buttonB.setText("B: " + currentQuestion.getB());
+        buttonB.setMouseTransparent(false);
+
+        buttonC.setText("C: " + currentQuestion.getC());
+        buttonC.setMouseTransparent(false);
+
+        buttonD.setText("D: " + currentQuestion.getD());
+        buttonD.setMouseTransparent(false);
+    }
 
     // switch from start window (in HelloFX) to main window (game)
     public void switchToGame() throws IOException { // called by button "Start"
@@ -145,19 +164,7 @@ public class MainController {
         HelloFX.stage.show();
     }
 
-
-
-    @FXML
-    private Label labelMoneyWon = new Label(); // print money won
-
-
-    @FXML
-    private Button buttonEndGame = new Button(); // switch to start window
-
-    @FXML
-    private Button buttonPlayAgain = new Button(); // switch to main window (shows directly first question again)
-
-
+    //switch from end to Start
     public void switchAndClose() throws IOException {
         Stage endStage = (Stage) buttonEndGame.getScene().getWindow(); // button is a child of the Alert window hence why buttonEndGame.getScene().getWindow();
         // new Stage with source from button is created; button has to be defined outside
@@ -165,6 +172,7 @@ public class MainController {
         endStage.close(); // close window which belongs to buttonEndGame
     }
 
+    //switch from end to Game
     public void switchAndClose2() throws IOException { // used by buttonPlayAgain because we don't switch
         Stage endStage = (Stage) buttonPlayAgain.getScene().getWindow();
         endStage.close();
@@ -235,29 +243,12 @@ public class MainController {
                 labelOutput.setText("Das war noch nicht richtig. Probier es nochmal."); // try again
                 currentQuestion.changeSecondChanceBack(); // deactivate second chance
             } else { // wrong answer - no second chance
-                //currentPlayer.printMoneyWon(false); // print money won according to different category
                 switchToAlert(); // open end window
-                //labelMoneyWon.setText();
-
             }
         }
     }
 
-    private void makeNextQuestion() { // print question and possible answers
-        currentQuestion = currentGame.getQuestionFromCategory(currentGame.getQuestionCategory(questions, currentPlayer.getCategory()));
-        labelQ.setText(currentQuestion.getQuestion());
-        buttonA.setText("A: " + currentQuestion.getA());
-        buttonA.setMouseTransparent(false);
 
-        buttonB.setText("B: " + currentQuestion.getB());
-        buttonB.setMouseTransparent(false);
-
-        buttonC.setText("C: " + currentQuestion.getC());
-        buttonC.setMouseTransparent(false);
-
-        buttonD.setText("D: " + currentQuestion.getD());
-        buttonD.setMouseTransparent(false);
-    }
 
     // COLORS
     // change color when mouse is pressed (not clicked)
@@ -286,7 +277,6 @@ public class MainController {
     void leaveGame() throws IOException {
         currentPlayer.switchMoney(); // get money according to category
         left = true; // set referring boolean to true
-        currentPlayer.changeCategory(16);
         switchToAlert();
     }
 
@@ -361,7 +351,7 @@ public class MainController {
             buttonA.setText("A: " + currentQuestion.getA());
         } else {
             buttonA.setText("A: ");
-            buttonA.setMouseTransparent(true);
+            buttonA.setMouseTransparent(true); // answer is not clickable
         }
         if (!currentQuestion.isHideB()) {
             buttonB.setText("B: " + currentQuestion.getB());
@@ -412,8 +402,7 @@ public class MainController {
             labelOutput.setText("Du hast diesen Joker bereits verwendet.");
             labelOutput.setStyle("-fx-text-fill: red");
         } else {
-            secondChance.changeUsed();
-            currentQuestion.changeSecondChance();
+            secondChance.useSecondChanceJoker(currentQuestion);
             labelOutput.setText("Second Chance Joker ist jetzt aktiv!");
             labelOutput.setStyle("-fx-text-fill: #ff9f00");
         }
@@ -505,14 +494,6 @@ public class MainController {
         } else {
             labelCat14.setStyle("-fx-background-color: #ffffff;");
         }
-
-      /*  if (category == 15) {
-            labelCat15.setStyle("-fx-background-color: #ffd447");
-        } else {
-            labelCat15.setStyle("-fx-background-color: #b8ffec;");
-        }
-
-       */
     }
 }
 

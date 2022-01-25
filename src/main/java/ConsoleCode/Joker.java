@@ -3,24 +3,18 @@ package ConsoleCode;
 import java.util.Random;
 
 public class Joker {
-    private boolean used; //returns true - ConsoleCode.Joker already or false - ConsoleCode.Joker not used yet
+    private boolean used; //returns true - Joker already used or false - Joker not used yet
     private char random; //random char out of a, b, c or d
 
-    //constructor for ConsoleCode.Joker class
+    //constructor for Joker class
     public Joker() {
-        this.used = false; //ConsoleCode.Joker all set to 'not used' at start of the game
+        this.used = false; //Joker all set to 'not used' at start of the game
         this.random = '\0'; //random variable empty
     }
 
     public boolean getUsed() {
-        return used; //returns true if ConsoleCode.Joker already used
+        return used; //returns true if Joker already used
     }
-
-    public void changeUsed() {
-        used = true;
-    }
-
-    //Second Chance and changeHide in Question class
 
     public static char getRandomChar() { //choose one char from 4 answer possibilities; return value is char (not int)
         Random random = new Random();
@@ -29,7 +23,7 @@ public class Joker {
         return randomChar;
     }
 
-    //FiftyFifty ConsoleCode.Joker
+    //FiftyFifty Joker
     public void changeQuestion(Question q1) { //method to hide one wrong answer
         random = getRandomChar();
         if (random != q1.getCorrect()) { //check if random char does not equal correct answer
@@ -43,6 +37,11 @@ public class Joker {
         changeQuestion(q1); //hides one wrong answer
         changeQuestion(q1); //hides another wrong answer
         this.used = true; //to not be used again!
+    }
+
+    public void useSecondChanceJoker(Question q1){
+        this.used = true; //to not be used again!
+        q1.changeSecondChance();// changes secondChance boolean in Question class on true
     }
 
     /*
