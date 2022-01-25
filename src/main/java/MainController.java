@@ -20,12 +20,15 @@ public class MainController {
     @FXML
     private Button buttonA = new Button();
 
+    // label for printing the question
     @FXML
     private Button buttonB = new Button();
 
+    // joker - buttons
     @FXML
     private Button buttonC = new Button();
 
+    // labels for displaying all categories
     @FXML
     private Button buttonD = new Button();
 
@@ -71,9 +74,11 @@ public class MainController {
     @FXML
     private Label labelCat9 = new Label();
 
+    // label for displaying statements regarding use of jokers
     @FXML
     private Label labelCat10 = new Label();
 
+    // button for leaving the game (and win money of current category)
     @FXML
     private Label labelCat11 = new Label();
 
@@ -102,10 +107,10 @@ public class MainController {
     private Question[] questions; // array of questions
     private Question currentQuestion; // new object of the Question class
     private final Player currentPlayer = new Player(); // new object of the Player class
+    private boolean left; // true when leaveButton is pressed
     private final Joker fiftyFifty = new Joker(); // new 50 : 50 Joker
     private final Joker secondChance = new Joker(); // new second chance Joker
-    private final Joker telephone = new Joker(); // new telephone Joker
-    private boolean left; // true when leaveButton is pressed
+    private final Joker telephone = new Joker();
 
     // initialize the game board
     @FXML
@@ -140,8 +145,11 @@ public class MainController {
         HelloFX.stage.show();
     }
 
+
+
     @FXML
     private Label labelMoneyWon = new Label(); // print money won
+
 
     @FXML
     private Button buttonEndGame = new Button(); // switch to start window
@@ -240,13 +248,13 @@ public class MainController {
         labelQ.setText(currentQuestion.getQuestion());
         buttonA.setText("A: " + currentQuestion.getA());
         buttonA.setMouseTransparent(false);
-        
+
         buttonB.setText("B: " + currentQuestion.getB());
         buttonB.setMouseTransparent(false);
-        
+
         buttonC.setText("C: " + currentQuestion.getC());
         buttonC.setMouseTransparent(false);
-        
+
         buttonD.setText("D: " + currentQuestion.getD());
         buttonD.setMouseTransparent(false);
     }
