@@ -24,6 +24,7 @@ import java.io.IOException;
 import java.security.Key;
 import java.time.Duration;
 
+
 public class MainController {
 
     // possible answers
@@ -255,9 +256,16 @@ public class MainController {
         currentQuestion = currentGame.getQuestionFromCategory(currentGame.getQuestionCategory(questions, currentPlayer.getCategory()));
         labelQ.setText(currentQuestion.getQuestion());
         buttonA.setText("A: " + currentQuestion.getA());
+        buttonA.setMouseTransparent(false);
+
         buttonB.setText("B: " + currentQuestion.getB());
+        buttonB.setMouseTransparent(false);
+
         buttonC.setText("C: " + currentQuestion.getC());
+        buttonC.setMouseTransparent(false);
+
         buttonD.setText("D: " + currentQuestion.getD());
+        buttonD.setMouseTransparent(false);
     }
 
     // COLORS
@@ -381,21 +389,25 @@ public class MainController {
             buttonA.setText("A: " + currentQuestion.getA());
         } else {
             buttonA.setText("A: ");
+            buttonA.setMouseTransparent(true);
         }
         if (!currentQuestion.isHideB()) {
             buttonB.setText("B: " + currentQuestion.getB());
         } else {
             buttonB.setText("B: ");
+            buttonB.setMouseTransparent(true);
         }
         if (!currentQuestion.isHideC()) {
             buttonC.setText("C: " + currentQuestion.getC());
         } else {
             buttonC.setText("C: ");
+            buttonC.setMouseTransparent(true);
         }
         if (!currentQuestion.isHideD()) {
             buttonD.setText("D: " + currentQuestion.getD());
         } else {
             buttonD.setText("D: ");
+            buttonD.setMouseTransparent(true);
         }
     }
 
