@@ -3,35 +3,39 @@ package ConsoleCode;
 import java.util.Scanner;
 
 public class Player {
-    //private Klassenvariablen
+    //private class variables
     private int money;
     private int category;
 
-    //Konstruktor
+    //Constructor
     public Player() {
         this.money = 0;
-        this.category = 14;
+        this.category = 1;
     }
 
-    //Gettermethode um Kategorie zu bekommen
+    //Getter-method to get the current category
     public int getCategory() {
         return category;
     }
 
-    public int getMoney() {return money;}
+    //Getter-method to get the current amount of money
+    public int getMoney() {
+        return money;
+    }
 
+    //method to set the category with the associated number (for switchMoney())
     public void changeCategory(int currentCategory){
         category = currentCategory; //refactored
     }
 
-    //Methode um die Kategorie nach jeder Frage um eins zu erhöhen
+    //method to raise the category after every question
     public void raiseCategory() {
         category++;
     }
 
-    //Methode um aus Kategorie den Geldbetrag zu ermitteln
+    //method to detect the current amount of money with help of the category
     public void switchMoney() {
-        switch (category) { //Kategorie wird geswitched
+        switch (category) { //category is being switched
             case 2:
                 money = 50;
                 break;
@@ -83,14 +87,14 @@ public class Player {
         }
     }
 
-    //Methode um Geld nach Ende des Spiels auszugeben
+    //method to print out the money that has been won
     public String printMoneyWon(boolean leave) {
         String moneyWon = "";
-        if (leave) {
+        if (leave) { //if contestant presses leave it prints out the current amount of money
             moneyWon = "Du hast " + money + " Euro gewonnen!";
-        } else if (category < 6) { //wenn du eine Frage falsch beantwortet hast und nicht weiter als Kategorie 4 gekommen bist
+        } else if (category < 6) { //if a question is answered wrong and the contestant was under category 6
             moneyWon = "Du gehst leider leer aus!";
-        } else if (category < 11) { //wenn du eine Frage falsch beantwortet hast und nicht weiter als Kategorie 9 gekommen bist
+        } else if (category < 11) { //if a question is answered wrong and the contestant was under category 11
             moneyWon = "Du hast 500 Euro gewonnen!";
         } else if(category < 16){ //wenn du eine Frage falsch beantwortet hast und höher als Kategorie 10 warst
             moneyWon = "Du hast 16000 Euro gewonnen!";
