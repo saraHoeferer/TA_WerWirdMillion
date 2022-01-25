@@ -4,6 +4,7 @@ import ConsoleCode.Joker;
 import ConsoleCode.Player;
 
 public class Question {
+    //instance variables
     private final String question;
     private final int category;
     private final String a;
@@ -17,6 +18,7 @@ public class Question {
     private boolean hideD;
     private boolean secondChance;
 
+    //constructor for Question object
     public Question(String question, int category, String a, String b, String c, String d, char correct) {
         this.question = question;
         this.category = category;
@@ -33,7 +35,7 @@ public class Question {
         this.secondChance = false;
     }
 
-    //Getter
+    //getter
     public String getQuestion() {
         return question;
     }
@@ -82,7 +84,7 @@ public class Question {
         return hideD;
     }
 
-    //Methoden
+    //methods
     public void changeSecondChance() {
         this.secondChance = true;
     }
