@@ -96,10 +96,8 @@ public class Player {
             moneyWon = "Du gehst leider leer aus!";
         } else if (category < 11) { //if a question is answered wrong and the contestant was under category 11
             moneyWon = "Du hast 500 Euro gewonnen!";
-        } else if(category < 15){ //if a question is answered wrong and the contestant was under category 15
+        } else if(category < 16){ //wenn du eine Frage falsch beantwortet hast und höher als Kategorie 10 warst
             moneyWon = "Du hast 16000 Euro gewonnen!";
-        } else if(category == 15){ //if contestant wins the millions
-            moneyWon = "Gl\u00fcckwunsch! Du bist Million\u00e4r."; // \u00fc and \u00e4 stands for ü and ä
         }
         return moneyWon;
     }

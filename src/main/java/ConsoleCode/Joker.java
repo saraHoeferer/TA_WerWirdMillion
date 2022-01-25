@@ -3,168 +3,169 @@ package ConsoleCode;
 import java.util.Random;
 
 public class Joker {
-    private boolean used; //gibt true - ConsoleCode.Joker bereits verwendet bzw. false - ConsoleCode.Joker noch nicht verwendet
-    private char random; //zufälliges char aus a, b, c, d
+    private boolean used; //returns true - ConsoleCode.Joker already or false - ConsoleCode.Joker not used yet
+    private char random; //random char out of a, b, c or d
 
-    //Konstruktor der ConsoleCode.Joker Klasse
+    //constructor for ConsoleCode.Joker class
     public Joker() {
-        this.used = false; //ConsoleCode.Joker sind am Anfang alle noch nicht verwendet
-        this.random = '\0'; //Zufallsvariable ist noch leer
+        this.used = false; //ConsoleCode.Joker all set to 'not used' at start of the game
+        this.random = '\0'; //random variable empty
     }
 
     public boolean getUsed() {
-        return used;
-    } //gibt true zurück, wenn ConsoleCode.Joker verwendet wurde
+        return used; //returns true if ConsoleCode.Joker already used
+    }
 
-    public void changeUsed(){
+    public void changeUsed() {
         used = true;
     }
 
-    public static char getRandomChar() { //wählt aus den 4 Antwortmöglichkeiten einen Buchstaben aus; Rückgabewert ist char nicht int
+    //Second Chance and changeHide in Question class
+
+    public static char getRandomChar() { //choose one char from 4 answer possibilities; return value is char (not int)
         Random random = new Random();
-        char randomChar = (char) (random.nextInt(4) + 'a'); //aus 4 aufeinanderfolgenden chars a, b, c, d ein char zufällig ziehen
+        char randomChar = (char) (random.nextInt(4) + 'a');
+        // a - 97 + [range: 0 - 3]
         return randomChar;
     }
 
     //FiftyFifty ConsoleCode.Joker
-    public void changeQuestion(Question q1) { //Methode, um falsche Antwortmöglichkeit zufällig zu verbergen
+    public void changeQuestion(Question q1) { //method to hide one wrong answer
         random = getRandomChar();
-        if (random != q1.getCorrect()) { //überprüfen, ob gezogenes char nicht gleich dem char der richtigen Antwort ist
-            q1.changeHide(random, this); //dann hide auf true setzen bei gezogenem char
+        if (random != q1.getCorrect()) { //check if random char does not equal correct answer
+            q1.changeHide(random, this); //hide is set true and changeHide from Question class is called
         } else {
-            changeQuestion(q1); //wenn random == correctAnswer -> Methode nochmal ausführen
+            changeQuestion(q1); //if random == correctAnswer -> run method again
         }
     }
 
-    /*
-Wahrscheinlichkeiten für Telefonjoker
-- Kategorie 1 - 5 - 90 Prozent
-- Kategorie 6 - 7 - 85 Prozent
-- Kategorie 8     - 80 Prozent
-- Kategorie 9     - 77 Prozent
-- Kategorie 10    - 75 Prozent
-- Kategorie 11    - 73 Prozent
-- Kategorie 12    - 70 Prozent
-- Kategorie 13    - 66 Prozent
-- Kategorie 14    - 61 Prozent
-- Kategorie 15    - 55 Prozent
- */
-    //TELEFONJOKER
-    //je höher die Kategorie, desto geringer wird die Wahrscheinlichkeit, die richtige Antwort zu bekommen
-    //zufällige Zahl zwischen 1 und 100 generieren
-    //ist diese Zahl kleiner gleich der Prozentzahl, wird vom Telefonjoker die richtige Antwort gesagt
-    //ist diese Zahl größer als die Prozentzahl, wird eine der 3 falschen Antworten gesagt (generateRandomWrongAnswer)
-    //Teammitglieder einbinden als Telefonjoker
+    public void useFiftyFiftyJoker(Question q1) {
+        changeQuestion(q1); //hides one wrong answer
+        changeQuestion(q1); //hides another wrong answer
+        this.used = true; //to not be used again!
+    }
 
-    public static int generateRandomNumber() { //Zahl zwischen 1 und 100 ziehen
+    /*
+Probabilities for Telephone Joker
+- Category 1 - 5 - 90 %
+- Category 6 - 7 - 85 %
+- Category 8     - 80 %
+- Category 9     - 77 %
+- Category 10    - 75 %
+- Category 11    - 73 %
+- Category 12    - 70 %
+- Category 13    - 66 %
+- Category 14    - 61 %
+- Category 15    - 55 %
+ */
+    //TELEPHONE JOKER
+    //the higher the category the lower the probability that the Joker tells you the correct answer
+    //generate random int between 1 and 100
+    //int <= probability -> givenAnswer == correct answer
+    //int >= probability -> givenAnswer != correct answer (generateRandomWrongAnswer)
+    //team members are implemented as telephone Jokers
+
+    public static int generateRandomNumber() { //generate random int between 1 and 100
         Random random = new Random();
         int randomNumber = random.nextInt(100) + 1;
         return randomNumber;
     }
 
-    public char generateRandomWrongAnswer(Question q1) { //zufällig eine der 3 falschen Antworten ziehen
+    public char generateRandomWrongAnswer(Question q1) { //choose one random char from 3 wrong answers
         random = getRandomChar();
-        if (random != q1.getCorrect()) { //überprüfen ob gezogenes char mit correctAnswer nicht übereinstimmt
-            random = getRandomChar(); //random ist also die Antwort des Telefonjokers
+        if (random != q1.getCorrect()) { //check if char does not equal correctAnswer
+            random = getRandomChar(); //random is answer from telephone Joker
         } else {
-            generateRandomWrongAnswer(q1); //wenn random == correctAnswer -> Methode nochmal ausführen
+            generateRandomWrongAnswer(q1); //if random == correctAnswer -> run method again
         }
         return random;
     }
 
     public String telephoneHelpMe(Question q1) {
         String answer = "";
-        char givenAnswer; //Antwortmöglichkeit, die der Telefonjoker als Antwort gibt
-        if (q1.getCategory() < 6) { //Kategorie 1-5
-            if (generateRandomNumber() < 91) { //90% Wahrscheinlichkeit auf richtige Antwort
+        char givenAnswer; //answer given from telephone Joker
+        if (q1.getCategory() < 6) { //category 1-5
+            if (generateRandomNumber() < 91) { //90% probability for right answer
                 givenAnswer = q1.getCorrect();
                 answer = "Susi: 'Ich bin mir zu 100 Prozent sicher, dass " + givenAnswer + " richtig ist.'";
             } else {
                 givenAnswer = generateRandomWrongAnswer(q1);
                 answer = "Susi: 'Ich bin mir nicht sicher. Ich glaube die Antwort ist " + givenAnswer + ".'";
             }
-        } else if (q1.getCategory() < 8) { //Kategorie 6-7
-            if (generateRandomNumber() < 86) { //85% Wahrscheinlichkeit auf richtige Antwort
+        } else if (q1.getCategory() < 8) { //category 6-7
+            if (generateRandomNumber() < 86) { //85% probability for right answer
                 givenAnswer = q1.getCorrect();
                 answer = "Chrisi: 'Das ist einfach! Die richtige Antwort ist " + givenAnswer + ".'";
             } else {
                 givenAnswer = generateRandomWrongAnswer(q1);
-                answer = "Chrisi: 'Ganz schön schwierig für den Anfang! " + givenAnswer + " könnte stimmen.'";
+                answer = "Chrisi: 'Ganz sch\u00f6n schwierig f\u00fcr den Anfang! " + givenAnswer + " k\u00f6nnte stimmen.'";
             }
-        } else if (q1.getCategory() == 8) { //Kategorie 8
-            if (generateRandomNumber() < 81) { //80% Wahrscheinlichkeit auf richtige Antwort
+        } else if (q1.getCategory() == 8) { //category 8
+            if (generateRandomNumber() < 81) { //80% probability for right answer
                 givenAnswer = q1.getCorrect();
-                answer = "Sophia: 'Wenn mich nicht alles täuscht, sollte " + givenAnswer + " stimmen.'";
+                answer = "Sophia: 'Wenn mich nicht alles t\u00e4uscht, sollte " + givenAnswer + " stimmen.'";
             } else {
                 givenAnswer = generateRandomWrongAnswer(q1);
                 answer = "Sophia: 'Wissen tu ich es nicht, aber ich tendiere zu " + givenAnswer + ".'";
             }
-        } else if (q1.getCategory() == 9) { //Kategorie 9
-            if (generateRandomNumber() < 78) { //77% Wahrscheinlichkeit auf richtige Antwort
+        } else if (q1.getCategory() == 9) { //category 9
+            if (generateRandomNumber() < 78) { //77% probability for right answer
                 givenAnswer = q1.getCorrect();
                 answer = "Taha: 'Das hab ich letztens erst wieder gelesen! Antwort " + givenAnswer + " ist richtig.'";
             } else {
                 givenAnswer = generateRandomWrongAnswer(q1);
-                answer = "Taha: 'Das ist eine gute Frage... Ich würde " + givenAnswer + " nehmen - ohne Garantie!'";
+                answer = "Taha: 'Das ist eine gute Frage... Ich w\u00fcrde " + givenAnswer + " nehmen - ohne Garantie!'";
             }
-        } else if (q1.getCategory() == 10) { //Kategorie 10
-            if (generateRandomNumber() < 76) { //75% Wahrscheinlichkeit auf richtige Antwort
+        } else if (q1.getCategory() == 10) { //category 10
+            if (generateRandomNumber() < 76) { //75% probability for right answer
                 givenAnswer = q1.getCorrect();
                 answer = "Sara: 'Ich glaube, dass " + givenAnswer + " die richtige Antwort ist.'";
             } else {
                 givenAnswer = generateRandomWrongAnswer(q1);
-                answer = "Sara: 'Ich weiß es leider nicht. Tippen würde ich aber auf " + givenAnswer + ".'";
+                answer = "Sara: 'Ich wei\u00df es leider nicht. Tippen w\u00fcrde ich aber auf " + givenAnswer + ".'";
             }
-        } else if (q1.getCategory() == 11) { //Kategorie 11
-            if (generateRandomNumber() < 74) { //73% Wahrscheinlichkeit auf richtige Antwort
+        } else if (q1.getCategory() == 11) { //category 11
+            if (generateRandomNumber() < 74) { //73% probability for right answer
                 givenAnswer = q1.getCorrect();
                 answer = "Susi: 'Mit hoher Wahrscheinlichkeit ist " + givenAnswer + " die richtige Antwort.'";
             } else {
                 givenAnswer = generateRandomWrongAnswer(q1);
-                answer = "Susi: 'Schwierige Frage. Ich bin mir nicht sehr sicher, würde aber " + givenAnswer + " nehmen.'";
+                answer = "Susi: 'Schwierige Frage. Ich bin mir nicht sehr sicher, w\u00fcrde aber " + givenAnswer + " nehmen.'";
             }
-        } else if (q1.getCategory() == 12) { //Kategorie 12
-            if (generateRandomNumber() < 71) { //70% Wahrscheinlichkeit auf richtige Antwort
+        } else if (q1.getCategory() == 12) { //category 12
+            if (generateRandomNumber() < 71) { //70% probability for right answer
                 givenAnswer = q1.getCorrect();
                 answer = "Chrisi: 'Ich glaube, dass die richtige Antwort " + givenAnswer + " ist.'";
             } else {
                 givenAnswer = generateRandomWrongAnswer(q1);
-                answer = "Chrisi: '" + givenAnswer + " wäre mein Tipp. Aber wissen tu ich es leider nicht.'";
+                answer = "Chrisi: '" + givenAnswer + " w\u00e4re mein Tipp. Aber wissen tu ich es leider nicht.'";
             }
-        } else if (q1.getCategory() == 13) { //Kategorie 13
-            if (generateRandomNumber() < 67) { //66% Wahrscheinlichkeit auf richtige Antwort
+        } else if (q1.getCategory() == 13) { //category 13
+            if (generateRandomNumber() < 67) { //66% probability for right answer
                 givenAnswer = q1.getCorrect();
                 answer = "Sophia: 'Ich bin mir recht sicher, dass " + givenAnswer + " richtig ist.";
             } else {
                 givenAnswer = generateRandomWrongAnswer(q1);
-                answer = "Sophia: '" + givenAnswer + " könnte die richtige Antwort sein. Ich bin mir aber leider nicht sicher.'";
+                answer = "Sophia: '" + givenAnswer + " k\u00f6nnte die richtige Antwort sein. Ich bin mir aber leider nicht sicher.'";
             }
-        } else if (q1.getCategory() == 14) { //Kategorie 14
-            if (generateRandomNumber() < 62) { //61% Wahrscheinlichkeit auf richtige Antwort
+        } else if (q1.getCategory() == 14) { //category 14
+            if (generateRandomNumber() < 62) { //61% probability for right answer
                 givenAnswer = q1.getCorrect();
                 answer = "Taha: 'Eine echt schwierige Frage, aber die richtige Antwort sollte " + givenAnswer + " sein.'";
             } else {
                 givenAnswer = generateRandomWrongAnswer(q1);
-                answer = "Taha: 'Ich weiß es nicht, würde aber auf " + givenAnswer + " tippen.'";
+                answer = "Taha: 'Ich wei\u00df es nicht, w\u00fcrde aber auf " + givenAnswer + " tippen.'";
             }
-        } else if (q1.getCategory() == 15) { //Kategorie 15
-            if (generateRandomNumber() < 56) { //55% Wahrscheinlichkeit auf richtige Antwort
+        } else if (q1.getCategory() == 15) { //category 15
+            if (generateRandomNumber() < 56) { //55% probability for right answer
                 givenAnswer = q1.getCorrect();
                 answer = "Sara: 'Ich bin mir nicht ganz sicher, glaube aber, dass Antwort " + givenAnswer + " richtig ist.'";
             } else {
                 givenAnswer = generateRandomWrongAnswer(q1);
-                answer = "Sara: 'Ich tippe zwar auf " + givenAnswer + ", würde aber an deiner Stelle lieber das Geld nehmen.'";
+                answer = "Sara: 'Ich tippe zwar auf " + givenAnswer + ", w\u00fcrde aber an deiner Stelle lieber das Geld nehmen.'";
             }
         }
-        this.used = true;
+        this.used = true; //used set to true
         return answer;
-    }
-
-    //Funktionen der verschiedenen ConsoleCode.Joker abrufen
-    //Methode, um ConsoleCode.Joker zu verwenden
-    public void useFiftyFiftyJoker(Question q1) {
-        changeQuestion(q1); //verbirgt eine falsche Antwortmöglichkeit
-        changeQuestion(q1); //verbirgt eine weitere falsche Antwortmöglichkeit
-        this.used = true; //used auf true setzen - wichtig, um ConsoleCode.Joker nur einmal verwenden zu können
     }
 }

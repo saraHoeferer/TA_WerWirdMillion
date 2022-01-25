@@ -2,27 +2,16 @@ import ConsoleCode.Game;
 import ConsoleCode.Joker;
 import ConsoleCode.Player;
 import ConsoleCode.Question;
-import javafx.animation.KeyFrame;
-import javafx.animation.Timeline;
-import javafx.event.ActionEvent;
-import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
-import javafx.scene.input.InputMethodEvent;
 import javafx.scene.input.MouseEvent;
-import javafx.scene.layout.AnchorPane;
-import javafx.scene.layout.StackPane;
-import javafx.scene.text.Text;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
-
-import javax.swing.plaf.basic.BasicSliderUI;
 import java.io.IOException;
-import java.security.Key;
-import java.time.Duration;
+
 
 
 public class MainController {
@@ -129,6 +118,7 @@ public class MainController {
         makeNextQuestion(); // printing first question on the game board
     }
 
+
     // switch from start window (in HelloFX) to main window (game)
     public void switchToGame() throws IOException { // called by button "Start"
         FXMLLoader fxmlLoader = new FXMLLoader(HelloFX.class.getResource("test.fxml")); // load belonging fxml file
@@ -168,11 +158,10 @@ public class MainController {
     }
 
     public void switchAndClose2() throws IOException { // used by buttonPlayAgain because we don't switch
-        Stage endStage = (Stage) buttonEndGame.getScene().getWindow();
+        Stage endStage = (Stage) buttonPlayAgain.getScene().getWindow();
         endStage.close();
         switchToGame(); // starting a new game but stay in same window
     }
-
 
 
     // end window pops up
@@ -191,15 +180,17 @@ public class MainController {
         stage.show();
 
 
-        Label moneyLabel = (Label) scene.lookup("#labelMoneyWon");
+        labelMoneyWon = (Label) scene.lookup("#labelMoneyWon");
         // new label connecting with scene label via fx:id
 
 
-       if(left) { // if leaveGame button is pushed
-            moneyLabel.setText(currentPlayer.printMoneyWon(true));
+        if(currentPlayer.getCategory() == 16){
+            labelMoneyWon.setText("Gl\u00fcckwunsch! Du bist ein Million\u00e4r.");
         }
-       else{ // if answer is wrong
-            moneyLabel.setText(currentPlayer.printMoneyWon(false));
+        else if (left) { // if leaveGame button is pushed
+            labelMoneyWon.setText(currentPlayer.printMoneyWon(true));
+        } else { // if answer is wrong
+            labelMoneyWon.setText(currentPlayer.printMoneyWon(false));
         }
 
     }
@@ -211,7 +202,7 @@ public class MainController {
         char fieldName = Character.toLowerCase(buttonName.charAt(buttonName.length() - 1)); // which answer is on different button
         if (fieldName == currentQuestion.getCorrect()) { // compare answer on the field that was pressed with correct answer
             changeCategory(currentPlayer.getCategory()); // call method changeCategory from Game class
-            ((Button)e.getSource()).setStyle("-fx-background-color: #36f546"); // color correct answer green
+            ((Button) e.getSource()).setStyle("-fx-background-color: #36f546"); // color correct answer green
             Thread.sleep(500); // delay - else it won't show green color
             changeColorBack(e); // field needs to be reset to origin color - else at next question answer still green
 
@@ -221,17 +212,17 @@ public class MainController {
             if (currentPlayer.getCategory() == 15) { // if category 15 is reached (won game)
                 labelCat14.setStyle("-fx-background-color: #ffffff"); // set background to origin background
                 labelCat15.setStyle("-fx-background-color: #ffd447"); // move category pointer one up
+                currentPlayer.raiseCategory(); // needed because else it does not change category
                 switchToAlert(); // open end window - choose if you want to play again or leave (switch to start window)
             }
 
             currentPlayer.raiseCategory(); // increase category by 1 - method from Player class
             makeNextQuestion(); // print next question
-            if (true) {
-                labelOutput.setText(""); // reset output label when creating new question
-            }
-            currentPlayer.switchMoney(); // money according to category ??? GEHÖRT NICHT printMoney Player class
+            labelOutput.setText(""); // reset output label when creating new question
+
+            currentPlayer.switchMoney(); // money according to category
         } else { // if answer is wrong
-            ((Button)e.getSource()).setStyle("-fx-background-color: #ff1414"); // color wrong answer red
+            ((Button) e.getSource()).setStyle("-fx-background-color: #ff1414"); // color wrong answer red
             if (currentQuestion.getSecondChance()) { // check if second chance joker is active
                 labelOutput.setText("Das war noch nicht richtig. Probier es nochmal."); // try again
                 currentQuestion.changeSecondChanceBack(); // deactivate second chance
@@ -263,25 +254,13 @@ public class MainController {
     // COLORS
     // change color when mouse is pressed (not clicked)
     @FXML
-    void changeColorASAP(MouseEvent event){
+    void changeColorASAP(MouseEvent event) {
         if (event.getSource().equals(buttonFiftyFifty)) {
-            /*if (!fiftyFifty.getUsed()) { // call getUsed method from Joker class
-                buttonFiftyFifty.setStyle("-fx-background-color: #ffe9a1"); // if 50:50 Joker is not used
-            } else
-             */
-                buttonFiftyFifty.setStyle("-fx-background-color: #9c9992; -fx-text-fill: #454340;"); // if 50:50 Joker is used
+            buttonFiftyFifty.setStyle("-fx-background-color: #9c9992; -fx-text-fill: #454340;"); // if 50:50 Joker is used
         } else if (event.getSource().equals(buttonTelephone)) {
-            /* if (!telephone.getUsed()) {
-                buttonTelephone.setStyle("-fx-background-color: #ffe9a1"); // telephone Joker
-            } else
-             */
-                buttonTelephone.setStyle("-fx-background-color: #9c9992; -fx-text-fill: #454340;");
+            buttonTelephone.setStyle("-fx-background-color: #9c9992; -fx-text-fill: #454340;");
         } else if (event.getSource().equals(buttonSecondChance)) { // second chance Joker
-            /* if (!secondChance.getUsed()) {
-                buttonSecondChance.setStyle("-fx-background-color: #ffe9a1");
-            } else
-            */
-                buttonSecondChance.setStyle("-fx-background-color: #9c9992; -fx-text-fill: #454340;");
+            buttonSecondChance.setStyle("-fx-background-color: #9c9992; -fx-text-fill: #454340;");
         } else if (event.getSource().equals(buttonLeave)) { // leave button
             buttonLeave.setStyle("-fx-background-color: #9c9992; -fx-text-fill: #454340;");
         } else {
@@ -296,19 +275,12 @@ public class MainController {
 
     // method to leave game and get money from current category
     @FXML
-    void leaveGame(ActionEvent event) throws IOException {
+    void leaveGame() throws IOException {
         currentPlayer.switchMoney(); // get money according to category
         left = true; // set referring boolean to true
         currentPlayer.changeCategory(16);
         switchToAlert();
-        labelMoneyWon.setText("Das Spiel ist hiermit beendet. Du hast " + currentPlayer.getMoney() + " Euro gewonnen!");
-        labelMoneyWon.setStyle("-fx-text-fill: black; -fx-font-weight: bold"); // geht nicht
     }
-
-    /**
-     *
-     * leave Game geht noch nicht
-     */
 
     // change color when mouse enters button
     @FXML
@@ -404,9 +376,8 @@ public class MainController {
     }
 
     //use 50 : 50 ConsoleCode Joker
-    //
     @FXML
-    void useFiftyFifty(ActionEvent e) { // use 50:50 Joker
+    void useFiftyFifty() { // use 50:50 Joker
         if (!fiftyFifty.getUsed()) {
             fiftyFifty.useFiftyFiftyJoker(currentQuestion);
             printFiftyFiftyQuestion();
@@ -417,7 +388,7 @@ public class MainController {
     }
 
     @FXML
-    void useTelephone(ActionEvent e) {
+    void useTelephone() {
         if (!telephone.getUsed()) {
             labelOutput.setStyle("-fx-text-fill: black; -fx-text-weight: bold");
             labelOutput.setText(telephone.telephoneHelpMe(currentQuestion));
@@ -428,7 +399,7 @@ public class MainController {
     }
 
     @FXML
-    void useSecondChance(ActionEvent event) {
+    void useSecondChance() {
         if (secondChance.getUsed()) {
             labelOutput.setText("Du hast diesen Joker bereits verwendet.");
             labelOutput.setStyle("-fx-text-fill: red");
@@ -527,11 +498,13 @@ public class MainController {
             labelCat14.setStyle("-fx-background-color: #ffffff;");
         }
 
-        if (category == 15) {
+      /*  if (category == 15) {
             labelCat15.setStyle("-fx-background-color: #ffd447");
         } else {
             labelCat15.setStyle("-fx-background-color: #b8ffec;");
         }
+
+       */
     }
 }
 
