@@ -8,7 +8,7 @@ public class Player {
     //Constructor
     public Player() {
         this.money = 0;
-        this.category = 14;
+        this.category = 1;
     }
 
     //Getter-method to get the current category

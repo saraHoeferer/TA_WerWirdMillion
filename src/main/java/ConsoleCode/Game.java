@@ -14,7 +14,11 @@ public class Game {
     public Question[] createQuestions() throws IOException {        //IOException class signals failure during the import
         Gson gson = new Gson();
         String dirPath = new File("").getAbsolutePath();
-        dirPath += "\\questions.json";
+        if (System.getProperty("os.name").toLowerCase().contains("win")) {
+            dirPath += "\\questions.json";
+        } else {
+            dirPath += "//questions.json";
+        }
         Question[] questions = gson.fromJson(new FileReader(dirPath, StandardCharsets.UTF_8), Question[].class);  // UTF_8 is needed for mutated vowels
         return questions;              // return of Question array
     }
