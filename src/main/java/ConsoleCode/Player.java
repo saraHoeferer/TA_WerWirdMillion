@@ -10,7 +10,7 @@ public class Player {
     //Konstruktor
     public Player() {
         this.money = 0;
-        this.category = 1;
+        this.category = 14;
     }
 
     //Gettermethode um Kategorie zu bekommen
@@ -92,10 +92,8 @@ public class Player {
             moneyWon = "Du gehst leider leer aus!";
         } else if (category < 11) { //wenn du eine Frage falsch beantwortet hast und nicht weiter als Kategorie 9 gekommen bist
             moneyWon = "Du hast 500 Euro gewonnen!";
-        } else if(category < 15){ //wenn du eine Frage falsch beantwortet hast und höher als Kategorie 10 warst
+        } else if(category < 16){ //wenn du eine Frage falsch beantwortet hast und höher als Kategorie 10 warst
             moneyWon = "Du hast 16000 Euro gewonnen!";
-        } else if(category == 15){
-            moneyWon = "Gl\u00fcckwunsch! Du bist Million\u00e4r.";
         }
         return moneyWon;
     }
