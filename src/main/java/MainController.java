@@ -24,6 +24,7 @@ import java.io.IOException;
 import java.security.Key;
 import java.time.Duration;
 
+
 public class MainController {
 
     // possible answers
@@ -112,9 +113,9 @@ public class MainController {
     private Question[] questions; // array of questions
     private Question currentQuestion; // new object of the Question class
     private final Player currentPlayer = new Player(); // new object of the Player class
-    private final Joker fiftyFifty = new Joker(1); // new 50 : 50 Joker
-    private final Joker secondChance = new Joker(2); // new second chance Joker
-    private final Joker telephone = new Joker(3); // new telephone Joker
+    private final Joker fiftyFifty = new Joker(); // new 50 : 50 Joker
+    private final Joker secondChance = new Joker(); // new second chance Joker
+    private final Joker telephone = new Joker(); // new telephone Joker
     private boolean left; // true when leaveButton is pressed
 
     // initialize the game board
@@ -247,9 +248,16 @@ public class MainController {
         currentQuestion = currentGame.getQuestionFromCategory(currentGame.getQuestionCategory(questions, currentPlayer.getCategory()));
         labelQ.setText(currentQuestion.getQuestion());
         buttonA.setText("A: " + currentQuestion.getA());
+        buttonA.setMouseTransparent(false);
+        
         buttonB.setText("B: " + currentQuestion.getB());
+        buttonB.setMouseTransparent(false);
+        
         buttonC.setText("C: " + currentQuestion.getC());
+        buttonC.setMouseTransparent(false);
+        
         buttonD.setText("D: " + currentQuestion.getD());
+        buttonD.setMouseTransparent(false);
     }
 
     // COLORS
@@ -373,21 +381,25 @@ public class MainController {
             buttonA.setText("A: " + currentQuestion.getA());
         } else {
             buttonA.setText("A: ");
+            buttonA.setMouseTransparent(true);
         }
         if (!currentQuestion.isHideB()) {
             buttonB.setText("B: " + currentQuestion.getB());
         } else {
             buttonB.setText("B: ");
+            buttonB.setMouseTransparent(true);
         }
         if (!currentQuestion.isHideC()) {
             buttonC.setText("C: " + currentQuestion.getC());
         } else {
             buttonC.setText("C: ");
+            buttonC.setMouseTransparent(true);
         }
         if (!currentQuestion.isHideD()) {
             buttonD.setText("D: " + currentQuestion.getD());
         } else {
             buttonD.setText("D: ");
+            buttonD.setMouseTransparent(true);
         }
     }
 
@@ -396,7 +408,7 @@ public class MainController {
     @FXML
     void useFiftyFifty(ActionEvent e) { // use 50:50 Joker
         if (!fiftyFifty.getUsed()) {
-            fiftyFifty.useJoker(currentQuestion);
+            fiftyFifty.useFiftyFiftyJoker(currentQuestion);
             printFiftyFiftyQuestion();
         } else {
             labelOutput.setText("Du hast diesen Joker bereits verwendet.");
